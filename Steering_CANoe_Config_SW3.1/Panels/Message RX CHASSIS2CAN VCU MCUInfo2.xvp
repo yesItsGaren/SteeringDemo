@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="Panel" ControlName="Message RX CHASSIS2CAN VCU MCUInfo2" Children="Controls">
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl832" ControlName="GroupBoxControl832" Children="Controls">
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2345" ControlName="StaticTextControl2345" Children="Controls">
+        <Property Name="Name">StaticTextControl2345</Property>
+        <Property Name="Size">220,17</Property>
+        <Property Name="Location">5,17</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="TextAlign">TopLeft</Property>
+        <Property Name="BorderStyle">None</Property>
+        <Property Name="Text">TX node: "EDU"</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl833" ControlName="GroupBoxControl833" Children="Controls">
+        <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl229" ControlName="CheckBoxControl229" Children="Controls">
+          <Property Name="Name">CheckBoxControl229</Property>
+          <Property Name="Size">60,17</Property>
+          <Property Name="Location">5,22</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Text">Enable</Property>
+          <Property Name="CheckValue">1</Property>
+          <Property Name="UncheckValue">0</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+          <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_EDU::MESSAGES::MCUInfo2::TIMINGS;;;EnableCyclic;1;;;-1</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl1583" ControlName="RadioButtonControl1583" Children="Controls">
+          <Property Name="Name">RadioButtonControl1583</Property>
+          <Property Name="Size">95,34</Property>
+          <Property Name="Location">65,14</Property>
+          <Property Name="Text">Normal Period
+(10 ms)</Property>
+          <Property Name="SwitchValue">0</Property>
+          <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_EDU::MESSAGES::MCUInfo2::TIMINGS;;;SelectedPeriod;1;;;-1</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl1584" ControlName="RadioButtonControl1584" Children="Controls">
+          <Property Name="Name">RadioButtonControl1584</Property>
+          <Property Name="Size">85,17</Property>
+          <Property Name="Location">160,22</Property>
+          <Property Name="Text">User Period</Property>
+          <Property Name="SwitchValue">-1</Property>
+          <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_EDU::MESSAGES::MCUInfo2::TIMINGS;;;SelectedPeriod;1;;;-1</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl968" ControlName="TextBoxControl968" Children="Controls">
+          <Property Name="Name">TextBoxControl968</Property>
+          <Property Name="Size">40,21</Property>
+          <Property Name="Location">245,22</Property>
+          <Property Name="TextForeColor">0,0,0</Property>
+          <Property Name="BoxForeColor">0,0,0</Property>
+          <Property Name="DescriptionText" />
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="BoxTextAlign">Left</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="AlarmGeneralSettings">1;0;0;0</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TextBackColor">255,255,255</Property>
+          <Property Name="BoxBackColor">255,255,255</Property>
+          <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_EDU::MESSAGES::MCUInfo2::TIMINGS;;;CyclePeriod;1;;;-1</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Property Name="Name">GroupBoxControl833</Property>
+        <Property Name="Size">290,53</Property>
+        <Property Name="Location">5,34</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="Text">Cyclic Timing</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl834" ControlName="GroupBoxControl834" Children="Controls">
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl229" ControlName="ButtonControl229" Children="Controls">
+          <Property Name="Name">ButtonControl229</Property>
+          <Property Name="Size">80,21</Property>
+          <Property Name="Location">5,17</Property>
+          <Property Name="Text">Send Once</Property>
+          <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_EDU::MESSAGES::MCUInfo2::TIMINGS;;;SendOnce;1;;;-1</Property>
+        </Object>
+        <Property Name="Name">GroupBoxControl834</Property>
+        <Property Name="Size">115,43</Property>
+        <Property Name="Location">300,34</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="Text">Event Timing</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl835" ControlName="GroupBoxControl835" Children="Controls">
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2346" ControlName="StaticTextControl2346" Children="Controls">
+          <Property Name="Name">StaticTextControl2346</Property>
+          <Property Name="Size">180,17</Property>
+          <Property Name="Location">5,17</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="TextAlign">TopLeft</Property>
+          <Property Name="BorderStyle">None</Property>
+          <Property Name="Text">Info2Checksum</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl969" ControlName="TextBoxControl969" Children="Controls">
+          <Property Name="Name">TextBoxControl969</Property>
+          <Property Name="Size">60,21</Property>
+          <Property Name="Location">185,17</Property>
+          <Property Name="TextForeColor">0,0,0</Property>
+          <Property Name="BoxForeColor">0,0,0</Property>
+          <Property Name="DescriptionText"></Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="BoxTextAlign">Left</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="AlarmGeneralSettings">1;0;0;255</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TextBackColor">255,255,255</Property>
+          <Property Name="BoxBackColor">255,255,255</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;Info2Checksum</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2347" ControlName="StaticTextControl2347" Children="Controls">
+          <Property Name="Name">StaticTextControl2347</Property>
+          <Property Name="Size">60,17</Property>
+          <Property Name="Location">245,17</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="TextAlign">TopLeft</Property>
+          <Property Name="BorderStyle">None</Property>
+          <Property Name="Text">NoUnit</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl1585" ControlName="RadioButtonControl1585" Children="Controls">
+          <Property Name="Name">RadioButtonControl1585</Property>
+          <Property Name="Size">58,17</Property>
+          <Property Name="Location">307,17</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Text">INIT</Property>
+          <Property Name="SwitchValue">0</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;Info2Checksum</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl729" ControlName="TrackBarControl729" Children="Controls">
+          <Property Name="Name">TrackBarControl729</Property>
+          <Property Name="Size">104,22</Property>
+          <Property Name="Location">365,17</Property>
+          <Property Name="Maximum">255</Property>
+          <Property Name="Orientation">Horizontal</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Minimum">0</Property>
+          <Property Name="MaximumDouble">255</Property>
+          <Property Name="MinimumDouble">0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;Info2Checksum</Property>
+          <Property Name="DisplayMinMax">False</Property>
+          <Property Name="DisplayValue">True</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+          <Property Name="TickFrequency">100</Property>
+          <Property Name="TickFrequencyDouble">100</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2348" ControlName="StaticTextControl2348" Children="Controls">
+          <Property Name="Name">StaticTextControl2348</Property>
+          <Property Name="Size">180,17</Property>
+          <Property Name="Location">5,39</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="TextAlign">TopLeft</Property>
+          <Property Name="BorderStyle">None</Property>
+          <Property Name="Text">Info2RollingCounter</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl970" ControlName="TextBoxControl970" Children="Controls">
+          <Property Name="Name">TextBoxControl970</Property>
+          <Property Name="Size">60,21</Property>
+          <Property Name="Location">185,39</Property>
+          <Property Name="TextForeColor">0,0,0</Property>
+          <Property Name="BoxForeColor">0,0,0</Property>
+          <Property Name="DescriptionText"></Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="BoxTextAlign">Left</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="AlarmGeneralSettings">1;0;0;15</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TextBackColor">255,255,255</Property>
+          <Property Name="BoxBackColor">255,255,255</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;Info2RollingCounter</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2349" ControlName="StaticTextControl2349" Children="Controls">
+          <Property Name="Name">StaticTextControl2349</Property>
+          <Property Name="Size">60,17</Property>
+          <Property Name="Location">245,39</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="TextAlign">TopLeft</Property>
+          <Property Name="BorderStyle">None</Property>
+          <Property Name="Text">NoUnit</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl1586" ControlName="RadioButtonControl1586" Children="Controls">
+          <Property Name="Name">RadioButtonControl1586</Property>
+          <Property Name="Size">58,17</Property>
+          <Property Name="Location">307,39</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Text">INIT</Property>
+          <Property Name="SwitchValue">0</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;Info2RollingCounter</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl730" ControlName="TrackBarControl730" Children="Controls">
+          <Property Name="Name">TrackBarControl730</Property>
+          <Property Name="Size">104,22</Property>
+          <Property Name="Location">365,39</Property>
+          <Property Name="Maximum">15</Property>
+          <Property Name="Orientation">Horizontal</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Minimum">0</Property>
+          <Property Name="MaximumDouble">15</Property>
+          <Property Name="MinimumDouble">0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;Info2RollingCounter</Property>
+          <Property Name="DisplayMinMax">False</Property>
+          <Property Name="DisplayValue">True</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2350" ControlName="StaticTextControl2350" Children="Controls">
+          <Property Name="Name">StaticTextControl2350</Property>
+          <Property Name="Size">180,17</Property>
+          <Property Name="Location">5,61</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="TextAlign">TopLeft</Property>
+          <Property Name="BorderStyle">None</Property>
+          <Property Name="Text">RegenTorqueAvailableInfo</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl971" ControlName="TextBoxControl971" Children="Controls">
+          <Property Name="Name">TextBoxControl971</Property>
+          <Property Name="Size">60,21</Property>
+          <Property Name="Location">185,61</Property>
+          <Property Name="TextForeColor">0,0,0</Property>
+          <Property Name="BoxForeColor">0,0,0</Property>
+          <Property Name="DescriptionText"></Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="BoxTextAlign">Left</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="AlarmGeneralSettings">1;0;-1000;0</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TextBackColor">255,255,255</Property>
+          <Property Name="BoxBackColor">255,255,255</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;RegenTorqueAvailableInfo</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2351" ControlName="StaticTextControl2351" Children="Controls">
+          <Property Name="Name">StaticTextControl2351</Property>
+          <Property Name="Size">60,17</Property>
+          <Property Name="Location">245,61</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="TextAlign">TopLeft</Property>
+          <Property Name="BorderStyle">None</Property>
+          <Property Name="Text">Nm</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl1587" ControlName="RadioButtonControl1587" Children="Controls">
+          <Property Name="Name">RadioButtonControl1587</Property>
+          <Property Name="Size">58,17</Property>
+          <Property Name="Location">307,61</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Text">SNA</Property>
+          <Property Name="SwitchValue">-977</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;RegenTorqueAvailableInfo</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl1588" ControlName="RadioButtonControl1588" Children="Controls">
+          <Property Name="Name">RadioButtonControl1588</Property>
+          <Property Name="Size">58,17</Property>
+          <Property Name="Location">367,61</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Text">INIT</Property>
+          <Property Name="SwitchValue">-1000</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;RegenTorqueAvailableInfo</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl731" ControlName="TrackBarControl731" Children="Controls">
+          <Property Name="Name">TrackBarControl731</Property>
+          <Property Name="Size">104,22</Property>
+          <Property Name="Location">425,61</Property>
+          <Property Name="Maximum">0</Property>
+          <Property Name="Orientation">Horizontal</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Minimum">-1000</Property>
+          <Property Name="MaximumDouble">0</Property>
+          <Property Name="MinimumDouble">-1000</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;RegenTorqueAvailableInfo</Property>
+          <Property Name="DisplayMinMax">False</Property>
+          <Property Name="DisplayValue">True</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+          <Property Name="TickFrequency">1000</Property>
+          <Property Name="TickFrequencyDouble">1000</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2352" ControlName="StaticTextControl2352" Children="Controls">
+          <Property Name="Name">StaticTextControl2352</Property>
+          <Property Name="Size">180,17</Property>
+          <Property Name="Location">5,83</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="TextAlign">TopLeft</Property>
+          <Property Name="BorderStyle">None</Property>
+          <Property Name="Text">TractionTorqueAvailableInfo</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl972" ControlName="TextBoxControl972" Children="Controls">
+          <Property Name="Name">TextBoxControl972</Property>
+          <Property Name="Size">60,21</Property>
+          <Property Name="Location">185,83</Property>
+          <Property Name="TextForeColor">0,0,0</Property>
+          <Property Name="BoxForeColor">0,0,0</Property>
+          <Property Name="DescriptionText"></Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="BoxTextAlign">Left</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="AlarmGeneralSettings">1;0;0;1000</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TextBackColor">255,255,255</Property>
+          <Property Name="BoxBackColor">255,255,255</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;TractionTorqueAvailableInfo</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2353" ControlName="StaticTextControl2353" Children="Controls">
+          <Property Name="Name">StaticTextControl2353</Property>
+          <Property Name="Size">60,17</Property>
+          <Property Name="Location">245,83</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="TextAlign">TopLeft</Property>
+          <Property Name="BorderStyle">None</Property>
+          <Property Name="Text">Nm</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl1589" ControlName="RadioButtonControl1589" Children="Controls">
+          <Property Name="Name">RadioButtonControl1589</Property>
+          <Property Name="Size">58,17</Property>
+          <Property Name="Location">307,83</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Text">SNA</Property>
+          <Property Name="SwitchValue">1023</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;TractionTorqueAvailableInfo</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl1590" ControlName="RadioButtonControl1590" Children="Controls">
+          <Property Name="Name">RadioButtonControl1590</Property>
+          <Property Name="Size">58,17</Property>
+          <Property Name="Location">367,83</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Text">INIT</Property>
+          <Property Name="SwitchValue">0</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;TractionTorqueAvailableInfo</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl732" ControlName="TrackBarControl732" Children="Controls">
+          <Property Name="Name">TrackBarControl732</Property>
+          <Property Name="Size">104,22</Property>
+          <Property Name="Location">425,83</Property>
+          <Property Name="Maximum">1000</Property>
+          <Property Name="Orientation">Horizontal</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Minimum">0</Property>
+          <Property Name="MaximumDouble">1000</Property>
+          <Property Name="MinimumDouble">0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;TractionTorqueAvailableInfo</Property>
+          <Property Name="DisplayMinMax">False</Property>
+          <Property Name="DisplayValue">True</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+          <Property Name="TickFrequency">1000</Property>
+          <Property Name="TickFrequencyDouble">1000</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2354" ControlName="StaticTextControl2354" Children="Controls">
+          <Property Name="Name">StaticTextControl2354</Property>
+          <Property Name="Size">180,17</Property>
+          <Property Name="Location">5,105</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="TextAlign">TopLeft</Property>
+          <Property Name="BorderStyle">None</Property>
+          <Property Name="Text">MotorTorqueEstimatedInfo</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl973" ControlName="TextBoxControl973" Children="Controls">
+          <Property Name="Name">TextBoxControl973</Property>
+          <Property Name="Size">60,21</Property>
+          <Property Name="Location">185,105</Property>
+          <Property Name="TextForeColor">0,0,0</Property>
+          <Property Name="BoxForeColor">0,0,0</Property>
+          <Property Name="DescriptionText"></Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="BoxTextAlign">Left</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="AlarmGeneralSettings">1;0;-1000;1000</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TextBackColor">255,255,255</Property>
+          <Property Name="BoxBackColor">255,255,255</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;MotorTorqueEstimatedInfo</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2355" ControlName="StaticTextControl2355" Children="Controls">
+          <Property Name="Name">StaticTextControl2355</Property>
+          <Property Name="Size">60,17</Property>
+          <Property Name="Location">245,105</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="TextAlign">TopLeft</Property>
+          <Property Name="BorderStyle">None</Property>
+          <Property Name="Text">Nm</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl1591" ControlName="RadioButtonControl1591" Children="Controls">
+          <Property Name="Name">RadioButtonControl1591</Property>
+          <Property Name="Size">58,17</Property>
+          <Property Name="Location">307,105</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Text">SNA</Property>
+          <Property Name="SwitchValue">1047</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;MotorTorqueEstimatedInfo</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl1592" ControlName="RadioButtonControl1592" Children="Controls">
+          <Property Name="Name">RadioButtonControl1592</Property>
+          <Property Name="Size">58,17</Property>
+          <Property Name="Location">367,105</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Text">INIT</Property>
+          <Property Name="SwitchValue">-1000</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;MotorTorqueEstimatedInfo</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl733" ControlName="TrackBarControl733" Children="Controls">
+          <Property Name="Name">TrackBarControl733</Property>
+          <Property Name="Size">104,22</Property>
+          <Property Name="Location">425,105</Property>
+          <Property Name="Maximum">1000</Property>
+          <Property Name="Orientation">Horizontal</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Minimum">-1000</Property>
+          <Property Name="MaximumDouble">1000</Property>
+          <Property Name="MinimumDouble">-1000</Property>
+          <Property Name="SymbolConfiguration">1;2;CHASSIS2CAN;EDU;MCUInfo2;MotorTorqueEstimatedInfo</Property>
+          <Property Name="DisplayMinMax">False</Property>
+          <Property Name="DisplayValue">True</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+          <Property Name="TickFrequency">1000</Property>
+          <Property Name="TickFrequencyDouble">1000</Property>
+        </Object>
+        <Property Name="Name">GroupBoxControl835</Property>
+        <Property Name="Size">534,132</Property>
+        <Property Name="Location">5,92</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="Text">Signal Group MCUInfo2SignalGroup</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Property Name="Name">GroupBoxControl832</Property>
+      <Property Name="Size">544,229</Property>
+      <Property Name="Location">5,5</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+      <Property Name="BackColor">255,255,255</Property>
+      <Property Name="Text">Signals of Message MCUInfo2</Property>
+      <Property Name="ForeColor">0,0,0</Property>
+    </Object>
+    <Property Name="Panel">Panel</Property>
+    <Property Name="Size">554,239</Property>
+    <Property Name="BackColor">255,255,255</Property>
+  </Object>
+</Panel>

@@ -1,0 +1,267 @@
+﻿/*@!Encoding:65001*/
+includes
+{
+  
+}
+
+variables
+{
+  
+  // timers
+  msTimer updateTimer;
+  msTimer primSteeringTimer;  // Timer for primary steering control
+  msTimer secSteeringTimer;
+  msTimer vsmInfoTimer;
+  msTimer vehMvmntInfoTimer;
+  msTimer sequenceTimer;
+  
+  // variable
+  int sliderValue = 0;
+  int sysVarValue;
+  int sequenceStep = 0;
+  int SleepValue = 1;
+  int ParkValue = 2;
+  int AutoValue = 3;
+  int Valid = 1;
+  int indexofTest = 0;
+
+    
+  // Input Messages (Simulation)
+  message CHASSIS2CAN::SDS_Primary::SDS_CtrlSteeringWheel_Prim primSteeringMsg2; // Primary Steering Control Chassis 2 (0x14B)
+  message CHASSIS1CAN::SDS_Secondary::SDS_CtrlSteeringWheel_Sec secSteeringMsg1;  // Secondary Steering Control Chassis 1 (0x14D)
+  message CHASSIS1CAN::VCU_VSMInfo vsmInfoMsg1;  // VSM Status Chassis 1 (0x11A)
+  message CHASSIS2CAN::VCU_VSMInfo vsmINfoMsg2;  // VSM Status Chassis 2 (0x11A)
+  message CHASSIS1CAN::MKC1_VehMvmntInfo MK100_1; // Breaks Chassis 1 MK100 (0x16A)
+  message CHASSIS2CAN::MKC1_VehMvmntInfo MKC1_2; // Breaks Chassis 2 MKC1 (0x16A)
+  
+  
+  // Output Messages (Validation)
+  message CHASSIS2CAN::ECU1_ISCS::ISCS_CurrPinionStat currentPinionAngle1;
+  message CHASSIS1CAN::ECU2_ISCS::ISCS_CurrPinionStat_2 currentPinionAngle2;
+  
+  
+  // Macros
+  const int ENABLED = 1;
+  const int DISABLED = 0;
+  const int VALID_STATE = 1;
+  const int INVALID_STATE = 0;
+  const int sequenceRate = 100;
+  const int updateRate = 10;
+}
+
+
+on timer updateTimer
+{
+  // Read system variable
+  write("Current slider Val: %d", @sysvar::SteeringVal::SteeringVal);
+  
+  // Restart timer
+  setTimer(updateTimer, 10);
+}
+
+// Timer event for primary steering control
+on timer primSteeringTimer
+{
+  // Send primary steering control messages
+  output(primSteeringMsg2);
+
+  // Restart the timer
+  setTimer(primSteeringTimer, 10);
+}
+
+// Timer event for secondary steering control
+on timer secSteeringTimer
+{
+  // Send secondary steering control messages
+  output(secSteeringMsg1);
+
+  // Restart the timer
+  setTimer(secSteeringTimer, 10);
+}
+
+// Timer event for VSM info
+on timer vsmInfoTimer
+{
+  // Send VSM info messages
+  output(vsmInfoMsg1);
+  output(vsmINfoMsg2);
+
+  // Restart the timer
+  setTimer(vsmInfoTimer, 100);
+}
+
+// Timer event for vehicle movement info
+on timer vehMvmntInfoTimer
+{
+  // Send vehicle movement info messages
+  output(MK100_1);
+  output(MKC1_2);
+
+  // Restart the timer
+  setTimer(vehMvmntInfoTimer, 20);
+}
+
+// Sets the Steering values via SDS. Note: You must set the validity to 1 before using this function. (Check setSteeringValidity(VALID_STATE))
+void SetSteeringValues(int steeringVal, int enablePrimary, int enableSecondary)
+{
+  
+  if(enablePrimary == ENABLED)
+  {
+    setSteeringValidity(VALID_STATE,3);
+    primSteeringMsg2.CtrlSteeringPinionAngle_Pri = steeringVal;
+    output(primSteeringMsg2);
+    setTimer(primSteeringTimer, 10); // Start cyclic sending of primary steering control
+    write("steeringValPrimary","Primary Steering Values set to %d",steeringVal);
+  }
+  else if(enablePrimary == DISABLED)
+  {
+    setSteeringValidity(INVALID_STATE,3);
+  }
+  else
+  {
+    write("", "Incompatible Primary steering angle value set to Steering. ");
+  }
+  
+  
+    if(enableSecondary == ENABLED)
+  {
+    setSteeringValidity(3,VALID_STATE);
+    secSteeringMsg1.CtrlSteeringPinionAngle_Sec = steeringVal;
+    output(secSteeringMsg1);      
+    setTimer(secSteeringTimer, 10);  // Start cyclic sending of secondary steering control
+    write("steeringValSecondary","Secondary Steering Values set to %d",steeringVal);
+  }
+  else if(enableSecondary == DISABLED)
+  {
+    setSteeringValidity(3,INVALID_STATE);
+  }
+  else
+  {
+    write("", "Incompatible Secondary steering angle value set to Steering. ");
+  }
+  
+  
+}
+
+void setSteeringValidity(int primaryValidity, int secondaryValidity)
+{
+      if(primaryValidity == VALID_STATE)
+      {
+        primSteeringMsg2.Valid_CtrlSteeringPinionAng_Pri = VALID_STATE;
+        output(primSteeringMsg2);
+        write("", "Validity of Primary Steering is set to VALID_STATE (%d). ", VALID_STATE);
+      }
+      else if(primaryValidity == INVALID_STATE)
+      {
+        primSteeringMsg2.Valid_CtrlSteeringPinionAng_Pri = INVALID_STATE;
+        output(primSteeringMsg2);
+        write("", "Validity of Primary Steering is set to INVALID_STATE (%d).", INVALID_STATE);
+      }
+      else
+      {
+        write("", "Incompatible Primary value set to Steering Validity State. ");
+      }
+      
+      if(secondaryValidity == VALID_STATE)
+      {
+        secSteeringMsg1.Valid_CtrlSteeringPinionAng_Sec = VALID_STATE;
+        output(secSteeringMsg1);
+        write("", "Validity of Secondary Steering is set to VALID_STATE (%d). ", VALID_STATE);
+      }
+      else if(secondaryValidity == INVALID_STATE)
+      {
+        secSteeringMsg1.Valid_CtrlSteeringPinionAng_Sec = INVALID_STATE;
+        output(secSteeringMsg1);
+        write("", "Validity of Secondary Steering is set to INVALID_STATE (%d).", INVALID_STATE);
+      }
+      else
+      {
+        write("", "Incompatible value set to Secondary Steering Validity State. ");
+      }
+}
+
+
+// Timer event for sequential execution
+on timer sequenceTimer
+{
+  switch (sequenceStep)
+  {
+    case 0:
+      // 0 - Set Sleep
+      vsmInfoMsg1.VSMStatus = SleepValue;
+      vsmINfoMsg2.VSMStatus = SleepValue;
+      write("","Step 0: Set Sleep");
+
+      // Start vsmInfoTimer for cyclic sending
+      setTimer(vsmInfoTimer, 100); // Start cyclic sending of VSM info
+      write("","Started vsmInfoTimer for cyclic sending.");
+
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 1000ms delay before next step
+      break;
+
+    case 1:
+      // 2 - Set SDS Steering validity to Valid
+      write("","Step 1: Set SDS Steering validity to Valid");
+      setSteeringValidity(VALID_STATE,VALID_STATE);
+
+      // Start primSteeringTimer and secSteeringTimer for cyclic sending
+      setTimer(primSteeringTimer, 10); // Start cyclic sending of primary steering control
+      setTimer(secSteeringTimer, 10);  // Start cyclic sending of secondary steering control
+
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 1000ms delay before next step
+      break;
+
+    case 2:
+      // 2 - Set Brake Validity to Valid
+      write("","Step 2: Set Brake Validity to Valid");
+      MK100_1.VehSpeedValidStat = Valid;
+      output(MK100_1);
+      MKC1_2.VehSpeedValidStat = Valid;
+      output(MKC1_2);
+      
+      // Start vehMvmntInfoTimer for cyclic sending
+      setTimer(vehMvmntInfoTimer, 20); // Start cyclic sending of vehicle movement info
+
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 100ms delay before next step
+      break;
+
+    case 3:
+      // 3 - Set Park
+      vsmInfoMsg1.VSMStatus = ParkValue;
+      output(vsmInfoMsg1);
+      vsmINfoMsg2.VSMStatus = ParkValue;
+      output(vsmINfoMsg2);
+      write("","Step 3: Set Park");
+
+      // No new cyclic timer needed here (vsmInfoTimer is already running)
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 100ms delay before next step
+      break;
+
+    case 4:
+      // 4 - Set Autonomous
+      write("","Step 4: Set Autonomous");
+      vsmInfoMsg1.VSMStatus = AutoValue;
+      output(vsmInfoMsg1);
+      vsmINfoMsg2.VSMStatus = AutoValue;
+      output(vsmINfoMsg2);
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 100ms delay before next step
+      break;
+
+    default:
+      // End of sequence
+      write("","Sequence Completed", "All steps executed successfully.");
+      break;
+  }
+}
+
+
+on start
+{
+  setTimer(sequenceTimer, sequenceRate);
+  setTimer(updateTimer, updateRate); // poll slider every 100ms
+}

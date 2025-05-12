@@ -1,0 +1,2001 @@
+VERSION ""
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ASS CGW2 ECU1_ISCS ECU2_ISCS MK100 SDS_Secondary VN
+
+
+BO_ 146 Veh1_Activate: 7 VN
+  SG_ Veh1_Activate_CRC : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+  SG_ Veh1_Activate_Counter : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+  SG_ Veh1_Activate_Activation : 24|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 160 MCUFastCommandResponse: 12 CGW2
+  SG_ MCUSts : 12|4@1+ (1,0) [0|15] "NoUnit" ASS,ECU2_ISCS,MK100
+
+BO_ 256 Veh1_VehData: 7 VN
+  SG_ Veh1_VehData_CRC : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+  SG_ Veh1_VehData_Counter : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+  SG_ Veh1_VehData_VehSpeed : 24|16@1+ (1,0) [0|0] "" Vector__XXX
+  SG_ Veh1_VehData_BrakeActive : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+  SG_ Veh1_VehData_VehSpeedQualifier : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 378 ISCS_Info: 8 CGW2
+  SG_ ISCSBlindStop : 0|2@1+ (1,0) [0|3] "NoUnit" SDS_Secondary
+  SG_ ISCSComStatBrake : 2|2@1+ (1,0) [0|3] "NoUnit" SDS_Secondary
+  SG_ ISCSComStatSDS : 4|2@1+ (1,0) [0|3] "NoUnit" SDS_Secondary
+  SG_ ISCSStat : 6|8@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+
+BO_ 1734 EPS_XCP_Rx: 8 CGW2
+  SG_ Calibration_Rx_Byte0 : 0|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS
+  SG_ Calibration_Rx_Byte1 : 8|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS
+  SG_ Calibration_Rx_Byte2 : 16|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS
+  SG_ Calibration_Rx_Byte3 : 24|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS
+  SG_ Calibration_Rx_Byte4 : 32|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS
+  SG_ Calibration_Rx_Byte5 : 40|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS
+  SG_ Calibration_Rx_Byte6 : 48|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS
+  SG_ Calibration_Rx_Byte7 : 56|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS
+
+BO_ 1751 EPS_XCP_Tx_2: 8 ECU2_ISCS
+  SG_ Calibration_Tx_Byte0_2 : 0|8@1+ (1,0) [0|255] "UNM" CGW2
+  SG_ Calibration_Tx_Byte1_2 : 8|8@1+ (1,0) [0|255] "UNM" CGW2
+  SG_ Calibration_Tx_Byte2_2 : 16|8@1+ (1,0) [0|255] "UNM" CGW2
+  SG_ Calibration_Tx_Byte3_2 : 24|8@1+ (1,0) [0|255] "UNM" CGW2
+  SG_ Calibration_Tx_Byte4_2 : 32|8@1+ (1,0) [0|255] "NoUnit" CGW2
+  SG_ Calibration_Tx_Byte5_2 : 40|8@1+ (1,0) [0|255] "UNM" CGW2
+  SG_ Calibration_Tx_Byte6_2 : 48|8@1+ (1,0) [0|0] "UNM" CGW2
+  SG_ Calibration_Tx_Byte7_2 : 56|8@1+ (1,0) [0|255] "NoUnit" CGW2
+
+BO_ 1766 CmnMfgSrvReq: 8 CGW2
+  SG_ CmnMfgSrv_Rx : 0|64@1+ (1,0) [0|1.84467440737096E+019] "NoUnit" ECU2_ISCS
+
+BO_ 1783 CmnMfgSrvResp_2: 8 ECU2_ISCS
+  SG_ CmnMfgSrv_Tx_2 : 0|64@1+ (1,0) [0|1.84467440737096E+019] "NoUnit" CGW2
+
+BO_ 1821 CLU_ID1: 8 MK100
+  SG_ YAW_RATE : 0|16@1+ (0.005,-163.83) [-163.83|163.845] "°/s" SDS_Secondary
+  SG_ YAW_RATE_QUAL : 16|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ LAT_ACC_QUAL : 20|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ LAT_ACC : 24|16@1+ (0.002,-65.532) [-65.532|65.538] "m/s^2" SDS_Secondary
+  SG_ TEMPERATURE : 40|8@1+ (1,-50) [-50|205] "°C" CGW2
+  SG_ SC_STATUS : 48|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ ALIV_CLU_ID1 : 52|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ CHKSUM_CLU_ID1 : 56|8@1+ (1,0) [0|255] "NoUnit" SDS_Secondary
+
+BO_ 1822 CLU_ID2: 8 MK100
+  SG_ ROLL_RATE : 0|16@1+ (0.005,-163.83) [-163.83|163.845] "°/s" SDS_Secondary
+  SG_ ROLL_RATE_QUAL : 16|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ LONG_ACC_QUAL : 20|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ LONG_ACC : 24|16@1+ (0.002,-65.532) [-65.532|65.538] "m/s^2" SDS_Secondary
+  SG_ ALIV_CLU_ID2 : 52|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ CHKSUM_CLU_ID2 : 56|8@1+ (1,0) [0|255] "NoUnit" SDS_Secondary
+
+BO_ 1823 CLU_ID3: 8 MK100
+  SG_ PITCH_RATE : 0|16@1+ (0.005,-163.83) [-163.83|163.845] "°/s" SDS_Secondary
+  SG_ PITCH_RATE_QUAL : 16|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ VERT_ACC_QUAL : 20|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ VERT_ACC : 24|16@1+ (0.002,-65.532) [-65.532|65.538] "m/s^2" SDS_Secondary
+  SG_ ALIV_CLU_ID3 : 52|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ CHKSUM_CLU_ID3 : 56|8@1+ (1,0) [0|255] "NoUnit" SDS_Secondary
+
+BO_ 1890 DIAG_REQ: 4 CGW2
+  SG_ DIAG_REQUEST : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+  SG_ RESET_REQUEST : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147483917 MKC1_FrntWhlSpd_Info: 8 MK100
+  SG_ MKC1FrntWhlSpdCRC : 0|8@1+ (1,0) [0|255] "NoUnit" SDS_Secondary
+  SG_ MKC1FrntWhlSpdCntr : 8|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ CurrWheelSpeedFRStat : 16|11@1+ (0.1,0) [0|100] "KPH" ECU2_ISCS,SDS_Secondary
+  SG_ WheelSpeedFLValidStat : 27|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ WheelSpeedFRValidStat : 28|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ CurrWheelSpeedFLStat : 32|11@1+ (0.1,0) [0|100] "KPH" ECU2_ISCS,SDS_Secondary
+
+BO_ 2147483918 MKC1_RrWhlSpd_Info: 8 MK100
+  SG_ MKC1RrWhlSpdCRC : 0|8@1+ (1,0) [0|255] "NoUnit" SDS_Secondary
+  SG_ MKC1RrWhlSpdCntr : 8|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ CurrWheelSpeedRRStat : 16|11@1+ (0.1,0) [0|100] "KPH" ECU2_ISCS,SDS_Secondary
+  SG_ WheelSpeedRLValidStat : 27|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ WheelSpeedRRValidStat : 28|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ CurrWheelSpeedRLStat : 32|11@1+ (0.1,0) [0|100] "KPH" ECU2_ISCS,SDS_Secondary
+
+BO_ 2147483930 VCU_VSMInfo: 8 CGW2
+  SG_ VCUVSMInfoCRC : 0|8@1+ (1,0) [0|255] "NoUnit" MK100
+  SG_ VCUVSMInfoCntr : 8|4@1+ (1,0) [0|15] "NoUnit" MK100
+  SG_ VSMStatus : 16|4@1+ (1,0) [0|15] "NoUnit" ASS,ECU2_ISCS,MK100
+
+BO_ 2147483931 ASS_VehicleLoad: 8 ASS
+  SG_ CurrVehicleLoad : 0|5@1+ (67,3200) [3200|5277] "Kilogram" CGW2
+  SG_ MaxLoadWarning : 5|1@1+ (1,0) [0|1] "NoUnit" CGW2
+  SG_ StatusVehicleLoadForDrv : 6|1@1+ (1,0) [0|1] "NoUnit" CGW2
+
+BO_ 2147483934 CGW_Manual_Steering_Info: 8 CGW2
+  SG_ CtrlSteeringPinionAng_Manual : 0|15@1+ (0.00977,-14.5) [-14.5|17.5] "Radians" ECU2_ISCS
+  SG_ Val_CtrlSteeringPinionAng_Manual : 15|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS
+  SG_ TruncatedFreshnessVal_ManStrInfo : 16|4@1+ (1,0) [0|0] "" ECU2_ISCS
+  SG_ TruncatedMAC_ManualSteeringInfo : 20|24@1+ (1,0) [0|0] "" ECU2_ISCS
+
+BO_ 2147483938 CGW_FVM_Authentication: 8 CGW2
+  SG_ FVMAuthenticator : 0|24@1+ (1,0) [0|16777215] "NoUnit" ASS,ECU2_ISCS,MK100,SDS_Secondary
+  SG_ FVMPDULinkerAuth : 24|2@1+ (1,0) [0|3] "NoUnit" ASS,ECU2_ISCS,MK100,SDS_Secondary
+
+BO_ 2147483939 CGW_FVM_Counter: 8 CGW2
+  SG_ FVMResetCounter : 0|22@1+ (1,0) [0|4194303] "NoUnit" ASS,ECU2_ISCS,MK100,SDS_Secondary
+  SG_ FVMPDULinkerCntr : 24|2@1+ (1,0) [0|3] "NoUnit" ASS,ECU2_ISCS,MK100,SDS_Secondary
+  SG_ FVMTripCounter : 32|24@1+ (1,0) [0|16777215] "NoUnit" ASS,ECU2_ISCS,MK100,SDS_Secondary
+
+BO_ 2147483942 VCU_ManualOperationInfo_Prim: 8 CGW2
+  SG_ StandstillReqValidStat_VCU : 14|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS
+  SG_ DeadManButtonPressedStat : 16|3@1+ (1,0) [0|3] "NoUnit" ECU2_ISCS
+  SG_ StandstillReq_VCU : 27|2@1+ (1,0) [0|3] "NoUnit" ECU2_ISCS
+
+BO_ 2147483943 VCU_ManualOperationInfo_Sec: 8 CGW2
+  SG_ VCUManOpInfoSecCRC : 0|8@1+ (1,0) [0|255] "NoUnit" MK100
+  SG_ VCUManOpInfoSecCntr : 8|4@1+ (1,0) [0|15] "NoUnit" MK100
+  SG_ AccelDecelReqSecValidStat_JS_VCU : 15|1@1+ (1,0) [0|1] "NoUnit" MK100
+  SG_ AccelDecelReqSec_JS_VCU : 16|8@1- (0.1,0) [-9|2] "m/s^2" MK100
+
+BO_ 2147483946 VCU_Info: 8 CGW2
+  SG_ StatusGear : 12|3@1+ (1,0) [0|7] "NoUnit" ASS,ECU2_ISCS
+
+BO_ 2147483949 BCM_SM_Request: 8 CGW2
+  SG_ SMReqBoardDeBoardHtAdj : 0|3@1+ (1,0) [0|7] "NoUnit" ASS
+
+BO_ 2147483953 PCU_Msg_VCU: 8 CGW2
+  SG_ PCUParkPosn_VCU : 0|3@1+ (1,0) [0|7] "" SDS_Secondary
+
+BO_ 2147483956 BatUSng: 8 CGW2
+  SG_ UBat : 28|12@1+ (0.25,0) [0|1023.75] "V" ASS,ECU2_ISCS,MK100
+
+BO_ 2147483962 VCU_LVBatt1Info: 8 CGW2
+  SG_ LVBatt1SoC : 20|7@1+ (1,0) [0|100] "NoUnit" ASS,ECU2_ISCS,MK100
+  SG_ LVBatt1Vtg : 34|15@1+ (0.001,0) [0|24] "V" ASS,ECU2_ISCS,MK100
+
+BO_ 2147483965 MK100_SecBrkInfo: 8 MK100
+  SG_ SecBrkInfoCRC : 0|8@1+ (1,0) [0|255] "NoUnit" SDS_Secondary
+  SG_ SecBrkInfoCntr : 8|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ SecBrkSysStat : 18|3@1+ (1,0) [0|7] "NoUnit" CGW2,ECU2_ISCS,SDS_Secondary
+  SG_ BrkDrvMdSBS : 21|2@1+ (1,0) [0|3] "NoUnit" CGW2,SDS_Secondary
+  SG_ SecBrkErrLvl : 24|3@1+ (1,0) [0|7] "NoUnit" CGW2,SDS_Secondary
+  SG_ VirtualDrvrStatFdbckSBS : 27|3@1+ (1,0) [0|7] "NoUnit" SDS_Secondary
+
+BO_ 2147483966 MK100_FrntWhlSpd_Info: 8 MK100
+  SG_ MK100FrntWhlSpdCRC : 0|8@1+ (1,0) [0|255] "NoUnit" CGW2
+  SG_ MK100FrntWhlSpdCntr : 8|4@1+ (1,0) [0|15] "NoUnit" CGW2
+  SG_ WheelSpeedFLValidStat2 : 22|1@1+ (1,0) [0|1] "NoUnit" CGW2
+  SG_ WheelSpeedFRValidStat2 : 23|1@1+ (1,0) [0|1] "NoUnit" CGW2
+  SG_ CurrWheelSpeedFLStat2 : 24|11@1+ (0.1,0) [0|100] "KPH" CGW2
+  SG_ CurrWheelSpeedFRStat2 : 35|11@1+ (0.1,0) [0|100] "KPH" CGW2
+
+BO_ 2147483967 VCU_LoadShed: 8 CGW2
+  SG_ LV_Ldshd : 0|3@1+ (1,0) [0|7] "NoUnit" ASS,ECU2_ISCS,SDS_Secondary
+
+BO_ 2147483968 ISCS_CurrPinionStat: 8 CGW2
+  SG_ CurrPinionStat_Checksum : 0|8@1+ (1,0) [0|255] "NoUnit" MK100,SDS_Secondary
+  SG_ CurrPinionStat_AliveCounter : 8|4@1+ (1,0) [0|15] "NoUnit" MK100,SDS_Secondary
+  SG_ CurrentSteeringPinionRate : 16|12@1+ (1,-2048) [-2048|2046] "°/s" MK100,SDS_Secondary
+  SG_ CurrSteerPinionAngleValidity : 29|1@1+ (1,0) [0|1] "NoUnit" MK100,SDS_Secondary
+  SG_ CurrSteerPinionRateValidity : 30|1@1+ (1,0) [0|1] "NoUnit" MK100,SDS_Secondary
+  SG_ CurrentSteeringPinionAngle : 32|15@1+ (0.1,-780) [-780|780] "deg" MK100,SDS_Secondary
+
+BO_ 2147483969 ISCS_CurrPinionStat_2: 8 ECU2_ISCS
+  SG_ CurrPinionStat_Checksum_2 : 0|8@1+ (1,0) [0|255] "NoUnit" CGW2,MK100,SDS_Secondary
+  SG_ CurrPinionStat_AliveCounter_2 : 8|4@1+ (1,0) [0|15] "NoUnit" CGW2,MK100,SDS_Secondary
+  SG_ CurrentSteeringPinionRate_2 : 16|12@1+ (1,-2048) [-2048|2046] "°/s" CGW2,MK100,SDS_Secondary
+  SG_ CurrSteerPinionAngleValidity_2 : 29|1@1+ (1,0) [0|1] "NoUnit" CGW2,MK100,SDS_Secondary
+  SG_ CurrSteerPinionRateValidity_2 : 30|1@1+ (1,0) [0|1] "NoUnit" CGW2,MK100,SDS_Secondary
+  SG_ CurrentSteeringPinionAngle_2 : 32|15@1+ (0.009765,-14.5) [-14.5|17.5] "deg" CGW2,MK100,SDS_Secondary
+
+BO_ 2147483976 ASS_VehRideHeight: 8 ASS
+  SG_ ASS_VehRideHeight_Cntr : 8|4@1+ (1,0) [0|15] "NoUnit" CGW2,SDS_Secondary
+  SG_ VehRideHeight_RL : 16|8@1+ (1,-127) [-127|128] "Milimeter" CGW2,SDS_Secondary
+  SG_ VehRideHeight_RR : 24|8@1+ (1,-127) [-127|128] "Milimeter" CGW2,SDS_Secondary
+  SG_ VehRideHeight_FL : 32|8@1+ (1,-127) [-127|128] "Milimeter" CGW2,SDS_Secondary
+  SG_ VehRideHeight_FR : 40|8@1+ (1,-127) [-127|128] "Milimeter" CGW2,SDS_Secondary
+
+BO_ 2147483978 ASS_Info: 8 ASS
+  SG_ StatusVehicleRideHeight : 15|2@1+ (1,0) [0|3] "NoUnit" CGW2,SDS_Secondary
+  SG_ ASSStsBoardDeboardHtAdj : 17|2@1+ (1,0) [0|3] "NoUnit" CGW2,SDS_Secondary
+  SG_ StatusServiceHeightAdjustment : 19|2@1+ (1,0) [0|3] "NoUnit" CGW2,SDS_Secondary
+
+BO_ 2147483979 SDS_CtrlSteeringWheel_Prim: 8 CGW2
+  SG_ SDS_CtrlSteeringWheel_Pri_CRC : 0|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ SDS_CtrlSteeringWheel_Pri_Cntr : 8|4@1+ (1,0) [0|15] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ CtrlSteeringPinionAngle_Pri : 16|15@1+ (0.009765,-14.5) [-14.5|17.5] "Radians" ECU2_ISCS,SDS_Secondary
+  SG_ Valid_CtrlSteeringPinionAng_Pri : 31|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ SteerRateReq_Pri : 32|12@1+ (1,-2048) [-2048|2046] "°/s" ECU2_ISCS
+
+BO_ 2147483981 SDS_CtrlSteeringWheel_Sec: 8 SDS_Secondary
+  SG_ SDS_CtrlSteeringWheel_Sec_CRC : 0|8@1+ (1,0) [0|255] "NoUnit" CGW2,ECU2_ISCS
+  SG_ SDS_CtrlSteeringWheel_Sec_Cntr : 8|4@1+ (1,0) [0|15] "NoUnit" CGW2,ECU2_ISCS
+  SG_ CtrlSteeringPinionAngle_Sec : 16|15@1+ (0.009765,-14.5) [-14.5|17.5] "Radians" CGW2,ECU2_ISCS
+  SG_ Valid_CtrlSteeringPinionAng_Sec : 31|1@1+ (1,0) [0|1] "NoUnit" CGW2,ECU2_ISCS
+  SG_ SteerRateReq_Sec : 32|12@1+ (1,-2048) [-2048|2046] "°/s" CGW2,ECU2_ISCS
+
+BO_ 2147483987 TCU_FuncReq2: 8 CGW2
+  SG_ StatusTelematicsConnectivity : 14|3@1+ (1,0) [0|7] "NoUnit" Vector__XXX
+
+BO_ 2147483989 SDS_Stability_Info_Prim: 8 CGW2
+  SG_ Stability_Info_Pri_Checksum : 0|8@1+ (1,0) [0|255] "NoUnit" SDS_Secondary
+  SG_ Stability_Info_Pri_AliveCounter : 8|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ GearchangeReqPri : 12|2@1+ (1,0) [0|3] "NoUnit" SDS_Secondary
+  SG_ AccelDecelReqPri : 16|8@1- (0.1,0) [-9|2] "m/s^2" SDS_Secondary
+  SG_ AccelDecelReqPriValidStat : 24|1@1+ (1,0) [0|1] "NoUnit" SDS_Secondary
+  SG_ VehStandStillReqPri : 25|2@1+ (1,0) [0|3] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ VehStandStillReqValidityPri : 27|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+
+BO_ 2147483990 SDS_Stability_Info_Sec: 8 SDS_Secondary
+  SG_ Stability_Info_Sec_Checksum : 0|8@1+ (1,0) [0|255] "NoUnit" CGW2,MK100
+  SG_ Stability_Info_Sec_AliveCounter : 8|4@1+ (1,0) [0|15] "NoUnit" CGW2,MK100
+  SG_ GearchangeReq_Sec : 12|2@1+ (1,0) [0|3] "NoUnit" CGW2
+  SG_ AccelDecelReqSec : 16|8@1- (0.1,0) [-9|2] "m/s^2" CGW2,MK100
+  SG_ AccelDecelReqSecValidStat : 24|1@1+ (1,0) [0|1] "NoUnit" CGW2,MK100
+  SG_ VehStandStillReqSec : 25|2@1+ (1,0) [0|3] "NoUnit" CGW2,ECU2_ISCS
+  SG_ VehStandStillReqValiditySec : 27|1@1+ (1,0) [0|1] "NoUnit" CGW2,ECU2_ISCS
+
+BO_ 2147484005 SDS_Status_Prim: 8 CGW2
+  SG_ SDSStatusCRC_Pri : 0|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS,MK100
+  SG_ SDSStatusCntr_Pri : 8|4@1+ (1,0) [0|15] "NoUnit" ECU2_ISCS,MK100
+  SG_ CurrentSDSModeStat_Pri : 40|4@1+ (1,0) [0|15] "NoUnit" ECU2_ISCS
+  SG_ MRMStatPri : 52|3@1+ (1,0) [0|7] "NoUnit" ECU2_ISCS,MK100
+
+BO_ 2147484006 SDS_Status_Sec: 8 SDS_Secondary
+  SG_ SDSStatusCRC_Sec : 0|8@1+ (1,0) [0|255] "NoUnit" CGW2,ECU2_ISCS,MK100
+  SG_ SDSStatusCntr_Sec : 8|4@1+ (1,0) [0|15] "NoUnit" CGW2,ECU2_ISCS,MK100
+  SG_ ParkingProcessStat_Sec : 17|3@1+ (1,0) [0|7] "NoUnit" CGW2
+  SG_ DestReachedStat_Sec : 22|2@1+ (1,0) [0|1] "NoUnit" CGW2
+  SG_ TeleOpReqStat_Sec : 30|2@1+ (1,0) [0|3] "NoUnit" CGW2
+  SG_ MissionProgressStat_Sec : 32|8@1+ (1,0) [0|15] "NoUnit" CGW2
+  SG_ CurrentSDSModeStat_Sec : 40|4@1+ (1,0) [0|15] "NoUnit" CGW2,ECU2_ISCS
+  SG_ LaneChangeStat_Sec : 48|4@1+ (1,0) [0|15] "NoUnit" CGW2
+  SG_ MRMStatSec : 52|3@1+ (1,0) [0|7] "NoUnit" CGW2,ECU2_ISCS,MK100
+
+BO_ 2147484010 MKC1_VehMvmntInfo: 8 MK100
+  SG_ VehMvmntInfoCRC : 0|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ VehMvmntInfoCntr : 8|4@1+ (1,0) [0|15] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ VehMvmntDirectnStat : 14|2@1+ (1,0) [0|3] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ VehSpeedCalcStat : 16|11@1+ (0.1,0) [0|100] "KPH" ASS,ECU2_ISCS,SDS_Secondary
+  SG_ VehStandStillStat : 27|2@1+ (1,0) [0|3] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ BlindStopStat : 29|2@1+ (1,0) [0|3] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ VehSpeedValidStat : 39|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ GradeSensStat : 40|14@1+ (0.02,-90) [-90|90] "deg" CGW2
+
+BO_ 2147484017 MKC1_BrakeInfo1: 8 MK100
+  SG_ BrkInfo1CRC : 0|8@1+ (1,0) [0|255] "NoUnit" ASS,SDS_Secondary
+  SG_ BrkInfo1Cntr : 8|4@1+ (1,0) [0|15] "NoUnit" ASS,SDS_Secondary
+  SG_ BrkPadWearWarnStatFA : 16|2@1+ (1,0) [0|3] "NoUnit" CGW2
+  SG_ BrkPadWearWarnStatRA : 18|2@1+ (1,0) [0|3] "NoUnit" CGW2
+  SG_ ParkBrakeRedLamp : 20|2@1+ (1,0) [0|3] "NoUnit" SDS_Secondary
+  SG_ PrimaryBrkSysStat : 24|3@1+ (1,0) [0|7] "NoUnit" ECU2_ISCS
+  SG_ PbcOutOfSpecMsg : 27|4@1+ (1,0) [0|15] "NoUnit" CGW2
+  SG_ PBCOutParkSupportReq : 31|1@1+ (1,0) [0|1] "NoUnit" CGW2
+  SG_ ParkBrakeStat : 32|3@1+ (1,0) [0|7] "NoUnit" ASS,SDS_Secondary
+  SG_ EscWarningLamp : 35|2@1+ (1,0) [0|3] "NoUnit" CGW2
+  SG_ ABSWarningLamp : 37|2@1+ (1,0) [0|3] "NoUnit" CGW2
+  SG_ ABrakeWarningLamp : 39|1@1+ (1,0) [0|1] "NoUnit" CGW2
+  SG_ BrakingWarningYellowLamp : 40|2@1+ (1,0) [0|3] "NoUnit" SDS_Secondary
+  SG_ BrakeWarningRedLamp : 42|1@1+ (1,0) [0|1] "NoUnit" CGW2
+  SG_ PbcOutFaultStatus : 43|3@1+ (1,0) [0|7] "NoUnit" CGW2
+  SG_ BrkFluidWarnStat : 46|2@1+ (1,0) [0|3] "NoUnit" CGW2
+
+BO_ 2147484018 MKC1_BrakeInfo2: 8 MK100
+  SG_ BrkInfo2CRC : 0|8@1+ (1,0) [0|255] "NoUnit" SDS_Secondary
+  SG_ BrkInfo2Cntr : 8|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ ABSStat : 12|3@1+ (1,0) [0|7] "NoUnit" SDS_Secondary
+  SG_ ESCStat : 18|3@1+ (1,0) [0|7] "NoUnit" SDS_Secondary
+  SG_ StbltyEventInProgStat : 21|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ TractionCtrlStat : 25|3@1+ (1,0) [0|7] "NoUnit" SDS_Secondary
+  SG_ SSMCurrBrkState : 28|3@1+ (1,0) [0|7] "NoUnit" SDS_Secondary
+  SG_ VirtualDrvrStatFdbckPBS : 31|3@1+ (1,0) [0|7] "NoUnit" SDS_Secondary
+  SG_ BrkDrvMdPBS : 34|2@1+ (1,0) [0|3] "NoUnit" SDS_Secondary
+  SG_ PrimaryBrkErrLvl : 37|3@1+ (1,0) [0|7] "NoUnit" SDS_Secondary
+  SG_ AccOverGndStat : 40|15@1- (0.005,0) [-81.9|81.915] "m/s^2" SDS_Secondary
+
+BO_ 2147484021 MKC1_TrqRedctnReq: 8 MK100
+  SG_ MKC1TrqRdctnReqCRC : 0|8@1+ (1,0) [0|255] "NoUnit" SDS_Secondary
+  SG_ MKC1TrqRdctnReqCntr : 8|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ StabilityTorqueDirection : 12|2@1+ (1,0) [0|3] "NoUnit" CGW2
+  SG_ OvrallBrkTrqAppldStat : 16|16@1+ (0.125,0) [0|8191.88] "Nm" SDS_Secondary
+  SG_ RegenTargetTorque : 32|16@1- (0.125,0) [-4096|4096] "Nm" CGW2
+  SG_ StabilityTargetTorque : 48|16@1- (0.125,0) [-4096|4096] "Nm" CGW2
+
+BO_ 2147484024 ISCS_Info_2: 8 ECU2_ISCS
+  SG_ ISCSBlindStop_2 : 0|2@1+ (1,0) [0|3] "NoUnit" CGW2,MK100,SDS_Secondary
+  SG_ ISCSComStatBrake_2 : 2|2@1+ (1,0) [0|3] "NoUnit" CGW2,SDS_Secondary
+  SG_ ISCSComStatSDS_2 : 4|2@1+ (1,0) [0|3] "NoUnit" CGW2,SDS_Secondary
+  SG_ ISCSStat_2 : 6|8@1+ (1,0) [0|15] "NoUnit" CGW2,MK100,SDS_Secondary
+
+BO_ 2147484027 MKC1_IMUInfo: 8 MK100
+  SG_ IMUInfoCRC : 0|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ IMUInfoCntr : 8|4@1+ (1,0) [0|15] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ LatAccFltValidStat : 12|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ YawRateFltValidStat : 13|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ LongAccFltValidStat : 14|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ LatAccFlt : 16|16@1+ (0.002,-65.532) [-65.532|65.538] "m/s^2" SDS_Secondary
+  SG_ YawRateFlt : 32|16@1+ (0.005,-163.83) [-163.83|163.845] "°/s" ECU2_ISCS,SDS_Secondary
+  SG_ LongAccFlt : 48|16@1+ (0.002,-65.532) [-65.532|65.538] "m/s^2" ECU2_ISCS,SDS_Secondary
+
+BO_ 2147484048 MKC1_ManualBrakeInfo: 8 MK100
+  SG_ MKC1ManBrkInfoCRC : 0|8@1+ (1,0) [0|255] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ MKC1ManBrkInfoCntr : 8|4@1+ (1,0) [0|15] "NoUnit" ECU2_ISCS,SDS_Secondary
+  SG_ ManualBrakeInterventionStatus : 12|1@1+ (1,0) [0|1] "NoUnit" ECU2_ISCS,SDS_Secondary
+
+BO_ 2147484182 ISCS_SteerWhl_Info: 8 CGW2
+  SG_ CurrSteerRateCRC : 0|8@1+ (1,0) [0|255] "NoUnit" SDS_Secondary
+  SG_ CurrSteerRateCntr : 8|4@1+ (1,0) [0|15] "NoUnit" SDS_Secondary
+  SG_ CurrSteerRate : 16|12@1+ (1,-2048) [-2048|2046] "°/s" SDS_Secondary
+  SG_ ManSteerIntervntnStat : 37|1@1+ (1,0) [0|1] "NoUnit" SDS_Secondary
+  SG_ CurrSteerRateValidity : 38|1@1+ (1,0) [0|1] "NoUnit" SDS_Secondary
+
+BO_ 2147484183 ISCS_SteerWhl_Info_2: 8 ECU2_ISCS
+  SG_ CurrSteerRateCRC_2 : 0|8@1+ (1,0) [0|255] "NoUnit" CGW2,MK100,SDS_Secondary
+  SG_ CurrSteerRateCntr_2 : 8|4@1+ (1,0) [0|15] "NoUnit" CGW2,MK100,SDS_Secondary
+  SG_ CurrSteerRate_2 : 16|12@1+ (1,-2048) [-2048|2046] "°/s" CGW2,MK100,SDS_Secondary
+  SG_ ManSteerIntervntnStat_2 : 37|1@1+ (1,0) [0|1] "NoUnit" CGW2,SDS_Secondary
+  SG_ CurrSteerRateValidity_2 : 38|1@1+ (1,0) [0|1] "NoUnit" CGW2,MK100,SDS_Secondary
+
+BO_ 2147484184 ISCS_SteeringError_Stat_2: 8 ECU2_ISCS
+  SG_ ISCSErrLvlCRC_2 : 0|8@1+ (1,0) [0|255] "NoUnit" CGW2,MK100,SDS_Secondary
+  SG_ ISCSErrLvlCntr_2 : 8|4@1+ (1,0) [0|15] "NoUnit" CGW2,MK100,SDS_Secondary
+  SG_ ISCSErrLvl_2 : 16|3@1+ (1,0) [0|7] "NoUnit" CGW2,MK100,SDS_Secondary
+
+BO_ 2147484185 ISCS_SteeringError_Stat: 8 CGW2
+  SG_ ISCSErrLvlCRC : 0|8@1+ (1,0) [0|255] "NoUnit" MK100
+  SG_ ISCSErrLvlCntr : 8|4@1+ (1,0) [0|15] "NoUnit" MK100,SDS_Secondary
+  SG_ ISCSErrLvl : 16|3@1+ (1,0) [0|7] "NoUnit" MK100,SDS_Secondary
+
+BO_ 2147484193 MKC1_BrakeLightReq: 8 MK100
+  SG_ MKC1BrkLghtReqCRC : 0|8@1+ (1,0) [0|255] "NoUnit" CGW2
+  SG_ MKC1BrkLghtReqCntr : 8|4@1+ (1,0) [0|15] "NoUnit" CGW2
+  SG_ BrkLghtActReq : 12|3@1+ (1,0) [0|7] "NoUnit" SDS_Secondary
+
+BO_ 2147484241 TCU_AltPositionReq: 8 CGW2
+  SG_ AltPosSTD : 0|32@1+ (4.294979169351029E8,-0) [0|10] "NoUnit" Vector__XXX
+  SG_ Altitude : 32|32@1+ (671091.3959372127,-0) [-400|6000] "NoUnit" Vector__XXX
+
+BO_ 2147484242 TCU_LatPositionReq: 8 CGW2
+  SG_ Latitude : 0|32@1+ (4.7721990770566985E7,-0) [0|90] "NoUnit" Vector__XXX
+  SG_ LatPosSTD : 32|32@1+ (4.294979169351029E8,-0) [0|10] "NoUnit" Vector__XXX
+
+BO_ 2147484243 TCU_LongPositionReq: 8 CGW2
+  SG_ Longitude : 0|32@1+ (1,-4.19095E-8) [0|180] "NoUnit" Vector__XXX
+  SG_ LongPosSTD : 32|32@1+ (4.294979169351029E8,-0) [0|10] "NoUnit" Vector__XXX
+
+BO_ 2147484244 TCU_PositionReq1: 8 CGW2
+  SG_ PosSec : 0|32@1+ (1,-0) [0|4294967295] "NoUnit" Vector__XXX
+  SG_ PosSecFraction : 32|16@1+ (65573.77049180328,-0) [0|65535] "NoUnit" Vector__XXX
+
+BO_ 2147484245 TCU_PositionReq2: 8 CGW2
+  SG_ Course : 0|32@1+ (1.1930469225354632E7,-0) [0|360] "NoUnit" Vector__XXX
+  SG_ SpeedOvrGnd : 32|32@1+ (1.160802485974604E8,-0) [0|37] "NoUnit" Vector__XXX
+
+BO_ 2147484246 TCU_PositionReq3: 8 CGW2
+  SG_ FixTypeDeadReckng : 0|1@1+ (1,0) [0|1] "NoUnit" Vector__XXX
+  SG_ FixTypeEstmtd : 1|1@1+ (1,0) [0|1] "NoUnit" Vector__XXX
+  SG_ FixTypeMultiBand : 2|1@1+ (1,0) [0|1] "NoUnit" Vector__XXX
+  SG_ FixTypeMultiConstltn : 3|1@1+ (1,0) [0|1] "NoUnit" Vector__XXX
+  SG_ FixTypePrpgtd : 4|1@1+ (1,0) [0|1] "NoUnit" Vector__XXX
+  SG_ FixTypeSBAS : 5|1@1+ (1,0) [0|1] "NoUnit" Vector__XXX
+  SG_ FixTypeSingleBand : 6|1@1+ (1,0) [0|1] "NoUnit" Vector__XXX
+  SG_ LatDirectn : 7|1@1+ (1,0) [0|1] "NoUnit" Vector__XXX
+  SG_ LongDirectn : 8|1@1+ (1,0) [0|1] "NoUnit" Vector__XXX
+
+BO_ 2147484247 TCU_Status: 8 CGW2
+  SG_ TCUActvCellularGen : 0|3@1+ (1,0) [0|7] "NoUnit" Vector__XXX
+
+BO_ 2147484442 IPC_Req: 8 CGW2
+  SG_ ManHtAdjstmntReq : 4|3@1+ (1,0) [0|3] "NoUnit" ASS
+
+BO_ 2147484448 ASS_Error_Info: 8 ASS
+  SG_ AirSpringErrLvl : 0|3@1+ (1,0) [0|7] "NoUnit" CGW2,SDS_Secondary
+
+BO_ 2147484700 VCU_VehicleTravel1Info: 8 CGW2
+  SG_ StatusTotalDistTravelledInd : 20|20@1+ (1,0) [0|1048575] "Km" ASS,ECU2_ISCS,MK100
+
+BO_ 2147484752 VehTi: 8 CGW2
+  SG_ Year : 0|12@1+ (1,0) [0|4095] "year" ASS,ECU2_ISCS,MK100
+  SG_ Month : 12|4@1+ (1,0) [1|12] "months" ASS,ECU2_ISCS,MK100
+  SG_ Day : 16|6@1+ (1,0) [0|63] "Days" ASS,ECU2_ISCS,MK100
+  SG_ Hour : 22|5@1+ (1,0) [0|24] "hours" ASS,ECU2_ISCS,MK100
+  SG_ Minu : 27|6@1+ (1,0) [0|59] "mins" ASS,ECU2_ISCS,MK100
+  SG_ Sec : 33|6@1+ (1,0) [0|60] "sec" ASS,ECU2_ISCS,MK100
+  SG_ miliseconds : 39|10@1+ (1,0) [0|1000] "ms" ASS,ECU2_ISCS,MK100
+
+BO_ 2147485190 TM_Status_0: 8 CGW2
+  SG_ StatusAmbientAirTemp : 8|8@1+ (1,-40) [-40|210] "°C" ASS,ECU2_ISCS,MK100
+
+BO_ 2147485442 BatSox: 8 CGW2
+  SG_ Soc : 0|10@1+ (0.125,0) [0|100] "%" ASS,ECU2_ISCS,MK100
+
+BO_ 2147486417 MKC1_SecOcDataPDU: 8 MK100
+  SG_ MKC1SecOcNPDU : 0|64@1+ (1,0) [0|0] "" ECU2_ISCS,SDS_Secondary
+
+BO_ 2563778289 ISCS2_DiagClient_CFM: 8 ECU2_ISCS
+  SG_ ISCS2DiagClientFaultCode : 0|24@1+ (1,0) [0|16777215] "NoUnit" CGW2
+  SG_ ISCS2DiagClientFaultEventHour : 24|5@1+ (1,0) [0|24] "hours" CGW2
+  SG_ ISCS2DiagClientFaultEventMinutes : 29|6@1+ (1,0) [0|59] "mins" CGW2
+  SG_ ISCS2DiagClientFaultEventSeconds : 35|6@1+ (1,0) [0|60] "sec" CGW2
+  SG_ ISCS2DiagClientFaultEventMS : 41|10@1+ (1,0) [0|1000] "ms" CGW2
+  SG_ ISCS2DiagClientSeverityLevel : 51|2@1+ (1,0) [0|3] "NoUnit" CGW2
+  SG_ ISCS2DiagClientActiveStatus : 53|1@1+ (1,0) [0|1] "NoUnit" CGW2
+
+BO_ 2564432369 DIAG_REQ_MK100: 8 CGW2
+  SG_ DiagReq_MK100 : 0|64@1+ (1,0) [0|0] "" MK100
+
+BO_ 2564433649 DIAG_REQ_ISCS_2: 8 CGW2
+  SG_ DiagReq_ISCS2 : 0|64@1+ (1,0) [0|0] "" ECU2_ISCS
+
+BO_ 2564434673 DIAG_REQ_ASS: 8 CGW2
+  SG_ DiagReq_ASS : 0|64@1+ (1,0) [0|0] "" ASS
+
+BO_ 2564485409 DIAG_RESP_MK100: 8 MK100
+  SG_ DiagResp_MK100 : 0|64@1+ (1,0) [0|0] "" CGW2
+
+BO_ 2564485414 DIAG_RESP_ISCS_2: 8 ECU2_ISCS
+  SG_ DiagResp_ISCS2 : 0|64@1+ (1,0) [0|0] "" CGW2
+
+BO_ 2564485418 DIAG_RESP_ASS: 8 ASS
+  SG_ DiagResp_ASS : 0|64@1+ (1,0) [0|0] "" CGW2
+
+BO_ 2564554481 DIAG_REQ_FUNCTIONAL: 8 CGW2
+  SG_ DiagReq_Functional : 0|64@1+ (1,0) [0|0] "NoUnit" ASS,ECU2_ISCS,MK100
+
+BO_ 2564903264 ASS_CTO: 8 CGW2
+  SG_ ASS_CTO : 0|64@1+ (1,0) [0|0] "" ASS
+
+BO_ 2564903265 ASS_DTO: 8 ASS
+  SG_ ASS_DTO : 0|64@1+ (1,0) [0|0] "" CGW2
+
+BO_ 2654486561 NM_MK100: 8 MK100
+  SG_ SourceNodeIdentifier : 0|8@1+ (1,0) [0|255] "NoUnit" CGW2
+
+BO_ 2654486624 NM_CGW: 8 CGW2
+  SG_ SourceNodeIdentifier : 0|8@1+ (1,0) [0|255] "NoUnit" MK100
+
+
+CM_ BU_ ASS "AirSupplySystem Electronic Control Unit (ASS ECU) shall enable the functionalities such as ride height maintenance of vehicle to comply with ground clearance, kneeling in order to support the passengers in their boarding and deboarding process and intended service height adjustment. ASS ECU shall inflate/deflate the airspring by allowing the distribution of pressure between reservoir and airsprings with respect to the ride height sensors value to achieve desired vehicle height. It shall also perform reservoir pressure refilling operation and vehicle load calculation. It is also responsible for diagnosis any failure in airsuspension system and publish DTC."; 
+CM_ BU_ ECU1_ISCS "Primary Internal Board of the ISCS ECU. This shall be connected to Chassis CAN1 and Chassis CAN2 in the HPM Network"; 
+CM_ BU_ MK100 "The Electrical Brake Booster will be the main component for building up and maintaining the hydraulic pressure of the vehicle´s brake system and for the distribution of hydraulic brake pressure to all wheels."; 
+CM_ BO_ 2147483956 "Battery voltage measurements of single pack system"; 
+CM_ BO_ 2147484752 "Vehicle time"; 
+CM_ BO_ 2147485442 "SoC, SoH and energy"; 
+CM_ SG_ 160 MCUSts "This signal is used to provide the MCU state machine status "; 
+CM_ SG_ 1821 YAW_RATE "This signal contains the physical value of the Yaw rate with 0.005°/s LSB. Table contains some hexadecimal values with special meaning (e.g. initialization). The Yaw rate signal can have values from -163.830°/s (0x0000) to +163.830°/s (0xFFFC). The 0°/s value is assigned to (0x7FFE). 
+YawRate [°/s] = (HexValue – 0x7FFE)?0.005 [°/s/digit] 
+
+Hexadecimal 
+value Name Description 0x0000 
+… 
+0xFFFC - No sensor error, and no critical internal SC failure is detected. The corresponding physical signal value is the measured sensor value. 0xFFFD NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. The corresponding qualifier signal value is NOT AVAILABLE. 0xFFFE INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detects critical internal failure. The corresponding qualifier signal value is INVALID. 0xFFFF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+"; 
+CM_ SG_ 1821 YAW_RATE_QUAL "This signal contains the qualifier of the Yaw rate. 
+
+exadecimal 
+value Name Description 0x2 VALID A valid sensor signal can be determined. The Sensor signal is within the specification. No sensor error was detected. The corresponding physical signal value is the measured sensor value. 0x4 SUBSITUTE A sensor signal can be detected. There is no sensor error. Sensor signal is outside of the specified range of values („sensor end stop'). The corresponding physical signal value is the measured sensor value. 0x6 INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detect critical internal failure. The corresponding physical signal value is INVALID value. 0xE NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. 0xF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+
+"; 
+CM_ SG_ 1821 LAT_ACC_QUAL "This signal contains the qualifier of the Lateral acceleration. 
+
+exadecimal 
+value Name Description 0x2 VALID A valid sensor signal can be determined. The Sensor signal is within the specification. No sensor error was detected. The corresponding physical signal value is the measured sensor value. 0x4 SUBSITUTE A sensor signal can be detected. There is no sensor error. Sensor signal is outside of the specified range of values („sensor end stop'). The corresponding physical signal value is the measured sensor value. 0x6 INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detect critical internal failure. The corresponding physical signal value is INVALID value. 0xE NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. 0xF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+
+"; 
+CM_ SG_ 1821 LAT_ACC "This signal contains the physical value of the Lateral acceleration with 0.002m/s2 LSB. Table contains the hexadecimal values with special meanings (e.g., initialization). The Lateral acceleration signal can have values from -65.532m/s2 (0x0000) to +65.532m/s2 (0xFFFC). The 0m/s2 value is assigned to (0x7FFE). 
+LatAcc [m/s2] = (HexValue – 0x7FFE)?0.002 [m/s2/digit] 
+
+Temporary Note : (Valid for only SW3.01) the Lateral acceleration provided shall be inverted before use by the receiver.
+
+Hexadecimal 
+value Name Description 0x0000 
+… 
+0xFFFC - No sensor error, and no critical internal SC failure is detected. The corresponding physical signal value is the measured sensor value. 0xFFFD NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. The corresponding qualifier signal value is NOT AVAILABLE. 0xFFFE INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detects critical internal failure. The corresponding qualifier signal value is INVALID. 0xFFFF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+"; 
+CM_ SG_ 1821 TEMPERATURE "This signal contains the physical value of the Temperature with 1°C LSB. Table contains hexadecimal values with special meaning (e.g., initialization). The TEMPERATURE signal has no separate qualifier signal. 
+
+Hexadecimal 
+value Name Description 0x0000 
+… 
+0xFFFC - No sensor error, and no critical internal SC failure is detected. The corresponding physical signal value is the measured sensor value. 0xFFFD NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. The corresponding qualifier signal value is NOT AVAILABLE. 0xFFFE INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detects critical internal failure. The corresponding qualifier signal value is INVALID. 0xFFFF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+
+
+
+"; 
+CM_ SG_ 1821 SC_STATUS "This signal contains the state information for the SC. Each state has different priority; therefore the SC can have only one state at the same time. 
+
+Hexadecimal 
+value Name Description 0x0 NO_MISTAKE There is no failure. 0x2 UNDERVOLTAGE The SC determines low supply voltage. Under voltage condition and exceeded maturation time. 0x3 OVERVOLTAGE The SC determines high supply voltage. Over voltage condition and exceeded maturation time. 0xD FUNC_NOT_AVAILABLE Function Interface is not available: Communication Interface is working, values are not available 0xE FUNC_ERROR Any failure, except under- and over voltage. 0xF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+
+"; 
+CM_ SG_ 1821 ALIV_CLU_ID1 "This signal is the message counter. At one communication cycle the values of the CLU_ID1, CLU_ID2, CLU_ID3 messages counters are the same. 
+If the SYNC_CLU message is received by the SC, then the SC repeats this MESS_COUNT_CLU value at ALIV_CLU_ID1. Otherwise, the previous value of the counter is increased by one. "; 
+CM_ SG_ 1821 CHKSUM_CLU_ID1 "CRC as defined in SAEJ1850 standard. 
+This signal uses the application CRC ID 61 (dec) = 3D (hex). This signal contains the CRC checksum for the extended standard protection with application CRC according to application profile 1A E2E-Protection (Autosar SWS 428), with deviating placement of the CRC in Byte 7 (M10 procedure), with 0xFF as CRC initial and XOR values (as defined in SAEJ1850 standard) and with DataIDMode set to E2E_P01_DATAID_LOW. "; 
+CM_ SG_ 1822 ROLL_RATE "This signal contains the physical value of the Roll rate with 0.005°/s LSB. Table contains some hexadecimal values with special meaning (e.g. initialization). The Roll rate signal can have values from -163.830°/s (0x0000) to +163.830°/s (0xFFFC). The 0°/s value is assigned to (0x7FFE). 
+RollRate [°/s] = (HexValue – 0x7FFE)?0.005 [°/s/digit] 
+
+Temporary Note : (Valid for only SW3.01) the roll rate provided shall be inverted before use by the receiver.
+
+Hexadecimal 
+value Name Description 0x0000 
+… 
+0xFFFC - No sensor error, and no critical internal SC failure is detected. The corresponding physical signal value is the measured sensor value. 0xFFFD NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. The corresponding qualifier signal value is NOT AVAILABLE. 0xFFFE INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detects critical internal failure. The corresponding qualifier signal value is INVALID. 0xFFFF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+"; 
+CM_ SG_ 1822 ROLL_RATE_QUAL "This signal contains the qualifier of the Roll rate. 
+
+exadecimal 
+value Name Description 0x2 VALID A valid sensor signal can be determined. The Sensor signal is within the specification. No sensor error was detected. The corresponding physical signal value is the measured sensor value. 0x4 SUBSITUTE A sensor signal can be detected. There is no sensor error. Sensor signal is outside of the specified range of values („sensor end stop'). The corresponding physical signal value is the measured sensor value. 0x6 INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detect critical internal failure. The corresponding physical signal value is INVALID value. 0xE NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. 0xF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+
+"; 
+CM_ SG_ 1822 LONG_ACC_QUAL "This signal contains the qualifier of the Longitudinal acceleration.
+
+exadecimal 
+value Name Description 0x2 VALID A valid sensor signal can be determined. The Sensor signal is within the specification. No sensor error was detected. The corresponding physical signal value is the measured sensor value. 0x4 SUBSITUTE A sensor signal can be detected. There is no sensor error. Sensor signal is outside of the specified range of values („sensor end stop'). The corresponding physical signal value is the measured sensor value. 0x6 INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detect critical internal failure. The corresponding physical signal value is INVALID value. 0xE NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. 0xF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+
+"; 
+CM_ SG_ 1822 LONG_ACC "This signal contains the physical value of the Longitudinal acceleration with 0.002m/s2 LSB. Table  contains the hexadecimal values with special meaning (e.g., initialization). The Longitudinal acceleration signal can have values from -65.532m/s2 (0x0000) to +65.532m/s2 (0xFFFC). The 0m/s2 value is assigned to (0x7FFE). 
+LongAcc [m/s2] = (HexValue – 0x7FFE)?0.002 [m/s2/digit] 
+
+Temporary Note : (Valid for only SW3.01) the Logitudinal acceleration provided shall be inverted before use by the receiver.
+
+Hexadecimal 
+value Name Description 0x0000 
+… 
+0xFFFC - No sensor error, and no critical internal SC failure is detected. The corresponding physical signal value is the measured sensor value. 0xFFFD NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. The corresponding qualifier signal value is NOT AVAILABLE. 0xFFFE INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detects critical internal failure. The corresponding qualifier signal value is INVALID. 0xFFFF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+"; 
+CM_ SG_ 1822 ALIV_CLU_ID2 "This signal is the message counter. At one communication cycle the values of the CLU_ID1, CLU_ID2, CLU_ID3 messages counters are the same. 
+If the SYNC_CLU message is received by the SC, then the SC repeats this MESS_COUNT_CLU value at ALIV_CLU_ID2. Otherwise, the previous value of the counter is increased by one. "; 
+CM_ SG_ 1822 CHKSUM_CLU_ID2 "CRC as defined in SAEJ1850 standard. 
+This signal uses the application CRC ID 70 (dec) = 46 (hex). This signal contains the CRC checksum for the extended standard protection with application CRC according to application profile 1A E2E-Protection (Autosar SWS 428), with deviating placement of the CRC in Byte 7 (M10 procedure) , with 0xFF as CRC initial and XOR values (as defined in SAEJ1850 standard) and with DataIDMode set to E2E_P01_DATAID_LOW. "; 
+CM_ SG_ 1823 PITCH_RATE "This signal contains the physical value of the Pitch rate with 0.005°/s LSB. Table  contains some hexadecimal values with special meaning (e.g. initialization). The Yaw rate signal can have values from -163.830°/s (0x0000) to +163.830°/s (0xFFFC). The 0°/s value is assigned to (0x7FFE). 
+PitchRate [°/s] = (HexValue – 0x7FFE)?0.005 [°/s/digit] 
+
+Temporary Note : (Valid for only SW3.01) the pitch rate provided shall be inverted before use by the receiver.
+
+Hexadecimal 
+value Name Description 0x0000 
+… 
+0xFFFC - No sensor error, and no critical internal SC failure is detected. The corresponding physical signal value is the measured sensor value. 0xFFFD NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. The corresponding qualifier signal value is NOT AVAILABLE. 0xFFFE INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detects critical internal failure. The corresponding qualifier signal value is INVALID. 0xFFFF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+"; 
+CM_ SG_ 1823 PITCH_RATE_QUAL "This signal contains the qualifier of the Pitch rate. 
+
+exadecimal 
+value Name Description 0x2 VALID A valid sensor signal can be determined. The Sensor signal is within the specification. No sensor error was detected. The corresponding physical signal value is the measured sensor value. 0x4 SUBSITUTE A sensor signal can be detected. There is no sensor error. Sensor signal is outside of the specified range of values („sensor end stop'). The corresponding physical signal value is the measured sensor value. 0x6 INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detect critical internal failure. The corresponding physical signal value is INVALID value. 0xE NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. 0xF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+
+"; 
+CM_ SG_ 1823 VERT_ACC_QUAL "This signal contains the qualifier of the Vertical acceleration. 
+
+exadecimal 
+value Name Description 0x2 VALID A valid sensor signal can be determined. The Sensor signal is within the specification. No sensor error was detected. The corresponding physical signal value is the measured sensor value. 0x4 SUBSITUTE A sensor signal can be detected. There is no sensor error. Sensor signal is outside of the specified range of values („sensor end stop'). The corresponding physical signal value is the measured sensor value. 0x6 INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detect critical internal failure. The corresponding physical signal value is INVALID value. 0xE NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. 0xF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+
+"; 
+CM_ SG_ 1823 VERT_ACC "This signal contains the physical value of the Vertical acceleration with 0.002m/s2 LSB. Table contains the hexadecimal values with special meaning (e.g. initialization). The Vertical acceleration signal can have values from -65.532m/s2 (0x0000) to +65.532m/s2 (0xFFFC). The 0m/s2 value is assigned to (0x7FFE). 
+VertAcc [m/s2] = (HexValue – 0x7FFE)?0.002 [m/s2/digit] 
+
+Hexadecimal 
+value Name Description 0x0000 
+… 
+0xFFFC - No sensor error, and no critical internal SC failure is detected. The corresponding physical signal value is the measured sensor value. 0xFFFD NOT AVAILABLE The sensor which measures the signal is not available or the sensor signal is in initialization phase. The corresponding qualifier signal value is NOT AVAILABLE. 0xFFFE INVALID No valid sensor signal can be determined (e.g. electrical monitoring indicates error), or the SC detects critical internal failure. The corresponding qualifier signal value is INVALID. 0xFFFF UNFILLED Used as pre-filling of the send buffer in the communication controller. 
+"; 
+CM_ SG_ 1823 ALIV_CLU_ID3 "This signal is the message counter. At one communication cycle the values of the CLU_ID1, CLU_ID2, CLU_ID3 messages counters are the same. 
+If the SYNC_CLU message is received by the SC, then the SC repeats this MESS_COUNT_CLU value at ALIV_CLU_ID3. Otherwise, the previous value of the counter is increased by one. "; 
+CM_ SG_ 1823 CHKSUM_CLU_ID3 "CRC as defined in SAEJ1850 standard. 
+This signal uses the application CRC ID 86 (dec) = 56 (hex). This signal contains the CRC checksum for the extended standard protection with application CRC according to application profile 1A E2E-Protection (Autosar SWS 428), with deviating placement of the CRC in Byte 7 (M10 procedure), with 0xFF as CRC initial and XOR values (as defined in SAEJ1850 standard) and with DataIDMode set to E2E_P01_DATAID_LOW. "; 
+CM_ SG_ 2147483917 MKC1FrntWhlSpdCRC "This signal is a CRC for the MKC1_FrntWhlSpd_Info Frame"; 
+CM_ SG_ 2147483917 MKC1FrntWhlSpdCntr "This signal is a Counter for the MKC1_FrntWhlSpd_Info Frame"; 
+CM_ SG_ 2147483917 CurrWheelSpeedFRStat "This signal indicates the longitudinal Front right wheel speed in kph"; 
+CM_ SG_ 2147483917 WheelSpeedFLValidStat "This signal indicates the reliability of Front Left Wheel Speed signal
+
+Value 0x0 – Invalid : Wheel speed is not reliable
+Value 0x1 – Valid : Wheel speed is reliable
+"; 
+CM_ SG_ 2147483917 WheelSpeedFRValidStat "This signal indicates the reliability of Front Right Wheel Speed signal
+
+Value 0x0 – Invalid : Wheel speed is not reliable
+Value 0x1 – Valid : Wheel speed is reliable
+"; 
+CM_ SG_ 2147483917 CurrWheelSpeedFLStat "This signal indicates the longitudinal Front left wheel speed in kph"; 
+CM_ SG_ 2147483918 MKC1RrWhlSpdCRC "This signal is a CRC for the MKC1_RrWhlSpd_Info Frame"; 
+CM_ SG_ 2147483918 MKC1RrWhlSpdCntr "This signal is a Counter for the MKC1_RrWhlSpd_Info Frame"; 
+CM_ SG_ 2147483918 CurrWheelSpeedRRStat "This signal indicates the longitudinal Rear Right wheel speed in kph"; 
+CM_ SG_ 2147483918 WheelSpeedRLValidStat "This signal indicates the reliability of Rear Left Wheel Speed signal
+
+Value 0x0 – Invalid : Wheel speed is not reliable
+Value 0x1 – Valid : Wheel speed is reliable
+"; 
+CM_ SG_ 2147483918 WheelSpeedRRValidStat "This signal indicates the reliability of Rear Right Wheel Speed signal
+
+Value 0x0 – Invalid : Wheel speed is not reliable
+Value 0x1 – Valid : Wheel speed is reliable
+"; 
+CM_ SG_ 2147483918 CurrWheelSpeedRLStat "This signal indicates the longitudinal Rear left wheel speed in kph"; 
+CM_ SG_ 2147483930 VCUVSMInfoCRC "This signal is to provide Checksum value "; 
+CM_ SG_ 2147483930 VCUVSMInfoCntr "This signal is to provide counter value "; 
+CM_ SG_ 2147483930 VSMStatus "VSM Status"; 
+CM_ SG_ 2147483931 CurrVehicleLoad "Provides the value of current vehicle load ."; 
+CM_ SG_ 2147483931 MaxLoadWarning "Provides the warning signal to telltale if the vehicle load reaches maximum threshold "; 
+CM_ SG_ 2147483931 StatusVehicleLoadForDrv "Provides the Status of vehicle load is Ok to Drive or not "; 
+CM_ SG_ 2147483934 TruncatedFreshnessVal_ManStrInfo "SecOC Freshness Value signal"; 
+CM_ SG_ 2147483934 TruncatedMAC_ManualSteeringInfo "SecOC Authentication signal"; 
+CM_ SG_ 2147483942 StandstillReqValidStat_VCU "Validity status of Standstill Request"; 
+CM_ SG_ 2147483942 DeadManButtonPressedStat "Dead Man Button Pressed Status"; 
+CM_ SG_ 2147483942 StandstillReq_VCU "Standstill request in Manual Mode"; 
+CM_ SG_ 2147483943 VCUManOpInfoSecCRC "This signal is to provide Checksum value "; 
+CM_ SG_ 2147483943 VCUManOpInfoSecCntr "This signal is to provide counter value "; 
+CM_ SG_ 2147483943 AccelDecelReqSecValidStat_JS_VCU "Validity flag for Acceleration Decceleration Command in Manual Mode ( Secondary CAN )"; 
+CM_ SG_ 2147483943 AccelDecelReqSec_JS_VCU "Acceleration Decceleration Command in Manual Mode  ( Secondary CAN)"; 
+CM_ SG_ 2147483946 StatusGear "Status Current Gear"; 
+CM_ SG_ 2147483956 UBat "Battery voltage (independent of contactor status)"; 
+CM_ SG_ 2147483962 LVBatt1SoC "This signal informs the LV battery 1 State Of Charge"; 
+CM_ SG_ 2147483962 LVBatt1Vtg "This signals informs the LV battery 1 voltage."; 
+CM_ SG_ 2147483965 SecBrkInfoCRC "This signal is a CRC for the “MK100_SecBrkInfo” Frame"; 
+CM_ SG_ 2147483965 SecBrkInfoCntr "This signal is a counter for the “MK100_SecBrkInfo” Frame"; 
+CM_ SG_ 2147483965 SecBrkSysStat "This signal provides the status of Secondary Brake system
+
+Value 0x0 – HAD System normal : SBS working normally
+Value 0x1 – HAD System Braking : Braking event is ongoing
+Value 0x2 – HAD System Normal Reduced 
+Value 0x3 - HAD System Co-operative
+Value 0x4 - HAD System Primary only
+Value 0x5 - HAD System Secondary only
+Value 0x6 - HAD System Degraded"; 
+CM_ SG_ 2147483965 BrkDrvMdSBS "This signal indicates the current active mode as per Secondary Brake System
+
+Value 0x0 – Not Available : Status unknown
+Value 0x1 – Brake Mode Autonomous : Secondary Brake is in Autonomous mode and executing Virtual Driver commands
+Value 0x2 – Brake Mode Manua : Secondary Brake is in Manual mode and executing Manual Driver commands"; 
+CM_ SG_ 2147483965 SecBrkErrLvl "This signal provides the Error level of Secondary Brake system
+
+Value 0x0 – No Fault : No fault in SBS
+Value 0x1 – Error Level 1 : Level 1 error in system
+Value 0x2 - Error Level 2 : Level 2 error in system
+Value 0x3 - Error Level 3 : Level 3 error in system
+Value 0x4 - Error Level 4 : Level 4 error in system"; 
+CM_ SG_ 2147483965 VirtualDrvrStatFdbckSBS "This signal indicates the status from the perspective of Secondary Brake system (based on the signal availabiities and errors recognized)
+
+Value 0x0 – Virtual Driver disabled : Both Primary & Secondary Virtual driver are unavailable
+Value 0x1 – Virtual Driver normal : Both Primary & Secondary Virtual driver available
+Value 0x2 – Virtual Driver Prim only : Only Primary virtual driver available
+Value 0x3 – Virtual Driver Sec only : Only Secondary virtual driver available
+Value 0x4 – Manual Driver normal : Both Primary & Secondary Manual driver available
+Value 0x5 – Manual Driver Prim only : Only Primary Manual driver available
+Value 0x6– Manual Driver Sec only : Only Secondary Manual driver available
+Value 0x7 - Reserved"; 
+CM_ SG_ 2147483966 MK100FrntWhlSpdCRC "This signal is a CRC for the “MK100_FrntWhlSpd_Info” Frame"; 
+CM_ SG_ 2147483966 MK100FrntWhlSpdCntr "This signal is a counter for the “MK100_FrntWhlSpd_Info” Frame"; 
+CM_ SG_ 2147483966 WheelSpeedFLValidStat2 "This signal indicates the reliability of Front Left Wheel Speed signal
+
+Value 0x0 – Invalid : Wheel speed is not reliable
+Value 0x1 – Valid : Wheel speed is reliable
+"; 
+CM_ SG_ 2147483966 WheelSpeedFRValidStat2 "This signal indicates the reliability of Front Right Wheel Speed signal
+
+Value 0x0 – Invalid : Wheel speed is not reliable
+Value 0x1 – Valid : Wheel speed is reliable
+"; 
+CM_ SG_ 2147483966 CurrWheelSpeedFLStat2 "This signal indicates the longitudinal Front left wheel speed in kph"; 
+CM_ SG_ 2147483966 CurrWheelSpeedFRStat2 "This signal indicates the longitudinal Front right wheel speed in kph"; 
+CM_ SG_ 2147483967 LV_Ldshd "Signal provides the Load shed level "; 
+CM_ SG_ 2147483978 StatusVehicleRideHeight "Provides the Status of Vehicle Height is Achieved or not."; 
+CM_ SG_ 2147483978 ASSStsBoardDeboardHtAdj "Provides the Status of vehicle is kneeled/ lowered or not."; 
+CM_ SG_ 2147483978 StatusServiceHeightAdjustment "Provides the Status of service Height during manual height adjustment."; 
+CM_ SG_ 2147483989 AccelDecelReqPri "Primary Acceleration and Decelertion Request (in m/s²) for Autonmous Driving. The Brake shall react on Deceleration Request (< 0m/s²) and VCU on Acceleration request (=< 0 m/s²). Arbitration shall be implemented on the actuator, in order to always give priority to Primary PDU when it is available, and switch to the Secondary PDU only when the Primary is missing or faulty."; 
+CM_ SG_ 2147483989 AccelDecelReqPriValidStat "Provides information if primary Acceleration Deceleration Request is valid"; 
+CM_ SG_ 2147483989 VehStandStillReqPri "Signal is used to indicate that SDS wants to reach vehicle standstill. Brake shall continue decelerating vehicle until standstill is reached and hold the vehicle. Furthermore, the Signal is used to indicate that SDS wants to drive off after vehicle standstill. "; 
+CM_ SG_ 2147483989 VehStandStillReqValidityPri "Provides information if Standstill Request is valid"; 
+CM_ SG_ 2147483990 GearchangeReq_Sec "Request for Gear change"; 
+CM_ SG_ 2147483990 AccelDecelReqSec "Secondary Acceleration and Decelertion Request (in m/s²) for Autonmous Driving. The Brake shall react on Deceleration Request (< 0m/s²) and VCU on Acceleration request (=< 0 m/s²). Arbitration shall be implemented on the actuator, in order to always give priority to Primary PDU when it is available, and switch to the Secondary PDU only when the Primary is missing or faulty."; 
+CM_ SG_ 2147483990 AccelDecelReqSecValidStat "Provides information if secondary Acceleration Deceleration Request is valid"; 
+CM_ SG_ 2147484005 CurrentSDSModeStat_Pri "Provides the Status of Current SDS Mode"; 
+CM_ SG_ 2147484005 MRMStatPri "Provides the MRM level (Minimum Risk Maneuver) and Information if MRC (Minimum Risk condition) is reached."; 
+CM_ SG_ 2147484010 VehMvmntInfoCRC "This signal is a CRC for the frame “MKC1_VehMvmtInfo”"; 
+CM_ SG_ 2147484010 VehMvmntInfoCntr "This signal is a Counter for the frame “MKC1_VehMvmtInfo”"; 
+CM_ SG_ 2147484010 VehMvmntDirectnStat "This signal indicates the direction of vehicle movement
+
+Value 0x0 - Forward
+Value 0x1 - Backward
+Value 0x2 - Standstill
+Value 0x3 - ERROR"; 
+CM_ SG_ 2147484010 VehSpeedCalcStat "This signal indicates the vehicle speed in kph"; 
+CM_ SG_ 2147484010 VehStandStillStat "This signal indicates the Vehicle standstill status
+
+Value 0x0 – Not Available – Feature not available
+Value 0x1 – Vehicle In Motion : Vehicle not in standstill
+Value 0x2 – Vehicle at Standstill : Vehicle is in Standstill
+Value 0x3 – Error : Error in SSM / Status unknown"; 
+CM_ SG_ 2147484010 BlindStopStat "This signal indicates the status of the Blind stop
+
+value 0x0 – Not Active  : Blind stop event is not active
+value 0x1 – Active : Blind stop event is active"; 
+CM_ SG_ 2147484010 VehSpeedValidStat "This signal indicates the reliability of VehSpeedCalcStat signal
+
+Value 0x0 – Invalid : Calculated Vehicle speed is not reliable
+Value 0x1 – Valid : Calculated Vehicle speed is reliable
+"; 
+CM_ SG_ 2147484010 GradeSensStat "This signal gives the Grade sensed. The grade sense signal will only be sent when reliable or sends “F7” which shall be treated as non reliable signal. “3FFF” shall be considered as complete unreliable signal.
+"; 
+CM_ SG_ 2147484017 BrkInfo1CRC "This signal is a CRC for the MKC1_BrakeInfo1 frame"; 
+CM_ SG_ 2147484017 BrkInfo1Cntr "This signal is a counter for the MKC1_BrakeInfo1 frame"; 
+CM_ SG_ 2147484017 BrkPadWearWarnStatFA "This signal indicates the Brake pad wear warning status for the front axle
+
+Value 0x0 – No Warning : Brake Pad OK
+Value 0x1 – Warnng/Error : Brake pad Not OK or Error in sensing Brake Pad wear"; 
+CM_ SG_ 2147484017 BrkPadWearWarnStatRA "This signal indicates the Brake pad wear warning status for the rear axle
+
+Value 0x0 – No Warning : Brake Pad OK
+Value 0x1 – Warnng/Error : Brake pad Not OK or Error in sensing Brake Pad wear"; 
+CM_ SG_ 2147484017 PrimaryBrkSysStat "This signal provides the status of Primary Brake system
+
+Value 0x0 – HAD System normal : PBS working normally
+Value 0x1 – HAD System Braking : Braking event is ongoing
+Value 0x2 – HAD System Normal Reduced 
+Value 0x3 - HAD System Co-operative
+Value 0x4 - HAD System Primary only
+Value 0x5 - HAD System Secondary only
+Value 0x6 - HAD System Degraded"; 
+CM_ SG_ 2147484017 PbcOutOfSpecMsg "This signal indicates the situation out of Specification from Park Brake Controller perspective
+
+Value 0x0 - None
+Value 0x1 - Message A
+Value 0x2 - Message B
+Value 0x3 - Message C
+Value 0x4 - Message D
+Value 0x5 - Message E
+Value 0x6 - Message F
+Value 0x7 - Message G
+Value 0x8 - Message H
+Value 0x9 - Message I
+Value 0xA - Message J
+Value 0xB - Message K
+Value 0xC - Message L
+Value 0xD - Message M
+Value 0xE - Message N
+Value 0xF - Message O"; 
+CM_ SG_ 2147484017 PBCOutParkSupportReq "This signal indicates the request of Brake controller to get an external support for parking
+
+Value 0x0 – Not Requested : External support not Needed
+Value 0x1 – Requested : External support Needed"; 
+CM_ SG_ 2147484017 ParkBrakeStat "This is the signal indicating the status of Park brake 
+
+Value 0x0 – Disengaged : Park Brake is Disengaged (Removed)
+Value 0x1- Engaging : Park Brake is Engaging (Applying)
+Value 0x2 – Engaged : Park Brake is Engaged (Applied)
+Value 0x3 – Disengaging : Park Brake is Disengaging (Removing)
+Value 0x4 – Park Brake Error : Park Brake is in Error / PBC in Error
+Value 0x5- Maintenance Released : Park brake is in Maintainence mode (Complete Released)
+Value 0x6 – Hold Applied :"; 
+CM_ SG_ 2147484017 ABSWarningLamp "This signal is the ABS warning status. 
+
+Value 0x0 – „On“
+Value 0x1 – “Flash”
+Value 0x2 – reserved
+Value 0x3 – “Off”
+
+
+"; 
+CM_ SG_ 2147484017 ABrakeWarningLamp "Signal gives the warning lamp activation status. 
+
+0 : Malfunction in ABS 
+1 : ABS in normal operation (No Malfunction)"; 
+CM_ SG_ 2147484017 PbcOutFaultStatus "This is the signal indicating Park Brake Controller fault state
+
+Value 0x0 – No Failure
+Value 0x1 – IPB disabled (No Apply Release)
+Value 0x2 – IPB Failure (Only Release Possible)
+Value 0x3 – IPB Failure (Only Apply Possible)
+"; 
+CM_ SG_ 2147484017 BrkFluidWarnStat "This signal indicates the Brake fluid warning status
+
+Value 0x0 – No Warnig : Brake fluid level is normal 
+Value 0x1 – Warning :  Brake fluid level is Low
+Value 0x2 – Error : Error in Brake Fluid level detection"; 
+CM_ SG_ 2147484018 BrkInfo2CRC "This signal is a CRC for the MKC1_BrakeInfo1 frame"; 
+CM_ SG_ 2147484018 BrkInfo2Cntr "This signal is a counter for the MKC1_BrakeInfo2 frame"; 
+CM_ SG_ 2147484018 ABSStat "This signal indicates the status of Antilock Braking System
+
+Value 0x0 – Not Available : ABS feature not available 
+Value 0x1 – Not Active : ABS not active
+Value 0x2 – Active Event in Progress : ABS is Active (ABS Event ongoing)
+Value 0x3  - Antilock Braking System Failure : ABS is in Failure (Malfuntioning ABS)"; 
+CM_ SG_ 2147484018 ESCStat "This signal indicates the status of Electronic stability control functionality
+
+Value 0x0 – Not Available : Feature not Available 
+Value 0x1- Not Active : ESC event not in progress
+Value 0x2 – Active – Event in Progress : ESC event is in Progress
+Value 0x3 – ESC Failure : ESC is in failure/fault mode"; 
+CM_ SG_ 2147484018 StbltyEventInProgStat "This signal Indicates the combination of stability event currently ongoing in vehicle
+
+Value 0x0 – No emergency and Stability event in progress
+Value 0x1 – Vehicle in Emergency
+Value 0x2 – TCS event in progress
+Value 0x3 – Vehicle in Emergency and TCS event in progress
+Value 0x4 – ESC event in progress
+Value 0x5 – Vehicle in Emergency and ESC event in progress
+Value 0x6 – TCS and ESC events in progress
+Value 0x7 - Vehicle in Emergency  & TCS and ESC events in progress
+Value 0x8 – ABS event in progress
+Value 0x9 – Vehicle in Emergency and ABS in progress
+Value 0xA - Invalid
+Value 0xB - Invalid
+Value 0xC – ESC & ABS in progress
+Value 0xD – Vehicle in Emergency and  ESC & ABS in progress
+Value 0xE - Invalid
+Value 0xF - Invalid
+"; 
+CM_ SG_ 2147484018 TractionCtrlStat "This signal indicates the status of Traction control System
+
+Value 0x0 – Not Available : TCS feature not available 
+Value 0x1 – Not Active : TCS not active
+Value 0x2 – Active Event in Progress : TCS is Active (TCS Event ongoing)
+Value 0x3  - Traction Control Failure : TCS is in Failure (Malfuntioning TCS)
+"; 
+CM_ SG_ 2147484018 SSMCurrBrkState "This signal giver the current status of Standstill Management 
+
+Value 0x0 – SSM IDLE – no failure
+Value 0x1 – SSM Hold Active
+Value 0x2 – SSM DRIVE_OFF active
+Value 0x3 - Reserved
+Value 0x4 - Reserved
+Value 0x5 - Reserved
+Value 0x6 - Reserved
+Value 0x7 – SSM Error / not available"; 
+CM_ SG_ 2147484018 VirtualDrvrStatFdbckPBS "This signal indicates the status from the perspective of Primary Brake system (based on the signal availabiities and errors recognized)
+
+Value 0x0 – Virtual Driver disabled : Both Primary & Secondary Virtual driver are unavailable
+Value 0x1 – Virtual Driver normal : Both Primary & Secondary Virtual driver available
+Value 0x2 – Virtual Driver Prim only : Only Primary virtual driver available
+Value 0x3 – Virtual Driver Sec only : Only Secondary virtual driver available
+Value 0x4 – Manual Driver normal : Both Primary & Secondary Manual driver available
+Value 0x5 – Manual Driver Prim only : Only Primary Manual driver available
+Value 0x6– Manual Driver Sec only : Only Secondary Manual driver available
+Value 0x7 - Reserved"; 
+CM_ SG_ 2147484018 BrkDrvMdPBS "This signal indicates the current active mode as per Primary Brake System
+
+Value 0x0 – Not Available : Status unknown
+Value 0x1 – Brake Mode Autonomous : Primary Brake is in Autonomous mode and executing Virtual Driver commands
+Value 0x2 – Brake Mode Manua : Primary Brake is in Manual mode and executing Manual Driver commands"; 
+CM_ SG_ 2147484018 PrimaryBrkErrLvl "This signal provides the Error level of Primary Brake system
+
+Value 0x0 – No Fault : No fault in PBS
+Value 0x1 – Error Level 1 : Level 1 error in system
+Value 0x2 - Error Level 2 : Level 2 error in system
+Value 0x3 - Error Level 3 : Level 3 error in system
+Value 0x4 - Error Level 4 : Level 4 error in system"; 
+CM_ SG_ 2147484018 AccOverGndStat "This signal indicates the acceleration over the ground based on vehicle speed. "; 
+CM_ SG_ 2147484021 MKC1TrqRdctnReqCRC "This signal is a CRC for the MKC1_TrqRedctnReq Frame"; 
+CM_ SG_ 2147484021 MKC1TrqRdctnReqCntr "This signal is a Counter for the MKC1_TrqRedctnReq Frame"; 
+CM_ SG_ 2147484021 StabilityTorqueDirection "This signal indicates the allowable change in torque direction in the event of Traction Control
+
+Value 0x0 – IDLE : Do not increase or decrease the torque / do not consider any change in stability target torque
+Value 0x1 – INCREASE : Increase allowed in Stability Traget torque 
+Value 0x2 – DECREASE : Decrease allowed in Stability Traget torque 
+
+"; 
+CM_ SG_ 2147484021 OvrallBrkTrqAppldStat "This signal is the Overall brake torque being applied to achieve target deceleration. This includes the requperation torque if applied any."; 
+CM_ SG_ 2147484021 RegenTargetTorque "This signal gives the Regenaration torque target to PWT in the event of Friction + Regern braking"; 
+CM_ SG_ 2147484021 StabilityTargetTorque "This signal indicates the torque request from the brake sytem in case of ESC events towards Powertrain."; 
+CM_ SG_ 2147484027 IMUInfoCRC "This signal is a CRC for the IMUInfo Frame"; 
+CM_ SG_ 2147484027 IMUInfoCntr "This signal is a counter for the IMUInfo Frame"; 
+CM_ SG_ 2147484027 LatAccFltValidStat "This signal is validity signal of filtered lateral acceleration 
+
+Value 0x0 – Invalid : Lateral acceleration value is not valid
+Value 0x1 – Valid : Lateral acceleration value is valid"; 
+CM_ SG_ 2147484027 YawRateFltValidStat "This signal indicates the reliability of filtered yaw rate signal
+
+Value 0x0 – Invalid : Signal is not reliable
+Value 0x1 – Valid : Signal is reliable
+"; 
+CM_ SG_ 2147484027 LongAccFltValidStat "This signal is validity signal of filtered longitudinal acceleration 
+
+Value 0x0 – Invalid : longitudinal acceleration value is not valid
+Value 0x1 – Valid : longitudinal acceleration value is valid"; 
+CM_ SG_ 2147484027 LatAccFlt "This signal is the filterred value of the raw lateral acceleration sensed by IMU"; 
+CM_ SG_ 2147484027 YawRateFlt "This signal is the filterred value of the raw Yaw Rete sensed by IMU"; 
+CM_ SG_ 2147484027 LongAccFlt "This signal is the filterred value of the raw longitudinal acceleration sensed by IMU"; 
+CM_ SG_ 2147484048 MKC1ManBrkInfoCRC "This signal is a CRC for the MKC1_ManualBrakeInfo Frame"; 
+CM_ SG_ 2147484048 MKC1ManBrkInfoCntr "This signal is a Counter for the MKC1_ManualBrakeInfo Frame"; 
+CM_ SG_ 2147484048 ManualBrakeInterventionStatus "This signal is the status of Manual brake intervention by brake pedal 
+
+Value 0x0 – No Manual Intervention : No Brake pedal intervention detected
+Value 0x1 – Manual Intervention : Brake pedal intervention detected"; 
+CM_ SG_ 2147484193 MKC1BrkLghtReqCRC "This signal is a CRC for the MKC1_BrakeLightReq Frame"; 
+CM_ SG_ 2147484193 MKC1BrkLghtReqCntr "This signal is a counter for the MKC1_BrakeLightReq Frame"; 
+CM_ SG_ 2147484193 BrkLghtActReq "This signal indicates the request to activate the Brake light
+
+Value 0x0 – Not Active : Do not activate Brake Light
+Value 0x1 – Normal Brake Light Activate : Activate Brake Light in Normal mode
+Value 0x2 – Emergency Brake Light Activate : Activate Brake Light in Emergency mode"; 
+CM_ SG_ 2147484700 StatusTotalDistTravelledInd "Total Distance Travelled Indications"; 
+CM_ SG_ 2147484752 Year "Year in time"; 
+CM_ SG_ 2147484752 Month "Month (within the year)"; 
+CM_ SG_ 2147484752 Day "Day (within the month)"; 
+CM_ SG_ 2147484752 Hour "Hour (within the day)"; 
+CM_ SG_ 2147484752 Minu "Minute (within the hour)"; 
+CM_ SG_ 2147484752 Sec "Second (within the minute)"; 
+CM_ SG_ 2147485190 StatusAmbientAirTemp "This signal provide ambient/ environmental air temperature"; 
+CM_ SG_ 2147485442 Soc "State of charge"; 
+CM_ SG_ 2564485409 DiagResp_MK100 "This signal indicates the diagnostics response of MK100 ECU"; 
+
+BA_DEF_  "SigType" ENUM "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ SG_  "ASIL" ENUM "ASIL A","ASIL B","ASIL C","ASIL D","NA","QM";
+BA_DEF_ BO_  "ASILLevel" ENUM "ASIL A","ASIL B","ASIL C","ASIL D","NA","QM";
+BA_DEF_ BO_  "SecOC" ENUM "NO","YES";
+BA_DEF_ SG_  "SecOc" ENUM "NO","YES";
+BA_DEF_ SG_  "GenSigSendType" ENUM "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 0;
+BA_DEF_ BU_  "NodeLayerModules" STRING;
+BA_DEF_ BU_  "ECU" STRING;
+BA_DEF_ BO_  "CANFD_BRS" ENUM "0","1";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM "No","Yes";
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM "cyclic","Event Triggered","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING;
+BA_DEF_  "ProtocolType" STRING;
+BA_DEF_ BO_  "VFrameFormat" ENUM "StandardCAN","ExtendedCAN","reserved","J1939PG","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_  "SW_Version" FLOAT 0 0;
+BA_DEF_  "Manufacturer" STRING;
+BA_DEF_  "VersionNumber" FLOAT 0 0;
+BA_DEF_  "VersionYear" INT 0 9999;
+BA_DEF_  "VersionMonth" INT 1 12;
+BA_DEF_  "BusType" STRING;
+BA_DEF_  "Baudrate" INT 50000 500000;
+BA_DEF_  "Arbitration_Baudrate" INT 0 0;
+
+
+
+BA_DEF_DEF_  "ASIL" "NA";
+BA_DEF_DEF_  "ASILLevel" "QM";
+BA_DEF_DEF_  "Arbitration_Baudrate" 2000000;
+BA_DEF_DEF_  "Baudrate" 100000;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "CANFD_BRS" "0";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "No";
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0.0;
+BA_DEF_DEF_  "Manufacturer" "Holon People Mover";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "SW_Version" 1.0;
+BA_DEF_DEF_  "SecOC" "NO";
+BA_DEF_DEF_  "SecOc" "NO";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "VersionMonth" 1;
+BA_DEF_DEF_  "VersionNumber" 0.0;
+BA_DEF_DEF_  "VersionYear" 2006;
+
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_ "Arbitration_Baudrate" 500000;
+BA_ "Baudrate" 2000000;
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "CHASSIS-1 CAN";
+BA_ "Manufacturer" "Holon People Mover";
+BA_ "ProtocolType" "CAN FD";
+BA_ "SW_Version" 3.1;
+BA_ "VersionMonth" 9;
+BA_ "VersionNumber" 9;
+BA_ "VersionYear" 2024;
+BA_ "NmStationAddress" BU_ ASS 42;
+BA_ "NmStationAddress" BU_ CGW2 96;
+BA_ "NmStationAddress" BU_ ECU2_ISCS 38;
+BA_ "NmStationAddress" BU_ MK100 33;
+BA_ "NmStationAddress" BU_ SDS_Secondary 49;
+BA_ "CANFD_BRS" BO_ 146 0;
+BA_ "GenMsgILSupport" BO_ 146 1;
+BA_ "VFrameFormat" BO_ 146 14;
+BA_ "GenMsgCycleTime" BO_ 160 10;
+BA_ "GenMsgILSupport" BO_ 160 1;
+BA_ "GenMsgSendType" BO_ 160 0;
+BA_ "VFrameFormat" BO_ 160 14;
+BA_ "CANFD_BRS" BO_ 256 0;
+BA_ "GenMsgILSupport" BO_ 256 1;
+BA_ "VFrameFormat" BO_ 256 14;
+BA_ "CANFD_BRS" BO_ 378 0;
+BA_ "GenMsgCycleTime" BO_ 378 100;
+BA_ "GenMsgILSupport" BO_ 378 1;
+BA_ "GenMsgSendType" BO_ 378 0;
+BA_ "VFrameFormat" BO_ 378 14;
+BA_ "GenMsgILSupport" BO_ 1734 0;
+BA_ "VFrameFormat" BO_ 1734 14;
+BA_ "GenMsgILSupport" BO_ 1751 0;
+BA_ "VFrameFormat" BO_ 1751 14;
+BA_ "GenMsgILSupport" BO_ 1766 1;
+BA_ "VFrameFormat" BO_ 1766 14;
+BA_ "GenMsgILSupport" BO_ 1783 1;
+BA_ "VFrameFormat" BO_ 1783 14;
+BA_ "CANFD_BRS" BO_ 1821 0;
+BA_ "GenMsgCycleTime" BO_ 1821 10;
+BA_ "GenMsgILSupport" BO_ 1821 1;
+BA_ "GenMsgSendType" BO_ 1821 0;
+BA_ "VFrameFormat" BO_ 1821 14;
+BA_ "CANFD_BRS" BO_ 1822 0;
+BA_ "GenMsgCycleTime" BO_ 1822 10;
+BA_ "GenMsgILSupport" BO_ 1822 1;
+BA_ "GenMsgSendType" BO_ 1822 0;
+BA_ "VFrameFormat" BO_ 1822 14;
+BA_ "CANFD_BRS" BO_ 1823 0;
+BA_ "GenMsgCycleTime" BO_ 1823 10;
+BA_ "GenMsgILSupport" BO_ 1823 1;
+BA_ "GenMsgSendType" BO_ 1823 0;
+BA_ "VFrameFormat" BO_ 1823 14;
+BA_ "CANFD_BRS" BO_ 1890 0;
+BA_ "DiagRequest" BO_ 1890 1;
+BA_ "DiagResponse" BO_ 1890 0;
+BA_ "GenMsgILSupport" BO_ 1890 0;
+BA_ "VFrameFormat" BO_ 1890 14;
+BA_ "GenMsgCycleTime" BO_ 2147483917 10;
+BA_ "GenMsgILSupport" BO_ 2147483917 1;
+BA_ "GenMsgSendType" BO_ 2147483917 0;
+BA_ "VFrameFormat" BO_ 2147483917 15;
+BA_ "GenMsgCycleTime" BO_ 2147483918 10;
+BA_ "GenMsgILSupport" BO_ 2147483918 1;
+BA_ "GenMsgSendType" BO_ 2147483918 0;
+BA_ "VFrameFormat" BO_ 2147483918 15;
+BA_ "GenMsgCycleTime" BO_ 2147483930 100;
+BA_ "GenMsgILSupport" BO_ 2147483930 1;
+BA_ "GenMsgSendType" BO_ 2147483930 0;
+BA_ "VFrameFormat" BO_ 2147483930 15;
+BA_ "CANFD_BRS" BO_ 2147483931 0;
+BA_ "GenMsgCycleTime" BO_ 2147483931 100;
+BA_ "GenMsgILSupport" BO_ 2147483931 1;
+BA_ "GenMsgSendType" BO_ 2147483931 0;
+BA_ "VFrameFormat" BO_ 2147483931 15;
+BA_ "CANFD_BRS" BO_ 2147483934 0;
+BA_ "GenMsgCycleTime" BO_ 2147483934 10;
+BA_ "GenMsgILSupport" BO_ 2147483934 1;
+BA_ "GenMsgSendType" BO_ 2147483934 0;
+BA_ "VFrameFormat" BO_ 2147483934 15;
+BA_ "GenMsgCycleTime" BO_ 2147483938 100;
+BA_ "GenMsgILSupport" BO_ 2147483938 1;
+BA_ "GenMsgSendType" BO_ 2147483938 0;
+BA_ "SecOC" BO_ 2147483938 1;
+BA_ "VFrameFormat" BO_ 2147483938 15;
+BA_ "GenMsgCycleTime" BO_ 2147483939 100;
+BA_ "GenMsgILSupport" BO_ 2147483939 1;
+BA_ "GenMsgSendType" BO_ 2147483939 0;
+BA_ "SecOC" BO_ 2147483939 1;
+BA_ "VFrameFormat" BO_ 2147483939 15;
+BA_ "GenMsgCycleTime" BO_ 2147483942 100;
+BA_ "GenMsgILSupport" BO_ 2147483942 1;
+BA_ "GenMsgSendType" BO_ 2147483942 0;
+BA_ "VFrameFormat" BO_ 2147483942 15;
+BA_ "GenMsgCycleTime" BO_ 2147483943 100;
+BA_ "GenMsgILSupport" BO_ 2147483943 1;
+BA_ "GenMsgSendType" BO_ 2147483943 0;
+BA_ "VFrameFormat" BO_ 2147483943 15;
+BA_ "CANFD_BRS" BO_ 2147483946 0;
+BA_ "GenMsgCycleTime" BO_ 2147483946 100;
+BA_ "GenMsgILSupport" BO_ 2147483946 1;
+BA_ "GenMsgSendType" BO_ 2147483946 0;
+BA_ "VFrameFormat" BO_ 2147483946 15;
+BA_ "CANFD_BRS" BO_ 2147483949 0;
+BA_ "GenMsgCycleTime" BO_ 2147483949 100;
+BA_ "GenMsgILSupport" BO_ 2147483949 1;
+BA_ "GenMsgSendType" BO_ 2147483949 0;
+BA_ "VFrameFormat" BO_ 2147483949 15;
+BA_ "GenMsgCycleTime" BO_ 2147483953 10;
+BA_ "GenMsgSendType" BO_ 2147483953 0;
+BA_ "VFrameFormat" BO_ 2147483953 15;
+BA_ "GenMsgCycleTime" BO_ 2147483956 100;
+BA_ "GenMsgILSupport" BO_ 2147483956 1;
+BA_ "GenMsgSendType" BO_ 2147483956 0;
+BA_ "VFrameFormat" BO_ 2147483956 15;
+BA_ "GenMsgCycleTime" BO_ 2147483962 100;
+BA_ "GenMsgILSupport" BO_ 2147483962 1;
+BA_ "GenMsgSendType" BO_ 2147483962 0;
+BA_ "VFrameFormat" BO_ 2147483962 15;
+BA_ "GenMsgCycleTime" BO_ 2147483965 50;
+BA_ "GenMsgILSupport" BO_ 2147483965 1;
+BA_ "GenMsgSendType" BO_ 2147483965 0;
+BA_ "VFrameFormat" BO_ 2147483965 15;
+BA_ "GenMsgCycleTime" BO_ 2147483966 10;
+BA_ "GenMsgILSupport" BO_ 2147483966 1;
+BA_ "GenMsgSendType" BO_ 2147483966 0;
+BA_ "VFrameFormat" BO_ 2147483966 15;
+BA_ "CANFD_BRS" BO_ 2147483967 0;
+BA_ "GenMsgCycleTime" BO_ 2147483967 100;
+BA_ "GenMsgILSupport" BO_ 2147483967 1;
+BA_ "GenMsgSendType" BO_ 2147483967 0;
+BA_ "VFrameFormat" BO_ 2147483967 15;
+BA_ "CANFD_BRS" BO_ 2147483968 0;
+BA_ "GenMsgCycleTime" BO_ 2147483968 10;
+BA_ "GenMsgILSupport" BO_ 2147483968 1;
+BA_ "GenMsgSendType" BO_ 2147483968 0;
+BA_ "VFrameFormat" BO_ 2147483968 15;
+BA_ "GenMsgCycleTime" BO_ 2147483969 10;
+BA_ "GenMsgILSupport" BO_ 2147483969 1;
+BA_ "GenMsgSendType" BO_ 2147483969 0;
+BA_ "VFrameFormat" BO_ 2147483969 15;
+BA_ "ASILLevel" BO_ 2147483976 1;
+BA_ "CANFD_BRS" BO_ 2147483976 0;
+BA_ "GenMsgCycleTime" BO_ 2147483976 20;
+BA_ "GenMsgILSupport" BO_ 2147483976 1;
+BA_ "GenMsgSendType" BO_ 2147483976 0;
+BA_ "VFrameFormat" BO_ 2147483976 15;
+BA_ "CANFD_BRS" BO_ 2147483978 0;
+BA_ "GenMsgCycleTime" BO_ 2147483978 100;
+BA_ "GenMsgILSupport" BO_ 2147483978 1;
+BA_ "GenMsgSendType" BO_ 2147483978 0;
+BA_ "VFrameFormat" BO_ 2147483978 15;
+BA_ "CANFD_BRS" BO_ 2147483979 0;
+BA_ "GenMsgCycleTime" BO_ 2147483979 10;
+BA_ "GenMsgILSupport" BO_ 2147483979 1;
+BA_ "GenMsgSendType" BO_ 2147483979 0;
+BA_ "VFrameFormat" BO_ 2147483979 15;
+BA_ "CANFD_BRS" BO_ 2147483981 0;
+BA_ "GenMsgCycleTime" BO_ 2147483981 10;
+BA_ "GenMsgILSupport" BO_ 2147483981 1;
+BA_ "GenMsgSendType" BO_ 2147483981 0;
+BA_ "VFrameFormat" BO_ 2147483981 15;
+BA_ "CANFD_BRS" BO_ 2147483987 0;
+BA_ "GenMsgCycleTime" BO_ 2147483987 100;
+BA_ "GenMsgILSupport" BO_ 2147483987 1;
+BA_ "GenMsgSendType" BO_ 2147483987 0;
+BA_ "VFrameFormat" BO_ 2147483987 15;
+BA_ "CANFD_BRS" BO_ 2147483989 0;
+BA_ "GenMsgCycleTime" BO_ 2147483989 100;
+BA_ "GenMsgILSupport" BO_ 2147483989 1;
+BA_ "GenMsgSendType" BO_ 2147483989 0;
+BA_ "VFrameFormat" BO_ 2147483989 15;
+BA_ "CANFD_BRS" BO_ 2147483990 0;
+BA_ "GenMsgCycleTime" BO_ 2147483990 100;
+BA_ "GenMsgILSupport" BO_ 2147483990 1;
+BA_ "GenMsgSendType" BO_ 2147483990 0;
+BA_ "VFrameFormat" BO_ 2147483990 15;
+BA_ "CANFD_BRS" BO_ 2147484005 0;
+BA_ "GenMsgCycleTime" BO_ 2147484005 10;
+BA_ "GenMsgILSupport" BO_ 2147484005 1;
+BA_ "GenMsgSendType" BO_ 2147484005 0;
+BA_ "VFrameFormat" BO_ 2147484005 15;
+BA_ "GenMsgCycleTime" BO_ 2147484006 10;
+BA_ "GenMsgILSupport" BO_ 2147484006 1;
+BA_ "GenMsgSendType" BO_ 2147484006 0;
+BA_ "VFrameFormat" BO_ 2147484006 15;
+BA_ "CANFD_BRS" BO_ 2147484010 0;
+BA_ "GenMsgCycleTime" BO_ 2147484010 20;
+BA_ "GenMsgILSupport" BO_ 2147484010 1;
+BA_ "GenMsgSendType" BO_ 2147484010 0;
+BA_ "VFrameFormat" BO_ 2147484010 15;
+BA_ "GenMsgCycleTime" BO_ 2147484017 20;
+BA_ "GenMsgILSupport" BO_ 2147484017 1;
+BA_ "GenMsgSendType" BO_ 2147484017 0;
+BA_ "VFrameFormat" BO_ 2147484017 15;
+BA_ "GenMsgCycleTime" BO_ 2147484018 20;
+BA_ "GenMsgILSupport" BO_ 2147484018 1;
+BA_ "GenMsgSendType" BO_ 2147484018 0;
+BA_ "VFrameFormat" BO_ 2147484018 15;
+BA_ "CANFD_BRS" BO_ 2147484021 0;
+BA_ "GenMsgCycleTime" BO_ 2147484021 20;
+BA_ "GenMsgILSupport" BO_ 2147484021 1;
+BA_ "GenMsgSendType" BO_ 2147484021 0;
+BA_ "VFrameFormat" BO_ 2147484021 15;
+BA_ "GenMsgCycleTime" BO_ 2147484024 100;
+BA_ "GenMsgILSupport" BO_ 2147484024 1;
+BA_ "GenMsgSendType" BO_ 2147484024 0;
+BA_ "VFrameFormat" BO_ 2147484024 15;
+BA_ "GenMsgCycleTime" BO_ 2147484027 10;
+BA_ "GenMsgILSupport" BO_ 2147484027 1;
+BA_ "GenMsgSendType" BO_ 2147484027 0;
+BA_ "VFrameFormat" BO_ 2147484027 15;
+BA_ "GenMsgCycleTime" BO_ 2147484048 10;
+BA_ "GenMsgILSupport" BO_ 2147484048 1;
+BA_ "GenMsgSendType" BO_ 2147484048 0;
+BA_ "VFrameFormat" BO_ 2147484048 15;
+BA_ "CANFD_BRS" BO_ 2147484182 0;
+BA_ "GenMsgCycleTime" BO_ 2147484182 10;
+BA_ "GenMsgILSupport" BO_ 2147484182 1;
+BA_ "GenMsgSendType" BO_ 2147484182 0;
+BA_ "VFrameFormat" BO_ 2147484182 15;
+BA_ "GenMsgCycleTime" BO_ 2147484183 10;
+BA_ "GenMsgILSupport" BO_ 2147484183 1;
+BA_ "GenMsgSendType" BO_ 2147484183 0;
+BA_ "VFrameFormat" BO_ 2147484183 15;
+BA_ "GenMsgCycleTime" BO_ 2147484184 100;
+BA_ "GenMsgILSupport" BO_ 2147484184 1;
+BA_ "GenMsgSendType" BO_ 2147484184 0;
+BA_ "VFrameFormat" BO_ 2147484184 15;
+BA_ "GenMsgCycleTime" BO_ 2147484185 100;
+BA_ "GenMsgILSupport" BO_ 2147484185 1;
+BA_ "GenMsgSendType" BO_ 2147484185 0;
+BA_ "VFrameFormat" BO_ 2147484185 15;
+BA_ "CANFD_BRS" BO_ 2147484193 0;
+BA_ "GenMsgCycleTime" BO_ 2147484193 100;
+BA_ "GenMsgILSupport" BO_ 2147484193 1;
+BA_ "GenMsgSendType" BO_ 2147484193 0;
+BA_ "VFrameFormat" BO_ 2147484193 15;
+BA_ "CANFD_BRS" BO_ 2147484241 0;
+BA_ "GenMsgCycleTime" BO_ 2147484241 100;
+BA_ "GenMsgILSupport" BO_ 2147484241 1;
+BA_ "GenMsgSendType" BO_ 2147484241 0;
+BA_ "VFrameFormat" BO_ 2147484241 15;
+BA_ "CANFD_BRS" BO_ 2147484242 0;
+BA_ "GenMsgCycleTime" BO_ 2147484242 100;
+BA_ "GenMsgILSupport" BO_ 2147484242 1;
+BA_ "GenMsgSendType" BO_ 2147484242 0;
+BA_ "VFrameFormat" BO_ 2147484242 15;
+BA_ "CANFD_BRS" BO_ 2147484243 0;
+BA_ "GenMsgCycleTime" BO_ 2147484243 100;
+BA_ "GenMsgILSupport" BO_ 2147484243 1;
+BA_ "GenMsgSendType" BO_ 2147484243 0;
+BA_ "VFrameFormat" BO_ 2147484243 15;
+BA_ "CANFD_BRS" BO_ 2147484244 0;
+BA_ "GenMsgCycleTime" BO_ 2147484244 100;
+BA_ "GenMsgILSupport" BO_ 2147484244 1;
+BA_ "GenMsgSendType" BO_ 2147484244 0;
+BA_ "VFrameFormat" BO_ 2147484244 15;
+BA_ "CANFD_BRS" BO_ 2147484245 0;
+BA_ "GenMsgCycleTime" BO_ 2147484245 100;
+BA_ "GenMsgILSupport" BO_ 2147484245 1;
+BA_ "GenMsgSendType" BO_ 2147484245 0;
+BA_ "VFrameFormat" BO_ 2147484245 15;
+BA_ "CANFD_BRS" BO_ 2147484246 0;
+BA_ "GenMsgCycleTime" BO_ 2147484246 100;
+BA_ "GenMsgILSupport" BO_ 2147484246 1;
+BA_ "GenMsgSendType" BO_ 2147484246 0;
+BA_ "VFrameFormat" BO_ 2147484246 15;
+BA_ "CANFD_BRS" BO_ 2147484247 0;
+BA_ "GenMsgCycleTime" BO_ 2147484247 100;
+BA_ "GenMsgILSupport" BO_ 2147484247 1;
+BA_ "GenMsgSendType" BO_ 2147484247 0;
+BA_ "VFrameFormat" BO_ 2147484247 15;
+BA_ "CANFD_BRS" BO_ 2147484442 0;
+BA_ "GenMsgCycleTime" BO_ 2147484442 100;
+BA_ "GenMsgILSupport" BO_ 2147484442 1;
+BA_ "GenMsgSendType" BO_ 2147484442 0;
+BA_ "VFrameFormat" BO_ 2147484442 15;
+BA_ "CANFD_BRS" BO_ 2147484448 0;
+BA_ "GenMsgCycleTime" BO_ 2147484448 100;
+BA_ "GenMsgILSupport" BO_ 2147484448 1;
+BA_ "GenMsgSendType" BO_ 2147484448 0;
+BA_ "VFrameFormat" BO_ 2147484448 15;
+BA_ "GenMsgCycleTime" BO_ 2147484700 100;
+BA_ "GenMsgILSupport" BO_ 2147484700 1;
+BA_ "GenMsgSendType" BO_ 2147484700 0;
+BA_ "VFrameFormat" BO_ 2147484700 15;
+BA_ "CANFD_BRS" BO_ 2147484752 0;
+BA_ "GenMsgCycleTime" BO_ 2147484752 10;
+BA_ "GenMsgILSupport" BO_ 2147484752 1;
+BA_ "GenMsgSendType" BO_ 2147484752 0;
+BA_ "VFrameFormat" BO_ 2147484752 15;
+BA_ "CANFD_BRS" BO_ 2147485190 0;
+BA_ "GenMsgCycleTime" BO_ 2147485190 500;
+BA_ "GenMsgILSupport" BO_ 2147485190 1;
+BA_ "GenMsgSendType" BO_ 2147485190 0;
+BA_ "VFrameFormat" BO_ 2147485190 15;
+BA_ "GenMsgCycleTime" BO_ 2147485442 1000;
+BA_ "GenMsgILSupport" BO_ 2147485442 1;
+BA_ "GenMsgSendType" BO_ 2147485442 0;
+BA_ "VFrameFormat" BO_ 2147485442 15;
+BA_ "GenMsgILSupport" BO_ 2147486417 1;
+BA_ "VFrameFormat" BO_ 2147486417 15;
+BA_ "GenMsgCycleTime" BO_ 2563778289 100;
+BA_ "GenMsgILSupport" BO_ 2563778289 1;
+BA_ "GenMsgSendType" BO_ 2563778289 0;
+BA_ "VFrameFormat" BO_ 2563778289 15;
+BA_ "CANFD_BRS" BO_ 2564432369 0;
+BA_ "DiagRequest" BO_ 2564432369 1;
+BA_ "DiagResponse" BO_ 2564432369 0;
+BA_ "GenMsgILSupport" BO_ 2564432369 0;
+BA_ "VFrameFormat" BO_ 2564432369 15;
+BA_ "DiagRequest" BO_ 2564433649 1;
+BA_ "DiagResponse" BO_ 2564433649 0;
+BA_ "GenMsgILSupport" BO_ 2564433649 0;
+BA_ "VFrameFormat" BO_ 2564433649 15;
+BA_ "CANFD_BRS" BO_ 2564434673 0;
+BA_ "DiagRequest" BO_ 2564434673 1;
+BA_ "DiagResponse" BO_ 2564434673 0;
+BA_ "GenMsgILSupport" BO_ 2564434673 0;
+BA_ "VFrameFormat" BO_ 2564434673 15;
+BA_ "CANFD_BRS" BO_ 2564485409 0;
+BA_ "DiagRequest" BO_ 2564485409 0;
+BA_ "DiagResponse" BO_ 2564485409 1;
+BA_ "GenMsgILSupport" BO_ 2564485409 0;
+BA_ "VFrameFormat" BO_ 2564485409 15;
+BA_ "DiagRequest" BO_ 2564485414 0;
+BA_ "DiagResponse" BO_ 2564485414 1;
+BA_ "GenMsgILSupport" BO_ 2564485414 0;
+BA_ "VFrameFormat" BO_ 2564485414 15;
+BA_ "CANFD_BRS" BO_ 2564485418 0;
+BA_ "DiagRequest" BO_ 2564485418 0;
+BA_ "DiagResponse" BO_ 2564485418 1;
+BA_ "GenMsgILSupport" BO_ 2564485418 0;
+BA_ "VFrameFormat" BO_ 2564485418 15;
+BA_ "CANFD_BRS" BO_ 2564554481 0;
+BA_ "DiagRequest" BO_ 2564554481 1;
+BA_ "GenMsgILSupport" BO_ 2564554481 0;
+BA_ "VFrameFormat" BO_ 2564554481 15;
+BA_ "GenMsgILSupport" BO_ 2564903264 0;
+BA_ "VFrameFormat" BO_ 2564903264 15;
+BA_ "CANFD_BRS" BO_ 2564903265 0;
+BA_ "GenMsgILSupport" BO_ 2564903265 0;
+BA_ "VFrameFormat" BO_ 2564903265 15;
+BA_ "CANFD_BRS" BO_ 2654486561 0;
+BA_ "GenMsgILSupport" BO_ 2654486561 1;
+BA_ "VFrameFormat" BO_ 2654486561 15;
+BA_ "CANFD_BRS" BO_ 2654486624 0;
+BA_ "GenMsgILSupport" BO_ 2654486624 1;
+BA_ "GenMsgSendType" BO_ 2654486624 8;
+BA_ "VFrameFormat" BO_ 2654486624 15;
+BA_ "ASIL" SG_ 146 Veh1_Activate_CRC 3;
+BA_ "GenSigSendType" SG_ 146 Veh1_Activate_CRC 7;
+BA_ "ASIL" SG_ 146 Veh1_Activate_Counter 3;
+BA_ "GenSigSendType" SG_ 146 Veh1_Activate_Counter 7;
+BA_ "ASIL" SG_ 146 Veh1_Activate_Activation 3;
+BA_ "GenSigSendType" SG_ 146 Veh1_Activate_Activation 7;
+BA_ "ASIL" SG_ 160 MCUSts 3;
+BA_ "GenSigSendType" SG_ 160 MCUSts 7;
+BA_ "GenSigStartValue" SG_ 160 MCUSts 0;
+BA_ "ASIL" SG_ 256 Veh1_VehData_CRC 3;
+BA_ "GenSigSendType" SG_ 256 Veh1_VehData_CRC 7;
+BA_ "ASIL" SG_ 256 Veh1_VehData_Counter 3;
+BA_ "GenSigSendType" SG_ 256 Veh1_VehData_Counter 7;
+BA_ "ASIL" SG_ 256 Veh1_VehData_VehSpeed 3;
+BA_ "GenSigSendType" SG_ 256 Veh1_VehData_VehSpeed 7;
+BA_ "ASIL" SG_ 256 Veh1_VehData_BrakeActive 3;
+BA_ "GenSigSendType" SG_ 256 Veh1_VehData_BrakeActive 7;
+BA_ "ASIL" SG_ 256 Veh1_VehData_VehSpeedQualifier 3;
+BA_ "GenSigSendType" SG_ 256 Veh1_VehData_VehSpeedQualifier 7;
+BA_ "ASIL" SG_ 1821 YAW_RATE 3;
+BA_ "GenSigSendType" SG_ 1821 YAW_RATE 4;
+BA_ "GenSigStartValue" SG_ 1821 YAW_RATE 32766;
+BA_ "ASIL" SG_ 1821 YAW_RATE_QUAL 3;
+BA_ "GenSigSendType" SG_ 1821 YAW_RATE_QUAL 7;
+BA_ "ASIL" SG_ 1821 LAT_ACC_QUAL 3;
+BA_ "GenSigSendType" SG_ 1821 LAT_ACC_QUAL 7;
+BA_ "ASIL" SG_ 1821 LAT_ACC 3;
+BA_ "GenSigSendType" SG_ 1821 LAT_ACC 4;
+BA_ "GenSigStartValue" SG_ 1821 LAT_ACC 32766;
+BA_ "ASIL" SG_ 1821 TEMPERATURE 3;
+BA_ "GenSigSendType" SG_ 1821 TEMPERATURE 7;
+BA_ "GenSigStartValue" SG_ 1821 TEMPERATURE 50;
+BA_ "ASIL" SG_ 1821 SC_STATUS 3;
+BA_ "GenSigSendType" SG_ 1821 SC_STATUS 7;
+BA_ "GenSigStartValue" SG_ 1821 SC_STATUS 0;
+BA_ "ASIL" SG_ 1821 ALIV_CLU_ID1 3;
+BA_ "GenSigSendType" SG_ 1821 ALIV_CLU_ID1 7;
+BA_ "ASIL" SG_ 1821 CHKSUM_CLU_ID1 3;
+BA_ "GenSigSendType" SG_ 1821 CHKSUM_CLU_ID1 7;
+BA_ "ASIL" SG_ 1822 ROLL_RATE 3;
+BA_ "GenSigSendType" SG_ 1822 ROLL_RATE 4;
+BA_ "GenSigStartValue" SG_ 1822 ROLL_RATE 32766;
+BA_ "ASIL" SG_ 1822 ROLL_RATE_QUAL 3;
+BA_ "GenSigSendType" SG_ 1822 ROLL_RATE_QUAL 7;
+BA_ "ASIL" SG_ 1822 LONG_ACC_QUAL 3;
+BA_ "GenSigSendType" SG_ 1822 LONG_ACC_QUAL 7;
+BA_ "ASIL" SG_ 1822 LONG_ACC 3;
+BA_ "GenSigSendType" SG_ 1822 LONG_ACC 4;
+BA_ "GenSigStartValue" SG_ 1822 LONG_ACC 32766;
+BA_ "ASIL" SG_ 1822 ALIV_CLU_ID2 3;
+BA_ "GenSigSendType" SG_ 1822 ALIV_CLU_ID2 7;
+BA_ "ASIL" SG_ 1822 CHKSUM_CLU_ID2 3;
+BA_ "GenSigSendType" SG_ 1822 CHKSUM_CLU_ID2 7;
+BA_ "ASIL" SG_ 1823 PITCH_RATE 3;
+BA_ "GenSigSendType" SG_ 1823 PITCH_RATE 4;
+BA_ "GenSigStartValue" SG_ 1823 PITCH_RATE 32766;
+BA_ "ASIL" SG_ 1823 PITCH_RATE_QUAL 3;
+BA_ "GenSigSendType" SG_ 1823 PITCH_RATE_QUAL 7;
+BA_ "ASIL" SG_ 1823 VERT_ACC_QUAL 3;
+BA_ "GenSigSendType" SG_ 1823 VERT_ACC_QUAL 7;
+BA_ "ASIL" SG_ 1823 VERT_ACC 3;
+BA_ "GenSigSendType" SG_ 1823 VERT_ACC 4;
+BA_ "GenSigStartValue" SG_ 1823 VERT_ACC 32766;
+BA_ "ASIL" SG_ 1823 ALIV_CLU_ID3 3;
+BA_ "GenSigSendType" SG_ 1823 ALIV_CLU_ID3 7;
+BA_ "ASIL" SG_ 1823 CHKSUM_CLU_ID3 3;
+BA_ "GenSigSendType" SG_ 1823 CHKSUM_CLU_ID3 7;
+BA_ "GenSigSendType" SG_ 1890 DIAG_REQUEST 7;
+BA_ "GenSigSendType" SG_ 1890 RESET_REQUEST 7;
+BA_ "ASIL" SG_ 2147483917 MKC1FrntWhlSpdCRC 3;
+BA_ "ASIL" SG_ 2147483917 MKC1FrntWhlSpdCntr 3;
+BA_ "ASIL" SG_ 2147483917 CurrWheelSpeedFRStat 3;
+BA_ "GenSigSendType" SG_ 2147483917 CurrWheelSpeedFRStat 7;
+BA_ "GenSigStartValue" SG_ 2147483917 CurrWheelSpeedFRStat 0;
+BA_ "ASIL" SG_ 2147483917 WheelSpeedFLValidStat 3;
+BA_ "GenSigSendType" SG_ 2147483917 WheelSpeedFLValidStat 7;
+BA_ "GenSigStartValue" SG_ 2147483917 WheelSpeedFLValidStat 0;
+BA_ "ASIL" SG_ 2147483917 WheelSpeedFRValidStat 3;
+BA_ "GenSigSendType" SG_ 2147483917 WheelSpeedFRValidStat 7;
+BA_ "GenSigStartValue" SG_ 2147483917 WheelSpeedFRValidStat 0;
+BA_ "ASIL" SG_ 2147483917 CurrWheelSpeedFLStat 3;
+BA_ "GenSigSendType" SG_ 2147483917 CurrWheelSpeedFLStat 7;
+BA_ "GenSigStartValue" SG_ 2147483917 CurrWheelSpeedFLStat 0;
+BA_ "ASIL" SG_ 2147483918 MKC1RrWhlSpdCRC 3;
+BA_ "ASIL" SG_ 2147483918 MKC1RrWhlSpdCntr 3;
+BA_ "ASIL" SG_ 2147483918 CurrWheelSpeedRRStat 3;
+BA_ "GenSigSendType" SG_ 2147483918 CurrWheelSpeedRRStat 7;
+BA_ "GenSigStartValue" SG_ 2147483918 CurrWheelSpeedRRStat 0;
+BA_ "ASIL" SG_ 2147483918 WheelSpeedRLValidStat 3;
+BA_ "GenSigSendType" SG_ 2147483918 WheelSpeedRLValidStat 7;
+BA_ "GenSigStartValue" SG_ 2147483918 WheelSpeedRLValidStat 0;
+BA_ "ASIL" SG_ 2147483918 WheelSpeedRRValidStat 3;
+BA_ "GenSigSendType" SG_ 2147483918 WheelSpeedRRValidStat 7;
+BA_ "GenSigStartValue" SG_ 2147483918 WheelSpeedRRValidStat 0;
+BA_ "ASIL" SG_ 2147483918 CurrWheelSpeedRLStat 3;
+BA_ "GenSigSendType" SG_ 2147483918 CurrWheelSpeedRLStat 7;
+BA_ "GenSigStartValue" SG_ 2147483918 CurrWheelSpeedRLStat 0;
+BA_ "ASIL" SG_ 2147483930 VCUVSMInfoCRC 3;
+BA_ "ASIL" SG_ 2147483930 VCUVSMInfoCntr 3;
+BA_ "ASIL" SG_ 2147483930 VSMStatus 3;
+BA_ "GenSigSendType" SG_ 2147483930 VSMStatus 7;
+BA_ "GenSigSendType" SG_ 2147483931 CurrVehicleLoad 7;
+BA_ "GenSigStartValue" SG_ 2147483931 CurrVehicleLoad 0;
+BA_ "GenSigSendType" SG_ 2147483931 MaxLoadWarning 7;
+BA_ "GenSigSendType" SG_ 2147483931 StatusVehicleLoadForDrv 7;
+BA_ "GenSigStartValue" SG_ 2147483931 StatusVehicleLoadForDrv 0;
+BA_ "ASIL" SG_ 2147483934 CtrlSteeringPinionAng_Manual 0;
+BA_ "ASIL" SG_ 2147483934 Val_CtrlSteeringPinionAng_Manual 0;
+BA_ "GenSigStartValue" SG_ 2147483934 TruncatedFreshnessVal_ManStrInfo 0;
+BA_ "GenSigStartValue" SG_ 2147483934 TruncatedMAC_ManualSteeringInfo 0;
+BA_ "GenSigStartValue" SG_ 2147483938 FVMAuthenticator 0;
+BA_ "GenSigStartValue" SG_ 2147483938 FVMPDULinkerAuth 0;
+BA_ "ASIL" SG_ 2147483939 FVMResetCounter 1;
+BA_ "GenSigStartValue" SG_ 2147483939 FVMResetCounter 0;
+BA_ "ASIL" SG_ 2147483939 FVMPDULinkerCntr 1;
+BA_ "GenSigStartValue" SG_ 2147483939 FVMPDULinkerCntr 0;
+BA_ "ASIL" SG_ 2147483939 FVMTripCounter 1;
+BA_ "GenSigStartValue" SG_ 2147483939 FVMTripCounter 0;
+BA_ "ASIL" SG_ 2147483942 StandstillReqValidStat_VCU 3;
+BA_ "GenSigSendType" SG_ 2147483942 StandstillReqValidStat_VCU 7;
+BA_ "GenSigStartValue" SG_ 2147483942 StandstillReqValidStat_VCU 0;
+BA_ "ASIL" SG_ 2147483942 DeadManButtonPressedStat 3;
+BA_ "GenSigSendType" SG_ 2147483942 DeadManButtonPressedStat 3;
+BA_ "ASIL" SG_ 2147483942 StandstillReq_VCU 3;
+BA_ "GenSigSendType" SG_ 2147483942 StandstillReq_VCU 7;
+BA_ "ASIL" SG_ 2147483943 VCUManOpInfoSecCRC 3;
+BA_ "ASIL" SG_ 2147483943 VCUManOpInfoSecCntr 3;
+BA_ "ASIL" SG_ 2147483943 AccelDecelReqSecValidStat_JS_VCU 3;
+BA_ "GenSigSendType" SG_ 2147483943 AccelDecelReqSecValidStat_JS_VCU 7;
+BA_ "ASIL" SG_ 2147483943 AccelDecelReqSec_JS_VCU 3;
+BA_ "GenSigSendType" SG_ 2147483943 AccelDecelReqSec_JS_VCU 7;
+BA_ "GenSigStartValue" SG_ 2147483943 AccelDecelReqSec_JS_VCU 0;
+BA_ "ASIL" SG_ 2147483946 StatusGear 3;
+BA_ "GenSigSendType" SG_ 2147483946 StatusGear 7;
+BA_ "GenSigSendType" SG_ 2147483949 SMReqBoardDeBoardHtAdj 7;
+BA_ "GenSigStartValue" SG_ 2147483949 SMReqBoardDeBoardHtAdj 0;
+BA_ "ASIL" SG_ 2147483956 UBat 3;
+BA_ "GenSigSendType" SG_ 2147483956 UBat 7;
+BA_ "GenSigStartValue" SG_ 2147483956 UBat 0;
+BA_ "GenSigSendType" SG_ 2147483962 LVBatt1SoC 7;
+BA_ "GenSigSendType" SG_ 2147483962 LVBatt1Vtg 7;
+BA_ "ASIL" SG_ 2147483965 SecBrkInfoCRC 3;
+BA_ "GenSigSendType" SG_ 2147483965 SecBrkInfoCRC 7;
+BA_ "ASIL" SG_ 2147483965 SecBrkInfoCntr 3;
+BA_ "GenSigSendType" SG_ 2147483965 SecBrkInfoCntr 7;
+BA_ "ASIL" SG_ 2147483965 SecBrkSysStat 3;
+BA_ "GenSigSendType" SG_ 2147483965 SecBrkSysStat 7;
+BA_ "ASIL" SG_ 2147483965 BrkDrvMdSBS 3;
+BA_ "ASIL" SG_ 2147483965 SecBrkErrLvl 3;
+BA_ "GenSigSendType" SG_ 2147483965 SecBrkErrLvl 7;
+BA_ "GenSigStartValue" SG_ 2147483965 SecBrkErrLvl 0;
+BA_ "ASIL" SG_ 2147483965 VirtualDrvrStatFdbckSBS 3;
+BA_ "ASIL" SG_ 2147483966 MK100FrntWhlSpdCRC 3;
+BA_ "ASIL" SG_ 2147483966 MK100FrntWhlSpdCntr 3;
+BA_ "ASIL" SG_ 2147483966 WheelSpeedFLValidStat2 3;
+BA_ "ASIL" SG_ 2147483966 WheelSpeedFRValidStat2 3;
+BA_ "ASIL" SG_ 2147483966 CurrWheelSpeedFLStat2 3;
+BA_ "ASIL" SG_ 2147483966 CurrWheelSpeedFRStat2 3;
+BA_ "GenSigStartValue" SG_ 2147483967 LV_Ldshd 0;
+BA_ "ASIL" SG_ 2147483968 CurrPinionStat_Checksum 3;
+BA_ "GenSigSendType" SG_ 2147483968 CurrPinionStat_Checksum 7;
+BA_ "GenSigStartValue" SG_ 2147483968 CurrPinionStat_Checksum 0;
+BA_ "ASIL" SG_ 2147483968 CurrPinionStat_AliveCounter 3;
+BA_ "GenSigSendType" SG_ 2147483968 CurrPinionStat_AliveCounter 7;
+BA_ "GenSigStartValue" SG_ 2147483968 CurrPinionStat_AliveCounter 0;
+BA_ "ASIL" SG_ 2147483968 CurrentSteeringPinionRate 3;
+BA_ "GenSigSendType" SG_ 2147483968 CurrentSteeringPinionRate 7;
+BA_ "GenSigStartValue" SG_ 2147483968 CurrentSteeringPinionRate 0;
+BA_ "ASIL" SG_ 2147483968 CurrSteerPinionAngleValidity 3;
+BA_ "ASIL" SG_ 2147483968 CurrSteerPinionRateValidity 3;
+BA_ "ASIL" SG_ 2147483968 CurrentSteeringPinionAngle 3;
+BA_ "GenSigSendType" SG_ 2147483968 CurrentSteeringPinionAngle 7;
+BA_ "GenSigStartValue" SG_ 2147483968 CurrentSteeringPinionAngle 0;
+BA_ "ASIL" SG_ 2147483976 ASS_VehRideHeight_Cntr 1;
+BA_ "GenSigStartValue" SG_ 2147483976 ASS_VehRideHeight_Cntr 0;
+BA_ "ASIL" SG_ 2147483976 VehRideHeight_RL 1;
+BA_ "GenSigSendType" SG_ 2147483976 VehRideHeight_RL 7;
+BA_ "GenSigStartValue" SG_ 2147483976 VehRideHeight_RL 0;
+BA_ "ASIL" SG_ 2147483976 VehRideHeight_RR 1;
+BA_ "GenSigSendType" SG_ 2147483976 VehRideHeight_RR 7;
+BA_ "GenSigStartValue" SG_ 2147483976 VehRideHeight_RR 0;
+BA_ "ASIL" SG_ 2147483976 VehRideHeight_FL 1;
+BA_ "GenSigSendType" SG_ 2147483976 VehRideHeight_FL 7;
+BA_ "GenSigStartValue" SG_ 2147483976 VehRideHeight_FL 0;
+BA_ "ASIL" SG_ 2147483976 VehRideHeight_FR 1;
+BA_ "GenSigSendType" SG_ 2147483976 VehRideHeight_FR 7;
+BA_ "GenSigStartValue" SG_ 2147483976 VehRideHeight_FR 0;
+BA_ "GenSigSendType" SG_ 2147483978 StatusVehicleRideHeight 7;
+BA_ "GenSigStartValue" SG_ 2147483978 StatusVehicleRideHeight 0;
+BA_ "GenSigSendType" SG_ 2147483978 ASSStsBoardDeboardHtAdj 7;
+BA_ "GenSigSendType" SG_ 2147483978 StatusServiceHeightAdjustment 7;
+BA_ "ASIL" SG_ 2147483979 SDS_CtrlSteeringWheel_Pri_CRC 3;
+BA_ "GenSigStartValue" SG_ 2147483979 SDS_CtrlSteeringWheel_Pri_CRC 0;
+BA_ "ASIL" SG_ 2147483979 SDS_CtrlSteeringWheel_Pri_Cntr 3;
+BA_ "GenSigStartValue" SG_ 2147483979 SDS_CtrlSteeringWheel_Pri_Cntr 0;
+BA_ "ASIL" SG_ 2147483979 CtrlSteeringPinionAngle_Pri 3;
+BA_ "GenSigSendType" SG_ 2147483979 CtrlSteeringPinionAngle_Pri 7;
+BA_ "ASIL" SG_ 2147483979 Valid_CtrlSteeringPinionAng_Pri 3;
+BA_ "GenSigSendType" SG_ 2147483979 Valid_CtrlSteeringPinionAng_Pri 7;
+BA_ "GenSigStartValue" SG_ 2147483979 Valid_CtrlSteeringPinionAng_Pri 0;
+BA_ "ASIL" SG_ 2147483979 SteerRateReq_Pri 3;
+BA_ "ASIL" SG_ 2147483981 SDS_CtrlSteeringWheel_Sec_CRC 3;
+BA_ "GenSigStartValue" SG_ 2147483981 SDS_CtrlSteeringWheel_Sec_CRC 0;
+BA_ "ASIL" SG_ 2147483981 SDS_CtrlSteeringWheel_Sec_Cntr 3;
+BA_ "GenSigStartValue" SG_ 2147483981 SDS_CtrlSteeringWheel_Sec_Cntr 0;
+BA_ "ASIL" SG_ 2147483981 CtrlSteeringPinionAngle_Sec 3;
+BA_ "GenSigSendType" SG_ 2147483981 CtrlSteeringPinionAngle_Sec 7;
+BA_ "ASIL" SG_ 2147483981 Valid_CtrlSteeringPinionAng_Sec 3;
+BA_ "GenSigSendType" SG_ 2147483981 Valid_CtrlSteeringPinionAng_Sec 7;
+BA_ "GenSigStartValue" SG_ 2147483981 Valid_CtrlSteeringPinionAng_Sec 0;
+BA_ "ASIL" SG_ 2147483981 SteerRateReq_Sec 3;
+BA_ "GenSigSendType" SG_ 2147483987 StatusTelematicsConnectivity 7;
+BA_ "ASIL" SG_ 2147483989 Stability_Info_Pri_Checksum 3;
+BA_ "GenSigSendType" SG_ 2147483989 Stability_Info_Pri_Checksum 7;
+BA_ "GenSigStartValue" SG_ 2147483989 Stability_Info_Pri_Checksum 0;
+BA_ "ASIL" SG_ 2147483989 Stability_Info_Pri_AliveCounter 3;
+BA_ "GenSigSendType" SG_ 2147483989 Stability_Info_Pri_AliveCounter 7;
+BA_ "GenSigStartValue" SG_ 2147483989 Stability_Info_Pri_AliveCounter 0;
+BA_ "ASIL" SG_ 2147483989 GearchangeReqPri 3;
+BA_ "GenSigSendType" SG_ 2147483989 GearchangeReqPri 7;
+BA_ "GenSigStartValue" SG_ 2147483989 GearchangeReqPri 2;
+BA_ "ASIL" SG_ 2147483989 AccelDecelReqPri 3;
+BA_ "GenSigSendType" SG_ 2147483989 AccelDecelReqPri 7;
+BA_ "GenSigStartValue" SG_ 2147483989 AccelDecelReqPri 0;
+BA_ "ASIL" SG_ 2147483989 AccelDecelReqPriValidStat 3;
+BA_ "GenSigSendType" SG_ 2147483989 AccelDecelReqPriValidStat 7;
+BA_ "GenSigStartValue" SG_ 2147483989 AccelDecelReqPriValidStat 0;
+BA_ "ASIL" SG_ 2147483989 VehStandStillReqPri 3;
+BA_ "GenSigSendType" SG_ 2147483989 VehStandStillReqPri 7;
+BA_ "GenSigStartValue" SG_ 2147483989 VehStandStillReqPri 0;
+BA_ "ASIL" SG_ 2147483989 VehStandStillReqValidityPri 3;
+BA_ "GenSigSendType" SG_ 2147483989 VehStandStillReqValidityPri 7;
+BA_ "GenSigStartValue" SG_ 2147483989 VehStandStillReqValidityPri 0;
+BA_ "ASIL" SG_ 2147483990 Stability_Info_Sec_Checksum 3;
+BA_ "GenSigSendType" SG_ 2147483990 Stability_Info_Sec_Checksum 7;
+BA_ "GenSigStartValue" SG_ 2147483990 Stability_Info_Sec_Checksum 0;
+BA_ "ASIL" SG_ 2147483990 Stability_Info_Sec_AliveCounter 3;
+BA_ "GenSigSendType" SG_ 2147483990 Stability_Info_Sec_AliveCounter 7;
+BA_ "GenSigStartValue" SG_ 2147483990 Stability_Info_Sec_AliveCounter 0;
+BA_ "ASIL" SG_ 2147483990 GearchangeReq_Sec 3;
+BA_ "GenSigSendType" SG_ 2147483990 GearchangeReq_Sec 7;
+BA_ "GenSigStartValue" SG_ 2147483990 GearchangeReq_Sec 2;
+BA_ "ASIL" SG_ 2147483990 AccelDecelReqSec 3;
+BA_ "GenSigSendType" SG_ 2147483990 AccelDecelReqSec 7;
+BA_ "GenSigStartValue" SG_ 2147483990 AccelDecelReqSec 0;
+BA_ "ASIL" SG_ 2147483990 AccelDecelReqSecValidStat 3;
+BA_ "GenSigSendType" SG_ 2147483990 AccelDecelReqSecValidStat 7;
+BA_ "GenSigStartValue" SG_ 2147483990 AccelDecelReqSecValidStat 0;
+BA_ "ASIL" SG_ 2147483990 VehStandStillReqSec 3;
+BA_ "GenSigStartValue" SG_ 2147483990 VehStandStillReqSec 0;
+BA_ "ASIL" SG_ 2147483990 VehStandStillReqValiditySec 3;
+BA_ "GenSigStartValue" SG_ 2147483990 VehStandStillReqValiditySec 0;
+BA_ "ASIL" SG_ 2147484005 SDSStatusCRC_Pri 3;
+BA_ "ASIL" SG_ 2147484005 SDSStatusCntr_Pri 3;
+BA_ "ASIL" SG_ 2147484005 CurrentSDSModeStat_Pri 3;
+BA_ "GenSigSendType" SG_ 2147484005 CurrentSDSModeStat_Pri 7;
+BA_ "GenSigStartValue" SG_ 2147484005 CurrentSDSModeStat_Pri 1;
+BA_ "ASIL" SG_ 2147484005 MRMStatPri 3;
+BA_ "GenSigSendType" SG_ 2147484005 MRMStatPri 7;
+BA_ "GenSigStartValue" SG_ 2147484005 MRMStatPri 0;
+BA_ "ASIL" SG_ 2147484006 SDSStatusCRC_Sec 3;
+BA_ "ASIL" SG_ 2147484006 SDSStatusCntr_Sec 3;
+BA_ "ASIL" SG_ 2147484006 ParkingProcessStat_Sec 3;
+BA_ "GenSigStartValue" SG_ 2147484006 ParkingProcessStat_Sec 0;
+BA_ "ASIL" SG_ 2147484006 DestReachedStat_Sec 3;
+BA_ "GenSigStartValue" SG_ 2147484006 DestReachedStat_Sec 1;
+BA_ "ASIL" SG_ 2147484006 TeleOpReqStat_Sec 3;
+BA_ "GenSigStartValue" SG_ 2147484006 TeleOpReqStat_Sec 2;
+BA_ "ASIL" SG_ 2147484006 MissionProgressStat_Sec 3;
+BA_ "GenSigStartValue" SG_ 2147484006 MissionProgressStat_Sec 1;
+BA_ "ASIL" SG_ 2147484006 CurrentSDSModeStat_Sec 3;
+BA_ "GenSigStartValue" SG_ 2147484006 CurrentSDSModeStat_Sec 1;
+BA_ "ASIL" SG_ 2147484006 LaneChangeStat_Sec 3;
+BA_ "GenSigStartValue" SG_ 2147484006 LaneChangeStat_Sec 0;
+BA_ "ASIL" SG_ 2147484006 MRMStatSec 3;
+BA_ "GenSigStartValue" SG_ 2147484006 MRMStatSec 0;
+BA_ "ASIL" SG_ 2147484010 VehMvmntInfoCRC 3;
+BA_ "GenSigSendType" SG_ 2147484010 VehMvmntInfoCRC 7;
+BA_ "ASIL" SG_ 2147484010 VehMvmntInfoCntr 3;
+BA_ "GenSigSendType" SG_ 2147484010 VehMvmntInfoCntr 7;
+BA_ "ASIL" SG_ 2147484010 VehMvmntDirectnStat 3;
+BA_ "GenSigSendType" SG_ 2147484010 VehMvmntDirectnStat 7;
+BA_ "ASIL" SG_ 2147484010 VehSpeedCalcStat 3;
+BA_ "GenSigSendType" SG_ 2147484010 VehSpeedCalcStat 7;
+BA_ "GenSigStartValue" SG_ 2147484010 VehSpeedCalcStat 0;
+BA_ "ASIL" SG_ 2147484010 VehStandStillStat 3;
+BA_ "GenSigSendType" SG_ 2147484010 VehStandStillStat 7;
+BA_ "GenSigStartValue" SG_ 2147484010 VehStandStillStat 2;
+BA_ "ASIL" SG_ 2147484010 BlindStopStat 3;
+BA_ "GenSigSendType" SG_ 2147484010 BlindStopStat 7;
+BA_ "GenSigStartValue" SG_ 2147484010 BlindStopStat 0;
+BA_ "ASIL" SG_ 2147484010 VehSpeedValidStat 3;
+BA_ "GenSigSendType" SG_ 2147484010 VehSpeedValidStat 7;
+BA_ "GenSigStartValue" SG_ 2147484010 VehSpeedValidStat 0;
+BA_ "ASIL" SG_ 2147484010 GradeSensStat 3;
+BA_ "GenSigSendType" SG_ 2147484010 GradeSensStat 7;
+BA_ "GenSigStartValue" SG_ 2147484010 GradeSensStat 4500;
+BA_ "ASIL" SG_ 2147484017 BrkInfo1CRC 3;
+BA_ "GenSigSendType" SG_ 2147484017 BrkInfo1CRC 7;
+BA_ "ASIL" SG_ 2147484017 BrkInfo1Cntr 3;
+BA_ "GenSigSendType" SG_ 2147484017 BrkInfo1Cntr 7;
+BA_ "ASIL" SG_ 2147484017 BrkPadWearWarnStatFA 3;
+BA_ "GenSigSendType" SG_ 2147484017 BrkPadWearWarnStatFA 7;
+BA_ "ASIL" SG_ 2147484017 BrkPadWearWarnStatRA 3;
+BA_ "GenSigSendType" SG_ 2147484017 BrkPadWearWarnStatRA 7;
+BA_ "ASIL" SG_ 2147484017 ParkBrakeRedLamp 3;
+BA_ "GenSigSendType" SG_ 2147484017 ParkBrakeRedLamp 7;
+BA_ "ASIL" SG_ 2147484017 PrimaryBrkSysStat 3;
+BA_ "GenSigSendType" SG_ 2147484017 PrimaryBrkSysStat 7;
+BA_ "ASIL" SG_ 2147484017 PbcOutOfSpecMsg 3;
+BA_ "GenSigSendType" SG_ 2147484017 PbcOutOfSpecMsg 7;
+BA_ "ASIL" SG_ 2147484017 PBCOutParkSupportReq 3;
+BA_ "GenSigSendType" SG_ 2147484017 PBCOutParkSupportReq 7;
+BA_ "ASIL" SG_ 2147484017 ParkBrakeStat 3;
+BA_ "GenSigSendType" SG_ 2147484017 ParkBrakeStat 7;
+BA_ "GenSigStartValue" SG_ 2147484017 ParkBrakeStat 2;
+BA_ "ASIL" SG_ 2147484017 EscWarningLamp 3;
+BA_ "ASIL" SG_ 2147484017 ABSWarningLamp 3;
+BA_ "ASIL" SG_ 2147484017 ABrakeWarningLamp 3;
+BA_ "ASIL" SG_ 2147484017 BrakingWarningYellowLamp 3;
+BA_ "GenSigSendType" SG_ 2147484017 BrakingWarningYellowLamp 7;
+BA_ "ASIL" SG_ 2147484017 BrakeWarningRedLamp 3;
+BA_ "ASIL" SG_ 2147484017 PbcOutFaultStatus 3;
+BA_ "GenSigSendType" SG_ 2147484017 PbcOutFaultStatus 7;
+BA_ "ASIL" SG_ 2147484017 BrkFluidWarnStat 3;
+BA_ "GenSigSendType" SG_ 2147484017 BrkFluidWarnStat 7;
+BA_ "ASIL" SG_ 2147484018 BrkInfo2CRC 3;
+BA_ "GenSigSendType" SG_ 2147484018 BrkInfo2CRC 7;
+BA_ "ASIL" SG_ 2147484018 BrkInfo2Cntr 3;
+BA_ "GenSigSendType" SG_ 2147484018 BrkInfo2Cntr 7;
+BA_ "ASIL" SG_ 2147484018 ABSStat 3;
+BA_ "GenSigSendType" SG_ 2147484018 ABSStat 7;
+BA_ "ASIL" SG_ 2147484018 ESCStat 3;
+BA_ "GenSigSendType" SG_ 2147484018 ESCStat 7;
+BA_ "ASIL" SG_ 2147484018 StbltyEventInProgStat 3;
+BA_ "GenSigSendType" SG_ 2147484018 StbltyEventInProgStat 7;
+BA_ "GenSigStartValue" SG_ 2147484018 StbltyEventInProgStat 0;
+BA_ "ASIL" SG_ 2147484018 TractionCtrlStat 3;
+BA_ "GenSigSendType" SG_ 2147484018 TractionCtrlStat 7;
+BA_ "ASIL" SG_ 2147484018 SSMCurrBrkState 3;
+BA_ "ASIL" SG_ 2147484018 VirtualDrvrStatFdbckPBS 3;
+BA_ "ASIL" SG_ 2147484018 BrkDrvMdPBS 3;
+BA_ "ASIL" SG_ 2147484018 PrimaryBrkErrLvl 3;
+BA_ "GenSigSendType" SG_ 2147484018 PrimaryBrkErrLvl 7;
+BA_ "GenSigStartValue" SG_ 2147484018 PrimaryBrkErrLvl 0;
+BA_ "ASIL" SG_ 2147484018 AccOverGndStat 3;
+BA_ "GenSigSendType" SG_ 2147484018 AccOverGndStat 7;
+BA_ "GenSigStartValue" SG_ 2147484018 AccOverGndStat 0;
+BA_ "ASIL" SG_ 2147484021 MKC1TrqRdctnReqCRC 3;
+BA_ "ASIL" SG_ 2147484021 MKC1TrqRdctnReqCntr 3;
+BA_ "ASIL" SG_ 2147484021 StabilityTorqueDirection 3;
+BA_ "ASIL" SG_ 2147484021 OvrallBrkTrqAppldStat 3;
+BA_ "GenSigSendType" SG_ 2147484021 OvrallBrkTrqAppldStat 7;
+BA_ "ASIL" SG_ 2147484021 RegenTargetTorque 3;
+BA_ "ASIL" SG_ 2147484021 StabilityTargetTorque 3;
+BA_ "GenSigSendType" SG_ 2147484021 StabilityTargetTorque 7;
+BA_ "ASIL" SG_ 2147484027 IMUInfoCRC 3;
+BA_ "GenSigSendType" SG_ 2147484027 IMUInfoCRC 7;
+BA_ "ASIL" SG_ 2147484027 IMUInfoCntr 3;
+BA_ "GenSigSendType" SG_ 2147484027 IMUInfoCntr 7;
+BA_ "ASIL" SG_ 2147484027 LatAccFltValidStat 3;
+BA_ "GenSigSendType" SG_ 2147484027 LatAccFltValidStat 7;
+BA_ "ASIL" SG_ 2147484027 YawRateFltValidStat 3;
+BA_ "GenSigSendType" SG_ 2147484027 YawRateFltValidStat 7;
+BA_ "ASIL" SG_ 2147484027 LongAccFltValidStat 3;
+BA_ "GenSigSendType" SG_ 2147484027 LongAccFltValidStat 7;
+BA_ "ASIL" SG_ 2147484027 LatAccFlt 3;
+BA_ "GenSigSendType" SG_ 2147484027 LatAccFlt 7;
+BA_ "GenSigStartValue" SG_ 2147484027 LatAccFlt 32765.999999999996;
+BA_ "ASIL" SG_ 2147484027 YawRateFlt 3;
+BA_ "GenSigSendType" SG_ 2147484027 YawRateFlt 7;
+BA_ "GenSigStartValue" SG_ 2147484027 YawRateFlt 32766;
+BA_ "ASIL" SG_ 2147484027 LongAccFlt 3;
+BA_ "GenSigSendType" SG_ 2147484027 LongAccFlt 7;
+BA_ "GenSigStartValue" SG_ 2147484027 LongAccFlt 32765.999999999996;
+BA_ "ASIL" SG_ 2147484048 MKC1ManBrkInfoCRC 3;
+BA_ "ASIL" SG_ 2147484048 MKC1ManBrkInfoCntr 3;
+BA_ "ASIL" SG_ 2147484048 ManualBrakeInterventionStatus 3;
+BA_ "GenSigSendType" SG_ 2147484048 ManualBrakeInterventionStatus 7;
+BA_ "ASIL" SG_ 2147484182 CurrSteerRateCRC 3;
+BA_ "ASIL" SG_ 2147484182 CurrSteerRateCntr 3;
+BA_ "ASIL" SG_ 2147484182 CurrSteerRate 3;
+BA_ "GenSigSendType" SG_ 2147484182 CurrSteerRate 7;
+BA_ "GenSigStartValue" SG_ 2147484182 CurrSteerRate 0;
+BA_ "ASIL" SG_ 2147484182 ManSteerIntervntnStat 3;
+BA_ "GenSigSendType" SG_ 2147484182 ManSteerIntervntnStat 7;
+BA_ "ASIL" SG_ 2147484182 CurrSteerRateValidity 3;
+BA_ "ASIL" SG_ 2147484185 ISCSErrLvlCRC 3;
+BA_ "ASIL" SG_ 2147484185 ISCSErrLvlCntr 3;
+BA_ "ASIL" SG_ 2147484185 ISCSErrLvl 3;
+BA_ "GenSigSendType" SG_ 2147484185 ISCSErrLvl 7;
+BA_ "GenSigStartValue" SG_ 2147484185 ISCSErrLvl 0;
+BA_ "ASIL" SG_ 2147484193 MKC1BrkLghtReqCRC 3;
+BA_ "ASIL" SG_ 2147484193 MKC1BrkLghtReqCntr 3;
+BA_ "ASIL" SG_ 2147484193 BrkLghtActReq 3;
+BA_ "GenSigSendType" SG_ 2147484193 BrkLghtActReq 7;
+BA_ "GenSigSendType" SG_ 2147484241 AltPosSTD 7;
+BA_ "GenSigStartValue" SG_ 2147484241 AltPosSTD 0;
+BA_ "GenSigSendType" SG_ 2147484241 Altitude 7;
+BA_ "GenSigStartValue" SG_ 2147484241 Altitude 0;
+BA_ "GenSigSendType" SG_ 2147484242 Latitude 7;
+BA_ "GenSigStartValue" SG_ 2147484242 Latitude 0;
+BA_ "GenSigSendType" SG_ 2147484242 LatPosSTD 7;
+BA_ "GenSigStartValue" SG_ 2147484242 LatPosSTD 0;
+BA_ "GenSigSendType" SG_ 2147484243 Longitude 7;
+BA_ "GenSigStartValue" SG_ 2147484243 Longitude 0;
+BA_ "GenSigSendType" SG_ 2147484243 LongPosSTD 7;
+BA_ "GenSigStartValue" SG_ 2147484243 LongPosSTD 0;
+BA_ "GenSigSendType" SG_ 2147484244 PosSec 7;
+BA_ "GenSigStartValue" SG_ 2147484244 PosSec 0;
+BA_ "GenSigSendType" SG_ 2147484244 PosSecFraction 7;
+BA_ "GenSigStartValue" SG_ 2147484244 PosSecFraction 0;
+BA_ "GenSigSendType" SG_ 2147484245 Course 7;
+BA_ "GenSigStartValue" SG_ 2147484245 Course 0;
+BA_ "GenSigSendType" SG_ 2147484245 SpeedOvrGnd 7;
+BA_ "GenSigStartValue" SG_ 2147484245 SpeedOvrGnd 0;
+BA_ "GenSigSendType" SG_ 2147484246 FixTypeDeadReckng 7;
+BA_ "GenSigStartValue" SG_ 2147484246 FixTypeDeadReckng 0;
+BA_ "GenSigSendType" SG_ 2147484246 FixTypeEstmtd 7;
+BA_ "GenSigStartValue" SG_ 2147484246 FixTypeEstmtd 0;
+BA_ "GenSigSendType" SG_ 2147484246 FixTypeMultiBand 7;
+BA_ "GenSigStartValue" SG_ 2147484246 FixTypeMultiBand 0;
+BA_ "GenSigSendType" SG_ 2147484246 FixTypeMultiConstltn 7;
+BA_ "GenSigStartValue" SG_ 2147484246 FixTypeMultiConstltn 0;
+BA_ "GenSigSendType" SG_ 2147484246 FixTypePrpgtd 7;
+BA_ "GenSigStartValue" SG_ 2147484246 FixTypePrpgtd 0;
+BA_ "GenSigSendType" SG_ 2147484246 FixTypeSBAS 7;
+BA_ "GenSigStartValue" SG_ 2147484246 FixTypeSBAS 0;
+BA_ "GenSigSendType" SG_ 2147484246 FixTypeSingleBand 7;
+BA_ "GenSigStartValue" SG_ 2147484246 FixTypeSingleBand 0;
+BA_ "GenSigSendType" SG_ 2147484246 LatDirectn 7;
+BA_ "GenSigStartValue" SG_ 2147484246 LatDirectn 0;
+BA_ "GenSigSendType" SG_ 2147484246 LongDirectn 7;
+BA_ "GenSigStartValue" SG_ 2147484246 LongDirectn 0;
+BA_ "GenSigSendType" SG_ 2147484247 TCUActvCellularGen 7;
+BA_ "GenSigStartValue" SG_ 2147484247 TCUActvCellularGen 0;
+BA_ "GenSigSendType" SG_ 2147484442 ManHtAdjstmntReq 7;
+BA_ "GenSigSendType" SG_ 2147484448 AirSpringErrLvl 7;
+BA_ "GenSigStartValue" SG_ 2147484448 AirSpringErrLvl 0;
+BA_ "GenSigSendType" SG_ 2147484700 StatusTotalDistTravelledInd 7;
+BA_ "GenSigSendType" SG_ 2147484752 Year 7;
+BA_ "GenSigStartValue" SG_ 2147484752 Year 0;
+BA_ "GenSigSendType" SG_ 2147484752 Month 7;
+BA_ "GenSigStartValue" SG_ 2147484752 Month 1;
+BA_ "GenSigSendType" SG_ 2147484752 Day 7;
+BA_ "GenSigStartValue" SG_ 2147484752 Day 0;
+BA_ "GenSigSendType" SG_ 2147484752 Hour 7;
+BA_ "GenSigStartValue" SG_ 2147484752 Hour 0;
+BA_ "GenSigSendType" SG_ 2147484752 Minu 7;
+BA_ "GenSigStartValue" SG_ 2147484752 Minu 0;
+BA_ "GenSigSendType" SG_ 2147484752 Sec 7;
+BA_ "GenSigStartValue" SG_ 2147484752 Sec 0;
+BA_ "GenSigSendType" SG_ 2147484752 miliseconds 7;
+BA_ "GenSigSendType" SG_ 2147485190 StatusAmbientAirTemp 7;
+BA_ "GenSigStartValue" SG_ 2147485190 StatusAmbientAirTemp 255;
+BA_ "GenSigSendType" SG_ 2147485442 Soc 7;
+BA_ "GenSigStartValue" SG_ 2147485442 Soc 0;
+BA_ "GenSigSendType" SG_ 2564432369 DiagReq_MK100 7;
+BA_ "GenSigSendType" SG_ 2564434673 DiagReq_ASS 7;
+BA_ "GenSigSendType" SG_ 2564485409 DiagResp_MK100 7;
+BA_ "GenSigSendType" SG_ 2564485418 DiagResp_ASS 7;
+BA_ "GenSigSendType" SG_ 2564554481 DiagReq_Functional 7;
+BA_ "GenSigSendType" SG_ 2564903264 ASS_CTO 7;
+BA_ "GenSigSendType" SG_ 2564903265 ASS_DTO 7;
+BA_ "GenSigSendType" SG_ 2654486561 SourceNodeIdentifier 7;
+BA_ "GenSigSendType" SG_ 2654486624 SourceNodeIdentifier 7;
+
+
+BA_ "NodeLayerModules" BU_ ASS "CANoeILNLVector.vmodule";
+BA_ "NodeLayerModules" BU_ CGW2 "CANoeILNLVector.vmodule";
+BA_ "NodeLayerModules" BU_ ECU1_ISCS "CANoeILNLVector.vmodule";
+BA_ "NodeLayerModules" BU_ ECU2_ISCS "CANoeILNLVector.vmodule";
+BA_ "NodeLayerModules" BU_ MK100 "CANoeILNLVector.vmodule";
+BA_ "NodeLayerModules" BU_ SDS_Secondary "CANoeILNLVector.vmodule";
+BA_ "NodeLayerModules" BU_ VN "CANoeILNLVector.vmodule";
+VAL_ 160 MCUSts 0 "INITIALIZATION" 1 "STANDBY" 2 "ACTIVATION" 3 "DEACTIVATION" 4 "OPERATIONAL" 5 "FAILURE" 6 "SHUTDOWN" 7 "READY FOR POWER OFF" 8 "WAIT FOR SAFE CONDITIONS" 14 "INVALID" 15 "SNA"; 
+VAL_ 378 ISCSBlindStop 0 "Present" 1 "Lost" 2 "Reserved_1" 3 "Reserved_2"; 
+VAL_ 378 ISCSComStatBrake 0 "Present" 1 "LostComBrakePrim" 2 "LostComBrakeSec" 3 "Reserved_1"; 
+VAL_ 378 ISCSComStatSDS 0 "Present" 1 "LostComSDSPrim" 2 "LostComSDSSec" 3 "Reserved_1"; 
+VAL_ 378 ISCSStat 0 "ISCS_OFF" 1 "ISCS_Standby" 2 "Manual_Steer_Intervention_Mode" 3 "ISCS_Autonomous_Steer_Mode_Prim" 4 "ISCS_Autonomous_Steer_Mode_Sec" 5 "ISCS Manual_Joystick_Steering_Mode" 6 "ISCS_Emergency_Maneuver" 7 "ISCS_Failure" 8 "Recoverable_degraded_mode" 9 "Non_Recoverable_Degraded_Mode" 10 "Parking_Mode" 11 "Reserved_1" 12 "Reserved_2" 13 "Reserved_3" 14 "Reserved_4" 15 "Reserved_5"; 
+VAL_ 1821 YAW_RATE 65533 "NOT AVAILABLE" 65534 "INVALID" 65535 "UNFILLED"; 
+VAL_ 1821 YAW_RATE_QUAL 2 "VALID" 4 "SUBSITUTE" 6 "INVALID" 14 "NOT AVAILABLE" 15 "UNFILLED"; 
+VAL_ 1821 LAT_ACC_QUAL 2 "VALID" 4 "SUBSITUTE" 6 "INVALID" 14 "NOT AVAILABLE" 15 "UNFILLED"; 
+VAL_ 1821 LAT_ACC 65533 "NOT AVAILABLE" 65534 "INVALID" 65535 "UNFILLED"; 
+VAL_ 1821 SC_STATUS 0 "NO_MISTAKE" 2 "UNDERVOLTAGE" 3 "OVERVOLTAGE" 4 "SYNC_UNDERFLOW" 5 "SYNC_FAIL" 13 "FUNC_NOT_AVAILABLE" 14 "FUNC_ERROR" 15 "UNFILLED"; 
+VAL_ 1822 ROLL_RATE 65533 "NOT AVAILABLE" 65534 "INVALID" 65535 "UNFILLED"; 
+VAL_ 1822 ROLL_RATE_QUAL 2 "VALID" 4 "SUBSITUTE" 6 "INVALID" 14 "NOT AVAILABLE" 15 "UNFILLED"; 
+VAL_ 1822 LONG_ACC_QUAL 2 "VALID" 4 "SUBSITUTE" 6 "INVALID" 14 "NOT AVAILABLE" 15 "UNFILLED"; 
+VAL_ 1822 LONG_ACC 65533 "NOT AVAILABLE" 65534 "INVALID" 65535 "UNFILLED"; 
+VAL_ 1823 PITCH_RATE 65533 "NOT AVAILABLE" 65534 "INVALID" 65535 "UNFILLED"; 
+VAL_ 1823 PITCH_RATE_QUAL 2 "VALID" 4 "SUBSITUTE" 6 "INVALID" 14 "NOT AVAILABLE" 15 "UNFILLED"; 
+VAL_ 1823 VERT_ACC_QUAL 2 "VALID" 4 "SUBSITUTE" 6 "INVALID" 14 "NOT AVAILABLE" 15 "UNFILLED"; 
+VAL_ 1823 VERT_ACC 65533 "NOT AVAILABLE" 65534 "INVALID" 65535 "UNFILLED"; 
+VAL_ 1890 DIAG_REQUEST 0 "CUSTOMER_NUM" 1 "MANUFACTURER_NUM" 2 "SERIAL_NUM_P1" 3 "SERIAL_NUM_P2" 4 "SW_RELEASE_NUM" 5 "HW_RELEASE_NUM" 15 "UNFILLED"; 
+VAL_ 1890 RESET_REQUEST 0 "OFF" 1 "ON" 13 "UNAVAILABLE" 14 "FAILURE" 15 "UNFILLED"; 
+VAL_ 2147483917 WheelSpeedFLValidStat 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483917 WheelSpeedFRValidStat 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483918 WheelSpeedRLValidStat 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483918 WheelSpeedRRValidStat 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483930 VSMStatus 0 "Default" 1 "SLEEP state" 2 "PARK state" 3 "DRIVE AUTONOMUS state" 4 "DRIVE MANUAL state" 5 "Plug In Charging state" 6 "Gear Neutral State" 7 "DIAGNOSTIC State" 8 "Test Drive Mode" 9 "Reserved_2" 10 "Reserved_3" 11 "Reserved_4" 12 "Reserved_5" 13 "Reserved_6" 14 "Reserved_7" 15 "Reserved_8"; 
+VAL_ 2147483931 MaxLoadWarning 0 "No warning" 1 "Warning"; 
+VAL_ 2147483931 StatusVehicleLoadForDrv 0 "OK to Drive" 1 "Not OK to Drive"; 
+VAL_ 2147483934 Val_CtrlSteeringPinionAng_Manual 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483942 StandstillReqValidStat_VCU 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483942 DeadManButtonPressedStat 0 "Released" 1 "Pressed" 2 "Error" 3 "Reserved"; 
+VAL_ 2147483942 StandstillReq_VCU 0 "Hold" 1 "Drive Off" 2 "Idle" 3 "Reserve"; 
+VAL_ 2147483943 AccelDecelReqSecValidStat_JS_VCU 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483946 StatusGear 0 "P" 1 "R" 2 "N" 3 "D" 4 "Reserved_1" 5 "Reserved_2" 6 "Reserved_3" 7 "Reserved_4"; 
+VAL_ 2147483949 SMReqBoardDeBoardHtAdj 0 "Default RideHeight" 1 "VehicleRideHeight Lowered" 2 "Forbid adjustment and levelling" 3 "No request (Station Manager inactive) " 4 "Reserved_1" 5 "Reserved_2" 6 "Reserved_3" 7 "Reserved_4"; 
+VAL_ 2147483953 PCUParkPosn_VCU 0 "Not initialized" 1 "Unkonwn" 2 "Park" 3 "Park stall" 4 "Between Park and Unpark" 5 "Unpark" 6 "Unpark stall"; 
+VAL_ 2147483965 SecBrkSysStat 0 "HAD System normal " 1 "HAD System Braking " 2 "HAD System normal Reduced" 3 "HAD System cooperative" 4 "HAD System Primary Only" 5 "HAD System Secondary Only" 6 "HAD System degraded" 7 "Reserved_1"; 
+VAL_ 2147483965 BrkDrvMdSBS 0 "Not Available" 1 "Brake Mode Autonomous" 2 "Brake Mode Manual" 3 "Reserved"; 
+VAL_ 2147483965 SecBrkErrLvl 0 "No Fault" 1 "Error Level 1" 2 "Error Level 2" 3 "Error Level 3" 4 "Error Level 4" 5 "Reserved_1" 6 "Reserved_2" 7 "Reserved_3"; 
+VAL_ 2147483965 VirtualDrvrStatFdbckSBS 0 "Virtual_driver_disabled" 1 "Virtual_driver_normal" 2 "Virtual_driver_prim_only" 3 "Virtual_driver_sec_only" 4 " Manual_driver_normal" 5 "Manual_driver_prim_only" 6 "Manual_driver_sec_only" 7 "Reserved"; 
+VAL_ 2147483966 WheelSpeedFLValidStat2 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483966 WheelSpeedFRValidStat2 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483967 LV_Ldshd 0 "No Shed" 1 "SHED_Level1" 2 "SHED_Level2" 3 "SHED_Level3" 4 "Reserved_1" 5 "Reserved_2" 6 "Reserved_3" 7 "Reserved_4"; 
+VAL_ 2147483968 CurrSteerPinionAngleValidity 0 "Valid" 1 "Invalid"; 
+VAL_ 2147483968 CurrSteerPinionRateValidity 0 "Valid" 1 "Invalid"; 
+VAL_ 2147483969 CurrSteerPinionAngleValidity_2 0 "Valid" 1 "Invalid"; 
+VAL_ 2147483969 CurrSteerPinionRateValidity_2 0 "Valid" 1 "Invalid"; 
+VAL_ 2147483978 StatusVehicleRideHeight 0 "RideHeight Achieved" 1 "RideHeight Not Achieved" 2 "Reserved_1" 3 "Reserved_2"; 
+VAL_ 2147483978 ASSStsBoardDeboardHtAdj 0 "No Kneeling" 1 "Kneeling" 2 "Leveling Inprogress" 3 "Reserved_1"; 
+VAL_ 2147483978 StatusServiceHeightAdjustment 0 "Default Ride Height" 1 "Vehicle Height Lifted Upward" 2 "Lowered Downward" 3 "Leveling In Progress"; 
+VAL_ 2147483979 Valid_CtrlSteeringPinionAng_Pri 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483981 Valid_CtrlSteeringPinionAng_Sec 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483987 StatusTelematicsConnectivity 0 "Default " 1 "Connecting" 2 "Connected" 3 "Discconnecting" 4 "Disconnected" 5 "Out of range" 6 "Reserved_1" 7 "Reserved_2"; 
+VAL_ 2147483989 GearchangeReqPri 0 "R" 1 "D" 2 "P" 3 "Reserved"; 
+VAL_ 2147483989 AccelDecelReqPriValidStat 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483989 VehStandStillReqPri 0 "No Request" 1 "Hold" 2 "Drive Off " 3 "Reserved_1"; 
+VAL_ 2147483989 VehStandStillReqValidityPri 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483990 GearchangeReq_Sec 0 "R" 1 "D" 2 "P" 3 "Reserved"; 
+VAL_ 2147483990 AccelDecelReqSecValidStat 0 "Invalid" 1 "Valid"; 
+VAL_ 2147483990 VehStandStillReqSec 0 "No Request" 1 "Hold" 2 "Drive Off " 3 "Reserved_1"; 
+VAL_ 2147483990 VehStandStillReqValiditySec 0 "Invalid" 1 "Valid"; 
+VAL_ 2147484005 CurrentSDSModeStat_Pri 0 "SDS_OFF" 1 "SDS_StandBy" 2 "SDS_Handover" 3 "SDS_TeleOp " 4 "SDS_Active_Main_Comfort" 5 "SDS_Active_Main_Empty_Shuttle" 6 "SDS_Emergency_Manuever" 7 "SDS_Failure" 8 "SDS_Recoverable_Degraded_Mode" 9 "SDS_Non_Recoverable_Degraded_Mode" 10 "Parking Mode" 11 "Reserved_1" 12 "Reserved_2" 13 "Reserved_3" 14 "Reserved_4" 15 "SNA"; 
+VAL_ 2147484005 MRMStatPri 0 "Not Active" 1 "Level 1" 2 "Level 2" 3 "Level 3" 4 "Level 4" 5 "Reserved_1" 6 "MRC Reached" 7 "Reserved_2"; 
+VAL_ 2147484006 ParkingProcessStat_Sec 0 "Idle" 1 "Start-of-parking-position reached" 2 "Parking Function triggered, ID received" 3 "Parking in Progress" 4 "Parking finished" 5 "error" 6 "Reserved" 7 "Invalid"; 
+VAL_ 2147484006 DestReachedStat_Sec 0 "Not Reached" 1 "Reached" 2 "Reserved" 3 "Invalid"; 
+VAL_ 2147484006 TeleOpReqStat_Sec 0 "Invalid" 1 "TeleOp Request Available" 2 "No TeleOp Request Available" 3 "Reserved"; 
+VAL_ 2147484006 MissionProgressStat_Sec 0 "Invalid" 1 "Ready" 2 "Mission received" 3 "Mission accepted" 4 "Mission rejected" 5 "Mission Execution" 6 "Stopping" 7 "arrived" 8 "Received Update" 9 "Interrupting TeleOPs" 10 "Interrupted TeleOps" 11 "Stopping Incident" 12 "Stopped Incident" 13 "Reserved_1" 14 "Reserved_2" 15 "Reserved_3"; 
+VAL_ 2147484006 CurrentSDSModeStat_Sec 0 "SDS_OFF" 1 "SDS_StandBy" 2 "SDS_Handover" 3 "SDS_TeleOp " 4 "SDS_Active_Main_Comfort" 5 "SDS_Active_Main_Empty_Shuttle" 6 "SDS_Emergency_Manuever" 7 "SDS_Failure" 8 "SDS_Recoverable_Degraded_Mode" 9 "SDS_Non_Recoverable_Degraded_Mode" 10 "Parking Mode" 11 "Reserved_1" 12 "Reserved_2" 13 "Reserved_3" 14 "Reserved_4" 15 "SNA"; 
+VAL_ 2147484006 LaneChangeStat_Sec 0 "Non Scheduled Start" 1 "Non Scheduled End" 2 "Non Scheduled Abortion" 3 "Non Scheduled In Progress" 4 "Scheduled Start" 5 "Scheduled End" 6 "Scheduled Abortion" 7 "Scheduled In Progress" 8 "Reserved_1" 9 "Reserved_2" 10 "Reserved_3" 11 "Reserved_4" 12 "Reserved_5" 13 "Reserved_6" 14 "Reserved_7" 15 "Reserved_8"; 
+VAL_ 2147484006 MRMStatSec 0 "Not Active" 1 "Level 1" 2 "Level 2" 3 "Level 3" 4 "Level 4" 5 "Reserved_1" 6 "MRC Reached" 7 "Reserved_2"; 
+VAL_ 2147484010 VehMvmntDirectnStat 0 "Forward" 1 "Backward" 2 "Standstill" 3 "Error"; 
+VAL_ 2147484010 VehStandStillStat 0 "Not Available" 1 "Vehicle in Motion" 2 "Vehicle at Standstill" 3 "Error"; 
+VAL_ 2147484010 BlindStopStat 0 "Not Active" 1 "Active" 2 "Reserved_1" 3 "Reserved_2"; 
+VAL_ 2147484010 VehSpeedValidStat 0 "Invalid" 1 "Valid"; 
+VAL_ 2147484017 BrkPadWearWarnStatFA 0 "No Warning" 1 "Warning/ Error" 2 "Reserved_1" 3 "Reserved_2"; 
+VAL_ 2147484017 BrkPadWearWarnStatRA 0 "No Warning" 1 "Warning/ Error" 2 "Reserved_1" 3 "Reserved_2"; 
+VAL_ 2147484017 ParkBrakeRedLamp 0 "ON" 1 "OFF" 2 "FLASH" 3 "FLASH WITH SOUND"; 
+VAL_ 2147484017 PrimaryBrkSysStat 0 "HAD System normal" 1 "HAD System Braking" 2 "HAD System normal reduced" 3 " HAD System cooperative" 4 "HAD System primary only" 5 "HAD System secondary only" 6 "HAD System degraded" 7 "Reserved_1"; 
+VAL_ 2147484017 PbcOutOfSpecMsg 0 "None" 1 "Message A" 2 "Message B" 3 "Message C" 4 "Message D" 5 "Message E" 6 "Message F" 7 "Message G" 8 "Message H" 9 "Message I" 10 "Message J" 11 "Message K" 12 "Message L" 13 "Message M" 14 "Message N" 15 "Message O"; 
+VAL_ 2147484017 PBCOutParkSupportReq 0 "Not Requested" 1 "Requested"; 
+VAL_ 2147484017 ParkBrakeStat 0 "Disengaged" 1 "Engaging" 2 "Engaged" 3 "Disengaging" 4 "Park Brake Error" 5 "Maintenance Released" 6 "Hold Applied" 7 "Reserved_1"; 
+VAL_ 2147484017 EscWarningLamp 0 "ON" 1 "FLASH" 2 "RESERVED" 3 "OFF"; 
+VAL_ 2147484017 ABSWarningLamp 0 "ON" 1 "FLASH" 2 "RESERVED" 3 "OFF"; 
+VAL_ 2147484017 ABrakeWarningLamp 0 "ON" 1 "OFF"; 
+VAL_ 2147484017 BrakingWarningYellowLamp 0 "ON" 1 "OFF" 2 "Reserved 1" 3 "Reserved 2"; 
+VAL_ 2147484017 BrakeWarningRedLamp 0 "ON" 1 "OFF"; 
+VAL_ 2147484017 PbcOutFaultStatus 0 "No Failure" 1 "IPB disabled – no release/apply" 2 "IPB failure – only release possible" 3 "IPB failure – only apply possible" 4 "Reserved_1" 5 "Reserved_2"; 
+VAL_ 2147484017 BrkFluidWarnStat 0 "No Warning" 1 "Warning" 2 "Error" 3 "Reserved"; 
+VAL_ 2147484018 ABSStat 0 "Not Available" 1 "Not Active" 2 "Active-Event In Progress" 3 "ABS Failure" 4 "Reserved_1" 5 "Reserved_2" 6 "Reserved_3" 7 "Reserved_4"; 
+VAL_ 2147484018 ESCStat 0 "Not Available" 1 "Not Active" 2 "Active-Event In Progress" 3 "ESC Failure" 4 "Reserved_1" 5 "Reserved_2" 6 "Reserved_3" 7 "Reserved_4"; 
+VAL_ 2147484018 StbltyEventInProgStat 0 "No Emergency and Stability event in progress" 1 "Vehicle in Emergency" 2 "TCS Event in Progress" 3 "Vehicle in Emergency and TCS in Progress" 4 "ESC Event in Progress" 5 "Vehicle in Emergency and ESC in Progress" 6 "TCS and ESC in Progress" 7 "Vehicle in Emergency and ESC and TCS in Progress" 8 "ABS Event in Progress" 9 "Vehicle in Emergency and ABS in progress" 10 "Invalid_4" 11 "Invalid_5" 12 "ESC & ABS in progress" 13 "Vehicle in Emergency and ESC & ABS in progress" 14 "Invalid_6" 15 "Invalid_7"; 
+VAL_ 2147484018 TractionCtrlStat 0 "Not Available" 1 "Not Active" 2 "Active-Event In Progress" 3 "Traction Control Failure" 4 "Reserved_1" 5 "Reserved_2" 6 "Reserved_3" 7 "Reserved_4"; 
+VAL_ 2147484018 SSMCurrBrkState 0 "SSM IDLE - no failure" 1 "SSM HOLD active" 2 " SSM DRIVE_OFF active" 3 "Reserved_1" 4 "Reserved_2" 5 "Reserved_3" 6 "Reserved_4" 7 "SSM Error / not available"; 
+VAL_ 2147484018 VirtualDrvrStatFdbckPBS 0 "Virtual_driver_disabled" 1 "Virtual_driver_normal" 2 "Virtual_driver_prim_only" 3 "Virtual_driver_sec_only" 4 " Manual_driver_normal" 5 "Manual_driver_prim_only" 6 "Manual_driver_sec_only" 7 "Reserved"; 
+VAL_ 2147484018 BrkDrvMdPBS 0 "Not Available" 1 "Brake Mode Autonomous" 2 "Brake Mode Manual" 3 "Reserved"; 
+VAL_ 2147484018 PrimaryBrkErrLvl 0 "No Fault" 1 "Error Level1" 2 "Error Level2" 3 "Error Level3" 4 "Error Level4" 5 "Reserved_1" 6 "Reserved_2" 7 "Reserved_3"; 
+VAL_ 2147484021 StabilityTorqueDirection 0 "IDLE" 1 "INCREASE" 2 "DECREASE" 3 "RESERVED"; 
+VAL_ 2147484024 ISCSBlindStop_2 0 "Present" 1 "Lost" 2 "Reserved_1" 3 "Reserved_2"; 
+VAL_ 2147484024 ISCSComStatBrake_2 0 "Present" 1 "LostComBrakePrim" 2 "LostComBrakeSec" 3 "Reserved_1"; 
+VAL_ 2147484024 ISCSComStatSDS_2 0 "Present" 1 "LostComSDSPrim" 2 "LostComSDSSec" 3 "Reserved_1"; 
+VAL_ 2147484024 ISCSStat_2 0 "ISCS_OFF" 1 "ISCS_Standby" 2 "Manual_Steer_Intervention_Mode" 3 "ISCS_Autonomous_Steer_Mode_Prim" 4 "ISCS_Autonomous_Steer_Mode_Sec" 5 "ISCS Manual_Joystick_Steering_Mode" 6 "ISCS_Emergency_Maneuver" 7 "ISCS_Failure" 8 "Recoverable_degraded_mode" 9 "Non_Recoverable_Degraded_Mode" 10 "Parking_Mode" 11 "Reserved_1" 12 "Reserved_2" 13 "Reserved_3" 14 "Reserved_4" 15 "Reserved_5"; 
+VAL_ 2147484027 LatAccFltValidStat 0 "INVALID" 1 "VALID"; 
+VAL_ 2147484027 YawRateFltValidStat 0 "INVALID" 1 "VALID"; 
+VAL_ 2147484027 LongAccFltValidStat 0 "INVALID" 1 "VALID"; 
+VAL_ 2147484027 LatAccFlt 65533 "NOT AVAILABLE" 65534 "INVALID" 65535 "UNFILLED"; 
+VAL_ 2147484027 YawRateFlt 65533 "NOT AVAILABLE" 65534 "INVALID" 65535 "UNFILLED"; 
+VAL_ 2147484027 LongAccFlt 65533 "NOT AVAILABLE" 65534 "INVALID" 65535 "UNFILLED"; 
+VAL_ 2147484048 ManualBrakeInterventionStatus 0 "No Manual Intervention" 1 "Manual Intervention"; 
+VAL_ 2147484182 ManSteerIntervntnStat 0 "No Manual Steering Intervention" 1 "Manual Steering Intervention Active"; 
+VAL_ 2147484182 CurrSteerRateValidity 0 "Valid" 1 "Invalid"; 
+VAL_ 2147484183 ManSteerIntervntnStat_2 0 "No Manual Steering Intervention" 1 "Manual Steering Intervention Active"; 
+VAL_ 2147484183 CurrSteerRateValidity_2 0 "Valid" 1 "Invalid"; 
+VAL_ 2147484184 ISCSErrLvl_2 0 "No Fault" 1 "Error Level 1" 2 "Error Level 2" 3 "Error Level 3" 4 "Error Level 4" 5 "Reserved_1" 6 "Reserved_2" 7 "Reserved_3"; 
+VAL_ 2147484185 ISCSErrLvl 0 "No Fault" 1 "Error Level 1" 2 "Error Level 2" 3 "Error Level 3" 4 "Error Level 4" 5 "Reserved_1" 6 "Reserved_2" 7 "Reserved_3"; 
+VAL_ 2147484193 BrkLghtActReq 0 "Not Active" 1 "Normal Brake Light Activate" 2 "Emergency Brake Light Activate" 3 "Reserved_1" 4 "Reserved_2" 5 "Reserved_3" 6 "Reserved_4" 7 "Reserved_5"; 
+VAL_ 2147484246 FixTypeDeadReckng 0 "False" 1 "True"; 
+VAL_ 2147484246 FixTypeEstmtd 0 "False" 1 "True"; 
+VAL_ 2147484246 FixTypeMultiBand 0 "False" 1 "True"; 
+VAL_ 2147484246 FixTypeMultiConstltn 0 "False" 1 "True"; 
+VAL_ 2147484246 FixTypePrpgtd 0 "False" 1 "True"; 
+VAL_ 2147484246 FixTypeSBAS 0 "False" 1 "True"; 
+VAL_ 2147484246 FixTypeSingleBand 0 "False" 1 "True"; 
+VAL_ 2147484246 LatDirectn 0 "North" 1 "South"; 
+VAL_ 2147484246 LongDirectn 0 "East" 1 "West"; 
+VAL_ 2147484247 TCUActvCellularGen 0 "No Network" 1 "2G" 2 "3G" 3 "4G" 4 "5G(NSA/SA)" 5 "Reserved_1" 6 "Reserved_2" 7 "Reserved_3"; 
+VAL_ 2147484442 ManHtAdjstmntReq 0 "Default Ride Height" 1 "Vehicle Height Lifted Upward" 2 "Lowered Downward" 3 "Reserved_1" 4 "Reserved_2" 5 "Reserved_3" 6 "Reserved_4" 7 "Reserved_5"; 
+VAL_ 2147484448 AirSpringErrLvl 0 "No_Fault" 1 "Error_Level1" 2 "Error_Level2" 3 "Error_Level3" 4 "Error_Level4" 5 "Reserved_1" 6 "Reserved_2" 7 "Reserved_3"; 
+VAL_ 2147485190 StatusAmbientAirTemp 254 "ERROR" 255 "SNA"; 
+VAL_ 2563778289 ISCS2DiagClientSeverityLevel 0 "Low Severe" 1 "Medium Severe" 2 "High Severe" 3 "Very High Severe"; 
+VAL_ 2563778289 ISCS2DiagClientActiveStatus 0 "Inactive" 1 "Active"; 
+
+SIG_GROUP_  2147483976 ASS_VehicRideHeightGroup 1 : ASS_VehRideHeight_Cntr VehRideHeight_FL VehRideHeight_FR VehRideHeight_RL VehRideHeight_RR;
+SIG_GROUP_  1821 CLUID1SignalGroup 1 : ALIV_CLU_ID1 CHKSUM_CLU_ID1 LAT_ACC LAT_ACC_QUAL SC_STATUS TEMPERATURE YAW_RATE YAW_RATE_QUAL;
+SIG_GROUP_  1822 CLUID2SignalGroup 1 : ALIV_CLU_ID2 CHKSUM_CLU_ID2 LONG_ACC LONG_ACC_QUAL ROLL_RATE ROLL_RATE_QUAL;
+SIG_GROUP_  1823 CLUID3SignalGroup 1 : ALIV_CLU_ID3 CHKSUM_CLU_ID3 PITCH_RATE PITCH_RATE_QUAL VERT_ACC VERT_ACC_QUAL;
+SIG_GROUP_  2147483969 ISCSCurrPinionStat2SignalGroup 1 : CurrPinionStat_AliveCounter_2 CurrPinionStat_Checksum_2 CurrSteerPinionAngleValidity_2 CurrSteerPinionRateValidity_2 CurrentSteeringPinionAngle_2 CurrentSteeringPinionRate_2;
+SIG_GROUP_  2147483968 ISCSCurrPinionStatSignalGroup 1 : CurrPinionStat_AliveCounter CurrPinionStat_Checksum CurrSteerPinionAngleValidity CurrSteerPinionRateValidity CurrentSteeringPinionAngle CurrentSteeringPinionRate;
+SIG_GROUP_  2147484183 ISCSSteerWhlInfo2SignalGroup 1 : CurrSteerRateCRC_2 CurrSteerRateCntr_2 CurrSteerRateValidity_2 CurrSteerRate_2 ManSteerIntervntnStat_2;
+SIG_GROUP_  2147484182 ISCSSteerWhlInfoSignalGroup 1 : CurrSteerRate CurrSteerRateCRC CurrSteerRateCntr CurrSteerRateValidity ManSteerIntervntnStat;
+SIG_GROUP_  2147484184 ISCSSteeringErrorStat2SignalGroup 1 : ISCSErrLvlCRC_2 ISCSErrLvlCntr_2 ISCSErrLvl_2;
+SIG_GROUP_  2147484185 ISCSSteeringErrorStatSignalGroup 1 : ISCSErrLvl ISCSErrLvlCRC ISCSErrLvlCntr;
+SIG_GROUP_  160 MCUFastCommandResponseSigGr 1 : MCUSts;
+SIG_GROUP_  2147483966 MK100FrntWhlSpdInfoSignalGroup 1 : CurrWheelSpeedFLStat2 CurrWheelSpeedFRStat2 MK100FrntWhlSpdCRC MK100FrntWhlSpdCntr WheelSpeedFLValidStat2 WheelSpeedFRValidStat2;
+SIG_GROUP_  2147483965 MK100SecBrkInfoSignalGroup 1 : BrkDrvMdSBS SecBrkErrLvl SecBrkInfoCRC SecBrkInfoCntr SecBrkSysStat VirtualDrvrStatFdbckSBS;
+SIG_GROUP_  2147484017 MKC1BrakeInfo1SignalGroup 1 : ABSWarningLamp ABrakeWarningLamp BrakeWarningRedLamp BrakingWarningYellowLamp BrkFluidWarnStat BrkInfo1CRC BrkInfo1Cntr BrkPadWearWarnStatFA BrkPadWearWarnStatRA EscWarningLamp PBCOutParkSupportReq ParkBrakeRedLamp ParkBrakeStat PbcOutFaultStatus PbcOutOfSpecMsg PrimaryBrkSysStat;
+SIG_GROUP_  2147484018 MKC1BrakeInfo2SignalGroup 1 : ABSStat AccOverGndStat BrkDrvMdPBS BrkInfo2CRC BrkInfo2Cntr ESCStat PrimaryBrkErrLvl SSMCurrBrkState StbltyEventInProgStat TractionCtrlStat VirtualDrvrStatFdbckPBS;
+SIG_GROUP_  2147484193 MKC1BrakeLightReqSignalGroup 1 : BrkLghtActReq MKC1BrkLghtReqCRC MKC1BrkLghtReqCntr;
+SIG_GROUP_  2147483917 MKC1FrntWhlSpdInfoSignalGroup 1 : WheelSpeedFRValidStat;
+SIG_GROUP_  2147484027 MKC1IMUInfoSignalGroup 1 : IMUInfoCRC IMUInfoCntr LatAccFlt LatAccFltValidStat LongAccFlt LongAccFltValidStat YawRateFlt YawRateFltValidStat;
+SIG_GROUP_  2147484048 MKC1ManualBrakeInfoSignalGroup 1 : MKC1ManBrkInfoCRC MKC1ManBrkInfoCntr ManualBrakeInterventionStatus;
+SIG_GROUP_  2147483918 MKC1RrWhlSpdInfoSignalGroup 1 : CurrWheelSpeedRLStat CurrWheelSpeedRRStat MKC1RrWhlSpdCRC MKC1RrWhlSpdCntr WheelSpeedRLValidStat WheelSpeedRRValidStat;
+SIG_GROUP_  2147484021 MKC1TrqRedctnReqSignalGroup 1 : MKC1TrqRdctnReqCRC MKC1TrqRdctnReqCntr OvrallBrkTrqAppldStat RegenTargetTorque StabilityTargetTorque StabilityTorqueDirection;
+SIG_GROUP_  2147484010 MKC1VehMvmntInfoSignalGroup 1 : BlindStopStat GradeSensStat VehMvmntDirectnStat VehMvmntInfoCRC VehMvmntInfoCntr VehSpeedCalcStat VehSpeedValidStat VehStandStillStat;
+SIG_GROUP_  2147483979 SDS_CtrlSteeringWheel_PrimSignalGroup 1 : CtrlSteeringPinionAngle_Pri SDS_CtrlSteeringWheel_Pri_CRC SDS_CtrlSteeringWheel_Pri_Cntr SteerRateReq_Pri Valid_CtrlSteeringPinionAng_Pri;
+SIG_GROUP_  2147483981 SDS_CtrlSteeringWheel_SecSignalGroup 1 : CtrlSteeringPinionAngle_Sec SDS_CtrlSteeringWheel_Sec_CRC SDS_CtrlSteeringWheel_Sec_Cntr SteerRateReq_Sec Valid_CtrlSteeringPinionAng_Sec;
+SIG_GROUP_  2147483989 SDS_Stability_Info_PrimSignalGroup 1 : AccelDecelReqPri AccelDecelReqPriValidStat GearchangeReqPri Stability_Info_Pri_AliveCounter Stability_Info_Pri_Checksum VehStandStillReqPri VehStandStillReqValidityPri;
+SIG_GROUP_  2147483990 SDS_Stability_Info_SecSignalGroup 1 : AccelDecelReqSec AccelDecelReqSecValidStat GearchangeReq_Sec Stability_Info_Sec_AliveCounter Stability_Info_Sec_Checksum VehStandStillReqSec VehStandStillReqValiditySec;
+SIG_GROUP_  2147484005 SDS_Status_PrimSignalGroup 1 : CurrentSDSModeStat_Pri MRMStatPri SDSStatusCRC_Pri SDSStatusCntr_Pri;
+SIG_GROUP_  2147484006 SDS_Status_SecSignalGroup 1 : CurrentSDSModeStat_Sec DestReachedStat_Sec LaneChangeStat_Sec MRMStatSec MissionProgressStat_Sec ParkingProcessStat_Sec SDSStatusCRC_Sec SDSStatusCntr_Sec TeleOpReqStat_Sec;
+SIG_GROUP_  2147483946 VCU_InfoSignalGroup 1 : StatusGear;
+SIG_GROUP_  2147483943 VCU_ManOpInfoSecSigGrp 1 : AccelDecelReqSecValidStat_JS_VCU AccelDecelReqSec_JS_VCU VCUManOpInfoSecCRC VCUManOpInfoSecCntr;
+SIG_GROUP_  2147483942 VCU_ManualOpInfoPrimSigGrp 1 : DeadManButtonPressedStat StandstillReqValidStat_VCU StandstillReq_VCU;
+SIG_GROUP_  2147483930 VCU_VSMInfoSigGrp 1 : VCUVSMInfoCRC VCUVSMInfoCntr VSMStatus;
+
+
+

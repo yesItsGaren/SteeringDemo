@@ -1,0 +1,679 @@
+﻿/*@!Encoding:65001*/
+
+variables{
+  
+    // Input Messages (Simulation)
+  message CHASSIS2CAN::SDS_Primary::SDS_CtrlSteeringWheel_Prim primSteeringMsg2; // Primary Steering Control Chassis 2 (0x14B)
+
+  message CHASSIS1CAN::SDS_Secondary::SDS_CtrlSteeringWheel_Sec secSteeringMsg1;  // Secondary Steering Control Chassis 1 (0x14D)
+  
+  message CHASSIS1CAN::VCU_VSMInfo vsmInfoMsg1;  // VSM Status Chassis 1 (0x11A)
+  message CHASSIS2CAN::VCU_VSMInfo vsmINfoMsg2;  // VSM Status Chassis 2 (0x11A)
+  
+  message CHASSIS1CAN::MKC1_VehMvmntInfo MK100_1; // Breaks Chassis 1 MK100 (0x16A)
+  message CHASSIS2CAN::MKC1_VehMvmntInfo MKC1_2; // Breaks Chassis 2 MKC1 (0x16A)
+  
+  // Output Messages (Validation)
+  message CHASSIS2CAN::ECU1_ISCS::ISCS_CurrPinionStat currentPinionAngle1;
+  message CHASSIS1CAN::ECU2_ISCS::ISCS_CurrPinionStat_2 currentPinionAngle2;
+  
+  // Timers for periodic sending
+  msTimer primSteeringTimer;  // Timer for primary steering control
+  msTimer secSteeringTimer;   // Timer for secondary steering control
+  msTimer vsmInfoTimer;       // Timer for VSM info
+  msTimer vehMvmntInfoTimer;  // Timer for vehicle movement info
+  msTimer steeringSetDelay; // Timer of 1 second to wait until steering angle is set
+  msTimer failSafeSequenceTimer;
+  
+  msTimer sequenceTimer;  // Timer for sequential execution
+  int sequenceStep = 0;   // Variable to track the current step in the sequence
+  int failSafeSeqStep = 0;
+  
+  int sequenceRate = 300; // Duration of each sequence
+  const int failSafeRate = 1000;
+  const int shortFailSafeRate = 100;
+
+  const int DELAY_1000_MS = 1000;
+  int TIMEOUT_TURN_WHEEL = 10000;
+
+  // input Variables
+  int SleepValue = 1;
+  int ParkValue = 2;
+  int AutoValue = 3;
+  int Valid = 1;
+  int indexofTest = 0;
+  const int NB_OF_VALS = 12;
+  const int VALID_STATE = 1;
+  const int INVALID_STATE = 0;
+  const int ENABLED = 1;
+  const int DISABLED = 0;
+  
+  
+  // Steering test values
+  int testVals[NB_OF_VALS] = {1485, 1600, 1800, 2000, 2200 ,2400, 2800, 2600, 2400, 2200,2000,1485};
+  float EXPECTED_PINION_ANGLE[NB_OF_VALS] = {0, -63.5, -173.9, -284.5, -394.6 , -465, -465, -465, -465, -395 ,-284.5,0};
+  
+  
+  int k;
+  float receivedPinionAngle;
+  float receivedPinionAngle2;
+  const float TOLERANCE = 2.5; // Acceptable tolerance range (±0.5 degrees)
+  int nbOfTries = 0;
+  int retVal = 0;
+  int retryCount =0;
+  const int MAX_RETRY_CNT = 9;
+  int angle1Result;
+  int angle2Result;
+  
+  
+  // Test return values macros
+  const int PASS = 1;
+  const int FAIL = 0;
+}
+
+
+// Function to start the sequence
+void StartSequence()
+{
+  // Start the sequence
+  sequenceStep = 0;
+  
+  setTimer(sequenceTimer, sequenceRate); // Start with a 1000ms delay
+  testStep("Sequence Started", "Starting the sequence with a 1000ms delay.");
+}
+
+
+// Function to start the fail safe test sequence
+void failSafeSequence()
+{
+  // Start the sequence
+  failSafeSeqStep = 0;
+  
+  setTimer(failSafeSequenceTimer, failSafeRate); // Start with a 500ms delay
+  testStep("Fail safe sequence Started", "Starting the fail safesequence with a 500ms delay.");
+}
+
+// Function to Stop Periodic Sending of Input Signals
+void StopPeriodicInputSignals()
+{
+  // Stop all timers
+  cancelTimer(primSteeringTimer);
+  cancelTimer(secSteeringTimer);
+  cancelTimer(vsmInfoTimer);
+  cancelTimer(vehMvmntInfoTimer);
+
+  testStep("Stop Timers","Periodic input signal sending stopped.");
+}
+
+
+// Timer event for sequential execution
+on timer sequenceTimer
+{
+  switch (sequenceStep)
+  {
+    case 0:
+      // 0 - Set Sleep
+      vsmInfoMsg1.VSMStatus = SleepValue;
+      vsmINfoMsg2.VSMStatus = SleepValue;
+      testStep("","Step 0: Set Sleep");
+
+      // Start vsmInfoTimer for cyclic sending
+      setTimer(vsmInfoTimer, 100); // Start cyclic sending of VSM info
+      testStep("","Started vsmInfoTimer for cyclic sending.");
+
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 1000ms delay before next step
+      break;
+
+    case 1:
+      // 2 - Set SDS Steering validity to Valid
+      testStep("","Step 1: Set SDS Steering validity to Valid");
+      setSteeringValidity(VALID_STATE,VALID_STATE);
+
+      // Start primSteeringTimer and secSteeringTimer for cyclic sending
+      setTimer(primSteeringTimer, 10); // Start cyclic sending of primary steering control
+      setTimer(secSteeringTimer, 10);  // Start cyclic sending of secondary steering control
+
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 1000ms delay before next step
+      break;
+
+    case 2:
+      // 2 - Set Brake Validity to Valid
+      testStep("","Step 2: Set Brake Validity to Valid");
+      MK100_1.VehSpeedValidStat = Valid;
+      output(MK100_1);
+      MKC1_2.VehSpeedValidStat = Valid;
+      output(MKC1_2);
+      
+      // Start vehMvmntInfoTimer for cyclic sending
+      setTimer(vehMvmntInfoTimer, 20); // Start cyclic sending of vehicle movement info
+
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 100ms delay before next step
+      break;
+
+    case 3:
+      // 3 - Set Park
+      vsmInfoMsg1.VSMStatus = ParkValue;
+      output(vsmInfoMsg1);
+      vsmINfoMsg2.VSMStatus = ParkValue;
+      output(vsmINfoMsg2);
+      testStep("","Step 3: Set Park");
+
+      // No new cyclic timer needed here (vsmInfoTimer is already running)
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 100ms delay before next step
+      break;
+
+    case 4:
+      // 4 - Set Autonomous
+      testStep("","Step 4: Set Autonomous");
+      vsmInfoMsg1.VSMStatus = AutoValue;
+      output(vsmInfoMsg1);
+      vsmINfoMsg2.VSMStatus = AutoValue;
+      output(vsmINfoMsg2);
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 100ms delay before next step
+      break;
+
+    case 5:
+      // 5 - Set Steering Values 
+      testStep("","Step 5: Setting SDS Steering Values...");
+      SetSteeringValues(testVals[k],ENABLED,ENABLED);
+      sequenceStep++;
+      setTimer(sequenceTimer, sequenceRate); // 100ms delay before next step
+      break;
+      
+    case 6:
+      // 6 - Read Output from ISCS ECUs with single value
+      testStep("","Step 6: Reading output from ISCS ECUs...");
+      retVal = TestSteeringAngle(EXPECTED_PINION_ANGLE[k],ENABLED,ENABLED);
+      
+      if(retVal==PASS)
+      {
+        sequenceStep++;
+        retryCount = 0;
+      }
+      else
+      {
+        retryCount++;
+        if(retryCount < MAX_RETRY_CNT)
+        {
+          sequenceStep--;
+          testStep("retrying","Received Pinion Angle Test failed. Retrying num %d...",retryCount);
+        }
+        else
+        {
+          TestStepFail("Received Pinion Angle Test failed after reaching MAX retry count.");
+          sequenceStep++;
+        }       
+      }
+      
+      setTimer(sequenceTimer, sequenceRate); // 100ms delay before next step
+      break;
+      
+    default:
+      // End of sequence
+      testStep("","Sequence Completed", "All steps executed successfully.");
+      retVal = FAIL;
+      retryCount = 0;
+      break;
+  }
+}
+
+
+
+// Timer event for sequential execution
+on timer failSafeSequenceTimer
+{
+  switch (failSafeSeqStep)
+  {
+    case 0:
+      // 0 - Set Sleep
+      vsmInfoMsg1.VSMStatus = SleepValue;
+      vsmINfoMsg2.VSMStatus = SleepValue;
+      testStep("","Step 0: Set Sleep");
+
+      // Start vsmInfoTimer for cyclic sending
+      setTimer(vsmInfoTimer, 100); // Start cyclic sending of VSM info
+      testStep("","Started vsmInfoTimer for cyclic sending.");
+
+      failSafeSeqStep++;
+      setTimer(failSafeSequenceTimer, shortFailSafeRate); // 500ms delay before next step
+      break;
+
+    case 1:
+      // 2 - Set SDS Steering validity to Valid
+      testStep("","Step 1: Set SDS Steering validity to Valid");
+      setSteeringValidity(VALID_STATE,VALID_STATE);
+
+      // Start primSteeringTimer and secSteeringTimer for cyclic sending
+      setTimer(primSteeringTimer, 10); // Start cyclic sending of primary steering control
+      setTimer(secSteeringTimer, 10);  // Start cyclic sending of secondary steering control
+
+      failSafeSeqStep++;
+      setTimer(failSafeSequenceTimer, shortFailSafeRate); // 500ms delay before next step
+      break;
+
+    case 2:
+      // 2 - Set Brake Validity to Valid
+      testStep("","Step 2: Set Brake Validity to Valid");
+      MK100_1.VehSpeedValidStat = Valid;
+      output(MK100_1);
+      MKC1_2.VehSpeedValidStat = Valid;
+      output(MKC1_2);
+      
+      // Start vehMvmntInfoTimer for cyclic sending
+      setTimer(vehMvmntInfoTimer, 20); // Start cyclic sending of vehicle movement info
+
+      failSafeSeqStep++;
+      setTimer(failSafeSequenceTimer, shortFailSafeRate); // 500ms delay before next step
+      break;
+
+    case 3:
+      // 3 - Set Park
+      vsmInfoMsg1.VSMStatus = ParkValue;
+      output(vsmInfoMsg1);
+      vsmINfoMsg2.VSMStatus = ParkValue;
+      output(vsmINfoMsg2);
+      testStep("","Step 3: Set Park");
+
+      // No new cyclic timer needed here (vsmInfoTimer is already running)
+      failSafeSeqStep++;
+      setTimer(failSafeSequenceTimer, shortFailSafeRate); // 500ms delay before next step
+      break;
+
+    case 4:
+      // 4 - Set Autonomous
+      testStep("","Step 4: Set Autonomous");
+      vsmInfoMsg1.VSMStatus = AutoValue;
+      output(vsmInfoMsg1);
+      vsmINfoMsg2.VSMStatus = AutoValue;
+      output(vsmINfoMsg2);
+      failSafeSeqStep++;
+      setTimer(failSafeSequenceTimer, shortFailSafeRate); // 500ms delay before next step
+      break;
+      
+    case 5:
+      // 5 - Set Steering Values on both SDS to 0
+      testStep("","Step 5: Set Steering Values on SDS Secondary only.");
+      SetSteeringValues(testVals[0],ENABLED,ENABLED);
+      failSafeSeqStep++;
+      setTimer(failSafeSequenceTimer, failSafeRate); // 500ms delay before next step
+      break;
+
+    case 6:
+      // 6 - Read Output from ISCS ECUs with single value
+      testStep("","Step 6: Reading output from ISCS ECUs...");
+      retVal = TestSteeringAngle(EXPECTED_PINION_ANGLE[0], ENABLED,DISABLED);
+      
+      if(retVal==PASS)
+      {
+        failSafeSeqStep++;
+        retryCount = 0;
+      }
+      else
+      {
+        retryCount++;
+        if(retryCount < MAX_RETRY_CNT)
+        {
+          failSafeSeqStep--;
+          testStep("retrying","Received Pinion Angle Test failed. Retrying num %d...",retryCount);
+        }
+        else
+        {
+          TestStepFail("Received Pinion Angle Test failed after reaching MAX retry count.");
+          failSafeSeqStep++;
+        }       
+      }
+      
+      setTimer(failSafeSequenceTimer, failSafeRate); // 100ms delay before next step
+      break;
+    case 7:
+      // 7 - Set Steering Values on SDS Secondary only  
+      testStep("","Step 7: Set Steering Values on SDS Secondary only.");
+      SetSteeringValues(testVals[3],DISABLED,ENABLED);
+      failSafeSeqStep++;
+      setTimer(failSafeSequenceTimer, failSafeRate); // 500ms delay before next step
+      break;
+    
+    case 8:
+      // 8 - Read Output from ISCS ECUs with single value
+      testStep("","Step 8: Reading output from ISCS ECUs...");
+      retVal = TestSteeringAngle(EXPECTED_PINION_ANGLE[3], ENABLED,DISABLED);
+      
+      if(retVal==PASS)
+      {
+        failSafeSeqStep++;
+        retryCount = 0;
+      }
+      else
+      {
+        retryCount++;
+        if(retryCount < MAX_RETRY_CNT)
+        {
+          failSafeSeqStep--;
+          testStep("retrying","Received Pinion Angle Test failed. Retrying num %d...",retryCount);
+        }
+        else
+        {
+          TestStepFail("Received Pinion Angle Test failed after reaching MAX retry count.");
+          failSafeSeqStep++;
+        }       
+      }
+      
+      setTimer(failSafeSequenceTimer, failSafeRate); // 100ms delay before next step
+      break;
+    case 9:
+      // 9 - Set Steering Values on both SDS to 0
+      testStep("","Step 9: Set Steering Values on SDS Secondary only.");
+      SetSteeringValues(testVals[0],ENABLED,ENABLED);
+      failSafeSeqStep++;
+      setTimer(failSafeSequenceTimer, failSafeRate); // 500ms delay before next step
+      break;
+    case 10:
+      // 10 - Read Output from ISCS ECUs with single value
+      testStep("","Step 10: Reading output from ISCS ECUs...");
+      retVal = TestSteeringAngle(EXPECTED_PINION_ANGLE[0], ENABLED,DISABLED);
+      
+      if(retVal==PASS)
+      {
+        failSafeSeqStep++;
+        retryCount = 0;
+      }
+      else
+      {
+        retryCount++;
+        if(retryCount < MAX_RETRY_CNT)
+        {
+          failSafeSeqStep--;
+          testStep("retrying","Received Pinion Angle Test failed. Retrying num %d...",retryCount);
+        }
+        else
+        {
+          TestStepFail("Received Pinion Angle Test failed after reaching MAX retry count.");
+          failSafeSeqStep++;
+        }       
+      }
+      
+      setTimer(failSafeSequenceTimer, failSafeRate); // 100ms delay before next step
+      break;
+
+    case 11:
+      // 11 - Set Steering Values on SDS Primary only  
+      testStep("","Step 11: Set Steering Values on SDS Primary only.");
+      SetSteeringValues(testVals[4],ENABLED,DISABLED);
+      failSafeSeqStep++;
+      setTimer(failSafeSequenceTimer, failSafeRate); // 500ms delay before next step
+      break;
+    
+    case 12:
+      // 12 - Read Output from ISCS ECUs with single value
+      testStep("","Step 12: Reading output from ISCS ECUs...");
+      retVal = TestSteeringAngle(EXPECTED_PINION_ANGLE[4], ENABLED,DISABLED);
+      
+      if(retVal==PASS)
+      {
+        failSafeSeqStep++;
+        retryCount = 0;
+      }
+      else
+      {
+        retryCount++;
+        if(retryCount < MAX_RETRY_CNT)
+        {
+          failSafeSeqStep--;
+          testStep("retrying","Received Pinion Angle Test failed. Retrying num %d...",retryCount);
+        }
+        else
+        {
+          TestStepFail("Received Pinion Angle Test failed after reaching MAX retry count.");
+          failSafeSeqStep++;
+        }       
+      }
+      
+      setTimer(failSafeSequenceTimer, failSafeRate); // 100ms delay before next step
+      break;
+      
+    default:
+      // End of sequence
+      testStep("","Sequence Completed", "All steps executed successfully.");
+      retVal = FAIL;
+      retryCount = 0;
+      break;
+  }
+}
+
+// Sets the Steering values via SDS. Note: You must set the validity to 1 before using this function. (Check setSteeringValidity(VALID_STATE))
+void SetSteeringValues(int steeringVal, int enablePrimary, int enableSecondary)
+{
+  
+  if(enablePrimary == ENABLED)
+  {
+    setSteeringValidity(VALID_STATE,3);
+    primSteeringMsg2.CtrlSteeringPinionAngle_Pri = steeringVal;
+    output(primSteeringMsg2);
+    setTimer(primSteeringTimer, 10); // Start cyclic sending of primary steering control
+    testStep("steeringValPrimary","Primary Steering Values set to %d",steeringVal);
+  }
+  else if(enablePrimary == DISABLED)
+  {
+    setSteeringValidity(INVALID_STATE,3);
+  }
+  else
+  {
+    teststep("", "Incompatible Primary steering angle value set to Steering. ");
+  }
+  
+  
+    if(enableSecondary == ENABLED)
+  {
+    setSteeringValidity(3,VALID_STATE);
+    secSteeringMsg1.CtrlSteeringPinionAngle_Sec = steeringVal;
+    output(secSteeringMsg1);      
+    setTimer(secSteeringTimer, 10);  // Start cyclic sending of secondary steering control
+    testStep("steeringValSecondary","Secondary Steering Values set to %d",steeringVal);
+  }
+  else if(enableSecondary == DISABLED)
+  {
+    setSteeringValidity(3,INVALID_STATE);
+  }
+  else
+  {
+    teststep("", "Incompatible Secondary steering angle value set to Steering. ");
+  }
+  
+  
+}
+
+
+void setSteeringValidity(int primaryValidity, int secondaryValidity)
+{
+      if(primaryValidity == VALID_STATE)
+      {
+        primSteeringMsg2.Valid_CtrlSteeringPinionAng_Pri = VALID_STATE;
+        output(primSteeringMsg2);
+        teststep("", "Validity of Primary Steering is set to VALID_STATE (%d). ", VALID_STATE);
+      }
+      else if(primaryValidity == INVALID_STATE)
+      {
+        primSteeringMsg2.Valid_CtrlSteeringPinionAng_Pri = INVALID_STATE;
+        output(primSteeringMsg2);
+        teststep("", "Validity of Primary Steering is set to INVALID_STATE (%d).", INVALID_STATE);
+      }
+      else
+      {
+        teststep("", "Incompatible Primary value set to Steering Validity State. ");
+      }
+      
+      if(secondaryValidity == VALID_STATE)
+      {
+        secSteeringMsg1.Valid_CtrlSteeringPinionAng_Sec = VALID_STATE;
+        output(secSteeringMsg1);
+        teststep("", "Validity of Secondary Steering is set to VALID_STATE (%d). ", VALID_STATE);
+      }
+      else if(secondaryValidity == INVALID_STATE)
+      {
+        secSteeringMsg1.Valid_CtrlSteeringPinionAng_Sec = INVALID_STATE;
+        output(secSteeringMsg1);
+        teststep("", "Validity of Secondary Steering is set to INVALID_STATE (%d).", INVALID_STATE);
+      }
+      else
+      {
+        teststep("", "Incompatible value set to Secondary Steering Validity State. ");
+      }
+}
+
+// Reads steering value and checks if it matches the expected value from the argument using a constant TOLERANCE.
+int TestSteeringAngle(float expectedVal, int readECU1, int readECU2)
+{
+
+    // Wait for the message containing the steering angle
+    if (TestWaitForMessage(CHASSIS2CAN::ECU1_ISCS::ISCS_CurrPinionStat, TIMEOUT_TURN_WHEEL) && TestWaitForMessage(CHASSIS1CAN::ECU2_ISCS::ISCS_CurrPinionStat_2, TIMEOUT_TURN_WHEEL))
+    {
+      // Get the received steering angle Primary
+      if(readECU1 == ENABLED)
+      {
+        receivedPinionAngle = getSignal(CHASSIS2CAN::ECU1_ISCS::ISCS_CurrPinionStat::CurrentSteeringPinionAngle);
+        teststep("", "Received Pinion Angle: %.2f%% and EXPECTED Pinion Angle: %.2f%%", receivedPinionAngle, expectedVal);
+        
+
+        // Validate Steering Pinion angle within tolerance
+        if ((abs(receivedPinionAngle - expectedVal) <= TOLERANCE))
+        {
+            teststep("", "Received Pinion Angle %.2f is within tolerance of expected value %.2f (±%.2f%)",
+                     receivedPinionAngle, expectedVal, TOLERANCE);
+            TestStepPass("Received Pinion Angle Test Passed!");
+            angle1Result = PASS;
+        }
+        else
+        {
+            teststep("", "Received Pinion Angle %.2f is outside tolerance of expected value %.2f (±%.2f)",
+                     receivedPinionAngle, expectedVal, TOLERANCE);
+            angle1Result = FAIL;
+        }
+      }
+        
+      // Get the received steering angle Secondary
+      if(readECU2 == ENABLED)
+      {
+        receivedPinionAngle2 = getSignal(CHASSIS1CAN::ECU2_ISCS::ISCS_CurrPinionStat_2::CurrentSteeringPinionAngle_2);
+        teststep("", "Received Pinion Angle 2: %.2f%% and EXPECTED Pinion Angle: %.2f%%", receivedPinionAngle2, expectedVal);
+        
+        // Validate Steering Pinion angle 2 within tolerance
+        if ((abs(receivedPinionAngle2 - expectedVal) <= TOLERANCE))
+        {
+            teststep("", "Received Pinion Angle 2 %.2f is within tolerance of expected value %.2f (±%.2f%)",
+                     receivedPinionAngle2, expectedVal, TOLERANCE);
+            TestStepPass("Received Pinion Angle Test Passed!");
+            angle2Result = PASS;
+        }
+        else
+        {
+            teststep("", "Received Pinion Angle 2 %.2f is outside tolerance of expected value %.2f (±%.2f)",
+                     receivedPinionAngle2, expectedVal, TOLERANCE);
+            angle2Result = FAIL;
+        }
+      }
+        
+      if((readECU2 == ENABLED) && (readECU1 == ENABLED))
+      {
+        if(angle1Result == PASS && angle2Result == PASS)
+        {
+          return PASS;
+        }
+        else
+        {
+          return FAIL;
+        }
+      }
+      else if((readECU2 == ENABLED) && (readECU1 == DISABLED))
+      {
+        if(angle2Result == PASS)
+        {
+          return PASS;
+        }
+        else
+        {
+          return FAIL;
+        }
+      }
+      else if((readECU1 == ENABLED) && (readECU2 == DISABLED))
+      {
+        if(angle1Result == PASS)
+        {
+          return PASS;
+        }
+        else
+        {
+          return FAIL;
+        }
+      }
+      else
+      {
+        return PASS;
+      }
+        
+        
+    }
+    else
+    {
+        teststep("", "Timeout: No Steering Pinion Angle value received from ISCS");
+        TestStepFail("No response received within TIMEOUT.");
+      return FAIL;
+    }
+
+}
+
+
+
+
+// Timer event for primary steering control
+on timer primSteeringTimer
+{
+  // Send primary steering control messages
+  output(primSteeringMsg2);
+
+  // Restart the timer
+  setTimer(primSteeringTimer, 10);
+}
+
+on timer steeringSetDelay
+{
+  testSTep("","Delay of 1000ms");
+}
+
+// Timer event for secondary steering control
+on timer secSteeringTimer
+{
+  // Send secondary steering control messages
+  output(secSteeringMsg1);
+
+  // Restart the timer
+  setTimer(secSteeringTimer, 10);
+}
+
+// Timer event for VSM info
+on timer vsmInfoTimer
+{
+  // Send VSM info messages
+  output(vsmInfoMsg1);
+  output(vsmINfoMsg2);
+
+  // Restart the timer
+  setTimer(vsmInfoTimer, 100);
+}
+
+// Timer event for vehicle movement info
+on timer vehMvmntInfoTimer
+{
+  // Send vehicle movement info messages
+  output(MK100_1);
+  output(MKC1_2);
+
+  // Restart the timer
+  setTimer(vehMvmntInfoTimer, 20);
+}
+
+

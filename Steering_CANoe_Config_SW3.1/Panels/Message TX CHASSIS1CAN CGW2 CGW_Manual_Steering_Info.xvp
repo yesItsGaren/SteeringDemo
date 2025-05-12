@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="Panel" ControlName="Message TX CHASSIS1CAN CGW2 CGW_Manual_Steering_Info" Children="Controls">
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl85" ControlName="GroupBoxControl85" Children="Controls">
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl172" ControlName="StaticTextControl172" Children="Controls">
+        <Property Name="Name">StaticTextControl172</Property>
+        <Property Name="Size">220,17</Property>
+        <Property Name="Location">5,17</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="TextAlign">TopLeft</Property>
+        <Property Name="BorderStyle">None</Property>
+        <Property Name="Text">TX node: "CGW2"</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl86" ControlName="GroupBoxControl86" Children="Controls">
+        <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl26" ControlName="CheckBoxControl26" Children="Controls">
+          <Property Name="Name">CheckBoxControl26</Property>
+          <Property Name="Size">60,17</Property>
+          <Property Name="Location">5,22</Property>
+          <Property Name="BackColor">255,255,255</Property>
+          <Property Name="Text">Enable</Property>
+          <Property Name="CheckValue">1</Property>
+          <Property Name="UncheckValue">0</Property>
+          <Property Name="ForeColor">0,0,0</Property>
+          <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_CGW2::MESSAGES::CGW_Manual_Steering_Info::TIMINGS;;;EnableCyclic;1;;;-1</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl124" ControlName="RadioButtonControl124" Children="Controls">
+          <Property Name="Name">RadioButtonControl124</Property>
+          <Property Name="Size">95,34</Property>
+          <Property Name="Location">65,14</Property>
+          <Property Name="Text">Normal Period
+(10 ms)</Property>
+          <Property Name="SwitchValue">0</Property>
+          <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_CGW2::MESSAGES::CGW_Manual_Steering_Info::TIMINGS;;;SelectedPeriod;1;;;-1</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl125" ControlName="RadioButtonControl125" Children="Controls">
+          <Property Name="Name">RadioButtonControl125</Property>
+          <Property Name="Size">85,17</Property>
+          <Property Name="Location">160,22</Property>
+          <Property Name="Text">User Period</Property>
+          <Property Name="SwitchValue">-1</Property>
+          <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_CGW2::MESSAGES::CGW_Manual_Steering_Info::TIMINGS;;;SelectedPeriod;1;;;-1</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl69" ControlName="TextBoxControl69" Children="Controls">
+          <Property Name="Name">TextBoxControl69</Property>
+          <Property Name="Size">40,21</Property>
+          <Property Name="Location">245,22</Property>
+          <Property Name="TextForeColor">0,0,0</Property>
+          <Property Name="BoxForeColor">0,0,0</Property>
+          <Property Name="DescriptionText" />
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="BoxTextAlign">Left</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="AlarmGeneralSettings">1;0;0;0</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TextBackColor">255,255,255</Property>
+          <Property Name="BoxBackColor">255,255,255</Property>
+          <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_CGW2::MESSAGES::CGW_Manual_Steering_Info::TIMINGS;;;CyclePeriod;1;;;-1</Property>
+          <Property Name="ReadOnlyControl">False</Property>
+        </Object>
+        <Property Name="Name">GroupBoxControl86</Property>
+        <Property Name="Size">290,53</Property>
+        <Property Name="Location">5,34</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="Text">Cyclic Timing</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl87" ControlName="GroupBoxControl87" Children="Controls">
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl26" ControlName="ButtonControl26" Children="Controls">
+          <Property Name="Name">ButtonControl26</Property>
+          <Property Name="Size">80,21</Property>
+          <Property Name="Location">5,17</Property>
+          <Property Name="Text">Send Once</Property>
+          <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_CGW2::MESSAGES::CGW_Manual_Steering_Info::TIMINGS;;;SendOnce;1;;;-1</Property>
+        </Object>
+        <Property Name="Name">GroupBoxControl87</Property>
+        <Property Name="Size">115,43</Property>
+        <Property Name="Location">300,34</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="Text">Event Timing</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl173" ControlName="StaticTextControl173" Children="Controls">
+        <Property Name="Name">StaticTextControl173</Property>
+        <Property Name="Size">190,17</Property>
+        <Property Name="Location">5,92</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="TextAlign">TopLeft</Property>
+        <Property Name="BorderStyle">None</Property>
+        <Property Name="Text">CtrlSteeringPinionAng_Manual</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl70" ControlName="TextBoxControl70" Children="Controls">
+        <Property Name="Name">TextBoxControl70</Property>
+        <Property Name="Size">60,21</Property>
+        <Property Name="Location">195,92</Property>
+        <Property Name="TextForeColor">0,0,0</Property>
+        <Property Name="BoxForeColor">0,0,0</Property>
+        <Property Name="DescriptionText"></Property>
+        <Property Name="ValueDecimalPlaces">3</Property>
+        <Property Name="BoxTextAlign">Left</Property>
+        <Property Name="BoxBorderStyle">FixedSingle</Property>
+        <Property Name="ValueDisplay">Double</Property>
+        <Property Name="AlarmGeneralSettings">1;0;-14.5;17.5</Property>
+        <Property Name="DisplayLabel">Left</Property>
+        <Property Name="TextBackColor">255,255,255</Property>
+        <Property Name="BoxBackColor">255,255,255</Property>
+        <Property Name="SymbolConfiguration">1;2;CHASSIS1CAN;CGW2;CGW_Manual_Steering_Info;CtrlSteeringPinionAng_Manual</Property>
+        <Property Name="ReadOnlyControl">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl174" ControlName="StaticTextControl174" Children="Controls">
+        <Property Name="Name">StaticTextControl174</Property>
+        <Property Name="Size">60,17</Property>
+        <Property Name="Location">255,92</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="TextAlign">TopLeft</Property>
+        <Property Name="BorderStyle">None</Property>
+        <Property Name="Text">Radians</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl126" ControlName="RadioButtonControl126" Children="Controls">
+        <Property Name="Name">RadioButtonControl126</Property>
+        <Property Name="Size">58,17</Property>
+        <Property Name="Location">317,92</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="Text">INIT</Property>
+        <Property Name="SwitchValue">-14.5</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+        <Property Name="SymbolConfiguration">1;2;CHASSIS1CAN;CGW2;CGW_Manual_Steering_Info;CtrlSteeringPinionAng_Manual</Property>
+        <Property Name="ReadOnlyControl">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl44" ControlName="TrackBarControl44" Children="Controls">
+        <Property Name="Name">TrackBarControl44</Property>
+        <Property Name="Size">104,22</Property>
+        <Property Name="Location">375,92</Property>
+        <Property Name="Maximum">17</Property>
+        <Property Name="Orientation">Horizontal</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="Minimum">-14</Property>
+        <Property Name="MaximumDouble">17.5</Property>
+        <Property Name="MinimumDouble">-14.5</Property>
+        <Property Name="SymbolConfiguration">1;2;CHASSIS1CAN;CGW2;CGW_Manual_Steering_Info;CtrlSteeringPinionAng_Manual</Property>
+        <Property Name="DisplayMinMax">False</Property>
+        <Property Name="DisplayValue">True</Property>
+        <Property Name="ReadOnlyControl">False</Property>
+        <Property Name="TickFrequency">0</Property>
+        <Property Name="TickFrequencyDouble">0.001</Property>
+        <Property Name="SmallChange">0</Property>
+        <Property Name="SmallChangeDouble">0.001</Property>
+        <Property Name="LargeChange">0</Property>
+        <Property Name="LargeChangeDouble">0.01</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl175" ControlName="StaticTextControl175" Children="Controls">
+        <Property Name="Name">StaticTextControl175</Property>
+        <Property Name="Size">190,17</Property>
+        <Property Name="Location">5,114</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="TextAlign">TopLeft</Property>
+        <Property Name="BorderStyle">None</Property>
+        <Property Name="Text">Val_CtrlSteeringPinionAng_Manual</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.ComboBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="ComboBoxControl35" ControlName="ComboBoxControl35" Children="Controls">
+        <Property Name="Name">ComboBoxControl35</Property>
+        <Property Name="Size">120,21</Property>
+        <Property Name="Location">195,114</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="DropDownWidth">250</Property>
+        <Property Name="DropDownHeight">106</Property>
+        <Property Name="MaxDropDownItems">16</Property>
+        <Property Name="ShowValues">Decimal</Property>
+        <Property Name="LeadingZeros">False</Property>
+        <Property Name="SymbolConfiguration">1;2;CHASSIS1CAN;CGW2;CGW_Manual_Steering_Info;Val_CtrlSteeringPinionAng_Manual</Property>
+        <Property Name="ReadOnlyControl">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl176" ControlName="StaticTextControl176" Children="Controls">
+        <Property Name="Name">StaticTextControl176</Property>
+        <Property Name="Size">60,17</Property>
+        <Property Name="Location">315,114</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="TextAlign">TopLeft</Property>
+        <Property Name="BorderStyle">None</Property>
+        <Property Name="Text">NoUnit</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl127" ControlName="RadioButtonControl127" Children="Controls">
+        <Property Name="Name">RadioButtonControl127</Property>
+        <Property Name="Size">118,17</Property>
+        <Property Name="Location">377,114</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="Text">INIT</Property>
+        <Property Name="SwitchValue">0</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+        <Property Name="SymbolConfiguration">1;2;CHASSIS1CAN;CGW2;CGW_Manual_Steering_Info;Val_CtrlSteeringPinionAng_Manual</Property>
+        <Property Name="ReadOnlyControl">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl177" ControlName="StaticTextControl177" Children="Controls">
+        <Property Name="Name">StaticTextControl177</Property>
+        <Property Name="Size">190,17</Property>
+        <Property Name="Location">5,135</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="TextAlign">TopLeft</Property>
+        <Property Name="BorderStyle">None</Property>
+        <Property Name="Text">TruncatedMAC_ManualSteeringInfo</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl71" ControlName="TextBoxControl71" Children="Controls">
+        <Property Name="Name">TextBoxControl71</Property>
+        <Property Name="Size">120,21</Property>
+        <Property Name="Location">195,135</Property>
+        <Property Name="TextForeColor">0,0,0</Property>
+        <Property Name="BoxForeColor">0,0,0</Property>
+        <Property Name="DescriptionText"></Property>
+        <Property Name="ValueDecimalPlaces">0</Property>
+        <Property Name="BoxTextAlign">Left</Property>
+        <Property Name="BoxBorderStyle">FixedSingle</Property>
+        <Property Name="ValueDisplay">Decimal</Property>
+        <Property Name="AlarmGeneralSettings">1;0;0;0</Property>
+        <Property Name="DisplayLabel">Left</Property>
+        <Property Name="TextBackColor">255,255,255</Property>
+        <Property Name="BoxBackColor">255,255,255</Property>
+        <Property Name="SymbolConfiguration">1;2;CHASSIS1CAN;CGW2;CGW_Manual_Steering_Info;TruncatedMAC_ManualSteeringInfo</Property>
+        <Property Name="ReadOnlyControl">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl128" ControlName="RadioButtonControl128" Children="Controls">
+        <Property Name="Name">RadioButtonControl128</Property>
+        <Property Name="Size">58,17</Property>
+        <Property Name="Location">317,135</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="Text">INIT</Property>
+        <Property Name="SwitchValue">0</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+        <Property Name="SymbolConfiguration">1;2;CHASSIS1CAN;CGW2;CGW_Manual_Steering_Info;TruncatedMAC_ManualSteeringInfo</Property>
+        <Property Name="ReadOnlyControl">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl178" ControlName="StaticTextControl178" Children="Controls">
+        <Property Name="Name">StaticTextControl178</Property>
+        <Property Name="Size">190,17</Property>
+        <Property Name="Location">5,156</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="TextAlign">TopLeft</Property>
+        <Property Name="BorderStyle">None</Property>
+        <Property Name="Text">TruncatedFreshnessVal_ManStrInfo</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl72" ControlName="TextBoxControl72" Children="Controls">
+        <Property Name="Name">TextBoxControl72</Property>
+        <Property Name="Size">120,21</Property>
+        <Property Name="Location">195,156</Property>
+        <Property Name="TextForeColor">0,0,0</Property>
+        <Property Name="BoxForeColor">0,0,0</Property>
+        <Property Name="DescriptionText"></Property>
+        <Property Name="ValueDecimalPlaces">0</Property>
+        <Property Name="BoxTextAlign">Left</Property>
+        <Property Name="BoxBorderStyle">FixedSingle</Property>
+        <Property Name="ValueDisplay">Decimal</Property>
+        <Property Name="AlarmGeneralSettings">1;0;0;0</Property>
+        <Property Name="DisplayLabel">Left</Property>
+        <Property Name="TextBackColor">255,255,255</Property>
+        <Property Name="BoxBackColor">255,255,255</Property>
+        <Property Name="SymbolConfiguration">1;2;CHASSIS1CAN;CGW2;CGW_Manual_Steering_Info;TruncatedFreshnessVal_ManStrInfo</Property>
+        <Property Name="ReadOnlyControl">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.RadioButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="RadioButtonControl129" ControlName="RadioButtonControl129" Children="Controls">
+        <Property Name="Name">RadioButtonControl129</Property>
+        <Property Name="Size">58,17</Property>
+        <Property Name="Location">317,156</Property>
+        <Property Name="BackColor">255,255,255</Property>
+        <Property Name="Text">INIT</Property>
+        <Property Name="SwitchValue">0</Property>
+        <Property Name="ForeColor">0,0,0</Property>
+        <Property Name="SymbolConfiguration">1;2;CHASSIS1CAN;CGW2;CGW_Manual_Steering_Info;TruncatedFreshnessVal_ManStrInfo</Property>
+        <Property Name="ReadOnlyControl">False</Property>
+      </Object>
+      <Property Name="Name">GroupBoxControl85</Property>
+      <Property Name="Size">500,182</Property>
+      <Property Name="Location">5,5</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+      <Property Name="BackColor">255,255,255</Property>
+      <Property Name="Text">Signals of Message CGW_Manual_Steering_Info</Property>
+      <Property Name="ForeColor">0,0,0</Property>
+    </Object>
+    <Property Name="Panel">Panel</Property>
+    <Property Name="Size">510,192</Property>
+    <Property Name="BackColor">255,255,255</Property>
+  </Object>
+</Panel>

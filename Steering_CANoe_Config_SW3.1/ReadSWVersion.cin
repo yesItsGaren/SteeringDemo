@@ -1,0 +1,197 @@
+﻿/*@!Encoding:65001*/
+variables{
+  diagRequest ISCS1.* readSW;
+  diagResponse ISCS1.* readDTCResponse;
+  diagRequest ISCS1.* toggleExtendedSession1;
+  diagRequest ISCS2.* toggleExtendedSession2;
+  byte DiagSW[3] ={0x22, 0xF1, 0x81};     // Has to be adapted. "22 F1 80" and "22 F1 81" for ISCS (Maybe)
+  byte FaultCodeUDS[3] ={0x19, 0x02, 0xFF}; 
+  byte ExtSess[2] ={0x10, 0x03};     // Has to be adapted
+  long ret;
+  long ExtSessRet;
+  long retFaultCode;
+  byte responseData[4095]; // Buffer to store the response data
+  long responseSize;
+  byte nrc;
+  long resp;
+}
+
+
+
+
+// Toggle extended session on ISCS1
+void extendedSessionTogle1(){
+  diagResize(toggleExtendedSession1, elcount(ExtSess));
+  diagSetPrimitiveData(toggleExtendedSession1, ExtSess, elCount(ExtSess)); // Set the request data
+  ExtSessRet = diagSendRequest(toggleExtendedSession1);
+  if (ExtSessRet >= 0)
+    {
+        testStepPass("ISCS1 Extended Session Toggled");
+    }
+    else
+    {
+        testStepFail("Failed to send request to enable Extended Session.");
+        return;
+    }
+}
+
+// Toggle extended session on ISCS2
+void extendedSessionTogle2(){
+  diagResize(toggleExtendedSession2, elcount(ExtSess));
+  diagSetPrimitiveData(toggleExtendedSession2, ExtSess, elCount(ExtSess)); // Set the request data
+  ExtSessRet = diagSendRequest(toggleExtendedSession2);
+  if (ExtSessRet >= 0)
+    {
+        testStepPass("ISCS2 Extended Session Toggled");
+    }
+    else
+    {
+        testStepFail("Failed to send request to enable Extended Session.");
+        return;
+    }
+}
+
+
+// Function to read the fault codes
+void readFaultCodes()
+{
+    // Prepare the UDS request (0x22 - ReadDataByIdentifier, 0xF189 - Software Version)
+    diagResize(readSW, elCount(FaultCodeUDS)); // Resize the request object
+    diagSetPrimitiveData(readSW, FaultCodeUDS, elCount(FaultCodeUDS)); // Set the request data
+
+    // Send the request
+    ret = diagSendRequest(readSW);
+    if (ret >= 0)
+    {
+        testStepPass("Request to read software version sent.");
+    }
+    else
+    {
+        testStepFail("Failed to send request to read software version.");
+        return;
+    }
+
+    // Wait for the response
+    ret = TestWaitForDiagResponse(readSW, 5000); // Wait for 5 seconds
+    
+    // Temp print
+    testStepPass("Read Fault Codes:");
+    TestReportWriteDiagResponse(readSW);
+}
+
+
+// Function to read the software version
+void readSWVersion()
+{
+    // Prepare the UDS request (0x22 - ReadDataByIdentifier, 0xF189 - Software Version)
+    diagResize(readSW, elCount(DiagSW)); // Resize the request object
+    diagSetPrimitiveData(readSW, DiagSW, elCount(DiagSW)); // Set the request data
+
+    // Send the request
+    ret = diagSendRequest(readSW);
+    if (ret >= 0)
+    {
+        testStepPass("Request to read software version sent.");
+    }
+    else
+    {
+        testStepFail("Failed to send request to read software version.");
+        return;
+    }
+
+    // Wait for the response
+    ret = TestWaitForDiagResponse(readSW, 5000); // Wait for 5 seconds
+    
+    // Temp print
+    testStepPass("Read SW Version:");
+    TestReportWriteDiagResponse(readSW);
+    
+    /*resp = DiagGetPrimitiveSize(readSW);
+    
+    // Print received DTCs in ASCII
+    testStepPass("ASCII Print of DTCs:");
+    PrintBytesAsASCII(DTCResponse, sizeDTCResp);
+    
+    //PrintHex(DTCResponse,elcount(DTCResponse));
+
+    if (ret == 1) // Response received
+    {
+        // Check if the response is positive (0x62 for 0x22)
+        if (diagGetPrimitiveByte(readSW, 0) == 0x62)
+        {
+            // Extract the full response data (including the SID)
+            responseSize = diagGetPrimitiveSize(readSW);
+            diagGetPrimitiveData(readSW, responseData, sizeDTCResp);
+          
+            // Print the full response data in ASCII format
+            PrintBytesAsASCII(responseData, responseSize);
+        }
+        else // Negative response
+        {
+            nrc = diagGetPrimitiveByte(readSW, 2); // NRC is the third byte
+            testStepFail("","Negative response received. NRC: 0x%02X", nrc);
+        }
+    }
+    else if (ret == 0) // Timeout
+    {
+        write("Timeout while waiting for software version response.");
+        testStepFail("","Timeout while waiting for software version response.");
+    }
+    else // Error
+    {
+        write("Error %d while waiting for software version response.", ret);
+        testStepFail("","Error %d while waiting for software version response.", ret);
+    }*/
+}
+
+// Function to print bytes in ASCII format
+void PrintBytesAsASCII(byte data[], long dataSize)
+{
+    char asciiString[256]; // Buffer to store the ASCII string
+    long i;
+
+    // Initialize the ASCII string buffer
+    snprintf(asciiString, elCount(asciiString), ""); // Clear the buffer
+
+    // Convert each byte to its ASCII representation
+    for (i = 0; i < dataSize; i++)
+    {
+        // Append the ASCII character to the string
+        if (data[i] >= 0x20 && data[i] <= 0x7E) // Printable ASCII range
+        {
+            snprintf(asciiString, elCount(asciiString), "%s%c", asciiString, data[i]);
+        }
+        else // Non-printable characters (e.g., control characters)
+        {
+            snprintf(asciiString, elCount(asciiString), "%s\\x%02X", asciiString, data[i]);
+        }
+    }
+
+    // Print the ASCII string using teststep()
+    testStepPass("Bytes in ASCII", "%s", asciiString);
+}
+
+void readSWVersionAlt(){
+  diagRequest ISCS1.* readSW;
+  byte Diag[4] ={0x22, 0xF1, 0x89};     // Has to be adapted
+  diagResize(req, elcount(Diag));
+  diagSendRequest(readSW);
+  testStepPass("Calling from the library");
+}
+
+// Print in Hex
+void PrintHex(byte data[], long dataSize){
+  if(isReceivedFlag == 1)
+  {
+    teststep("DTCResponse", "Printing DTC Array:");
+    for (i = 0; i < elcount(data); i++) {
+      teststep("", "DTC[%d] = 0x%04X", i, data[i]);
+    }
+    isReceivedFlag = 0;
+  }
+  else
+  {
+    testStep("DTC print out","Array is NULL");
+  }
+  
+}

@@ -1,0 +1,12 @@
+﻿/*@!Encoding:65001*/
+
+variables{
+  diagRequest ISCS1.* readSW;
+  byte Diag[4] = {0x22, 0xF1, 0x88};
+}
+void readSWVersion(){
+  
+  diagResize(readSW, elcount(Diag));
+  diagSendRequest(readSW);
+  testStepPass("Calling from the library");
+}

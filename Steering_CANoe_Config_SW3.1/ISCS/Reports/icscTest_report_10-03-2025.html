@@ -1,0 +1,3656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ISCS_Test</title>
+    <style type="text/css">
+      
+       
+      
+      @media screen
+      {
+        body
+        {
+          background-color: rgb(255, 255, 255);
+          font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        }
+      }
+  
+      
+      @media print
+      {
+        
+        body
+        {
+          background-color: rgb(255, 255, 255);
+          font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        }
+        
+        
+        a
+        {
+          text-decoration: none;
+        }
+        
+        
+        .HeadingTable, .SubHeadingTable, .GroupHeadingTable , .GroupEndTable
+        {
+          border-width: 2px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        .ResultBlockHeading
+        {
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        table.ResultTable, table.OverviewTable, table.CheckStatisticsTable
+        {
+          border-collapse: collapse;
+        }
+        
+        td.DefaultCell, td.DefineCell, td.NumberCell, td.NumberCellPositiveResult, td.NumberCellNegativeResult, 
+        td.NumberCellErrorResult, td.NumberCellInconclusiveResult, td.NumberCellNoneResult, td.NumberCellNoColor,
+        td.PositiveResultCell, td.NegativeResultCell, td.WarningCell, td.NoneResultCell, td.InconclusiveResultCell,
+        td.ErrorResultCell, th.TableHeadingCell
+        {
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(150,150,150);
+        }
+        
+        .PatternSeparator
+        {
+          
+          border-style: none;
+        }
+        
+        .PositiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .NegativeResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .NoneResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .InconclusiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .ErrorResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+
+        
+        .TestcaseHeadingDefaultResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .TestcaseHeadingPositiveResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        .TestcaseHeadingNegativeResult
+        {
+          
+          border-bottom: 2px solid;
+        }
+        
+        table.ScreenOnly, a.Undecorated, .LinkCell
+        {
+          display: none;
+        }
+      }
+      
+      a.Undecorated:hover 
+      {
+        color:red;
+      }
+      a.Undecorated
+      { 
+        text-decoration: none; 
+      }
+      
+      .NavStyle
+      {
+        background-color: rgb(220, 221, 222);
+      }
+      
+      td.LinkCell, td.UpCell
+      {
+        
+        width:              1px;
+        white-space:        nowrap;
+      }
+
+      
+      table
+      {
+        margin-bottom:    10px;
+        vertical-align:   top; 
+        border:           0;
+        border-spacing:   1px;
+        padding:          2px;
+      }
+      table.ScreenOnly
+      {
+        vertical-align: top; 
+        margin-bottom:  10px;
+      }
+      .NoMarginBottom
+      {
+        margin-bottom:    0px;
+      }
+      .HeadingTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        margin-bottom:    30px;
+        margin-left:      auto;
+        margin-right:     auto;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .SubHeadingTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        margin-bottom:    25px;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .GroupHeadingTable, .GroupEndTable
+      {
+        width:            100%;
+        text-align:       center;
+        margin-top:       15px;
+        padding-right:    20px;
+        background-color: rgb(220, 221, 222);
+      }
+      
+      .DefaultTable
+      {
+        padding:        0px;
+        border-spacing: 0px;
+      }
+      
+      .CheckStatisticsTable
+      {
+        margin-bottom: 8px;
+        padding-right:  20px;
+      }
+  
+      .OverviewTable
+      {
+        text-align:     left;
+      }
+      
+      .OverviewResultTable
+      {
+        width:          100%;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+        padding:        0px;
+        text-align:     center;
+      }
+      
+      .ResultTable
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  20px;
+      }
+      
+      .ResultTableInner
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  0px;
+      }
+  
+      table.ResultTable td, table.ChildLinkTable td
+      {
+        vertical-align: top;
+      }
+      .ChildLinkTable
+      {
+        width:          1px;
+        text-align:     left;
+      }
+      .InfoTable
+      {
+        text-align:     left;
+        padding-right:  0px;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+      }
+      .InfoTableExpand
+      {
+        width:          100%;
+        text-align:     left;
+        padding-right:  0px;
+        margin-bottom:  0px;
+        border-spacing: 0px;
+      }
+      .OverallResultTable
+      {
+        width:         50%;
+        text-align:    center;
+        margin-bottom: 20px;
+        margin-left:   auto;
+        margin-right:  auto;
+        font-weight:   bold;
+      }
+      
+      .TableHeadingCell
+      {
+        background-color: rgb(179, 179, 179);
+        font-family:      arial, verdana, trebuchet, officina, sans-serif;
+        font-weight:      bold;
+        text-align:       center;
+      }
+  
+      .CellNoColor
+      {
+        text-align:     left;
+        vertical-align: top;
+      }   
+      
+      .DefineCell
+      {
+        background-color: rgb(179, 179, 179);
+        text-align:       left;
+      }
+      
+      .DefaultCell, .DefaultCellBold
+      {
+        background-color: rgb(229, 229, 229);
+        text-align:       left;
+      }
+      
+      .DefaultCellBold
+      {
+        font-weight:      bold;
+      }
+        
+      .NumberCell
+      {
+        background-color: rgb(229, 229, 229);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellPositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNoneResult
+      {
+        background-color: rgb(105, 105, 105);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellInconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+        text-align:       center;
+        min-width:        50px;
+      }
+      
+      .NumberCellNoColor
+      {        
+        text-align: center;
+      }
+      
+      .PositiveResultCell
+      {
+        background-color: rgb(25, 165, 88);
+      }
+    
+      .NegativeResultCell
+      {
+        background-color: rgb(240, 0, 0);
+      }
+      
+      .NoneResultCell
+      {
+        background-color: rgb(105, 105, 105);
+      }
+      
+      .InconclusiveResultCell
+      {
+        background-color: rgb(255, 165, 0);
+      }
+      
+      .ErrorResultCell
+      {
+        background-color: rgb(205, 0, 0);
+        white-space:        nowrap;
+      }
+
+      .WarningCell
+      {
+        background-color: rgb(255, 255, 0);
+      }
+
+      .TestcaseHeadingDefaultResult
+      {
+        background-color: rgb(179, 179, 179);
+      }
+      .TestcaseHeadingPositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+      }      
+      .TestcaseHeadingNegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+      }      
+      .TestcaseHeadingNoneResult
+      {
+        background-color: rgb(105, 105, 105);
+      }
+      .TestcaseHeadingInconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+      }
+      .TestcaseHeadingErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+      }
+      
+      .PatternSeparator
+      {
+        height: 0.2em;
+      }
+      
+      .NegativeResult
+      {
+        background-color: rgb(240, 0, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .PositiveResult
+      {
+        background-color: rgb(25, 165, 88);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .NoneResult
+      {
+        background-color: rgb(105, 105, 105);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .InconclusiveResult
+      {
+        background-color: rgb(255, 165, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      .ErrorResult
+      {
+        background-color: rgb(205, 0, 0);
+        text-align:       center;
+        font-weight:      bold;
+      }
+      
+      
+      
+      .Heading1
+      {
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        font-size:   26px;
+      }
+      
+      .Heading2
+      {
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        font-size:   20px;
+      }
+      
+      .Heading3
+      {
+        font-family:   arial, sans-serif;
+        font-weight:   bold;
+        font-size:     18px;
+        margin-bottom: 20px;
+        margin-top:    20px;
+      }
+      
+      .Heading4
+      {
+        font-family:   arial, sans-serif;
+        font-weight:   bold;
+        font-size:     16px;
+        margin-top:    10px;
+        margin-bottom: 10px;
+      }
+      
+      
+      img
+      {
+        Margin-bottom: 10px;
+        Margin-right:  10px;
+      }
+      
+      
+      p
+      {
+        Margin-bottom: 20px;
+      }
+      
+      
+      .DefaultTableBackground
+      {
+        background-color: rgb(229, 229, 229);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .NegativeResultBackground
+      {
+        background-color: rgb(240, 0, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .PositiveResultBackground
+      {
+        background-color: rgb(25, 165, 88);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .WarningResultBackground
+      {
+        background-color: rgb(255, 255, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .NoneResultBackground
+      {
+        background-color: rgb(105, 105, 105);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .InconclusiveResultBackground
+      {
+        background-color: rgb(255, 165, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .ErrorResultBackground
+      {
+        background-color: rgb(205, 0, 0);
+        border-spacing:   0px;
+        padding:          0px;
+      }
+      
+      .TestGroupHeadingBackground
+      {
+        background-color: rgb(179, 179, 179);
+      }
+    
+      
+      .Indentation
+      {
+        margin-left:  20px;
+      }
+    </style>
+    <script type="text/javascript">
+      var EXPANDED = '[−]';
+      var COLLAPSED = '[+]';
+      var VISIBLE = 'Visible';
+      var HIDDEN = 'Hidden';
+      var NONE = 'none';
+      var BLOCK = '';
+      function getDivId(id) { return 'div_' + id; }
+      function getLinkId(id) { return 'lnk_' + id; }
+      function getTableId(id) { return 'tbl_' + id; }
+      function getTbl2Id(id) { return 'tbl_t' + id; }
+      
+      
+      function switchText(oldText) { return oldText == COLLAPSED ? EXPANDED : COLLAPSED ; }
+      function getStyleFromText(linkText) { return linkText == COLLAPSED ? HIDDEN : VISIBLE; }
+      
+      function getElements(tagName, elementId)
+      {
+        this.elements = [];
+        var index = 0;
+        var elm = document.getElementsByTagName(tagName);
+        var len = elm.length;
+        for (var i = 0; i < len; i++) 
+        {
+          var id = elm[i].id;
+          if (id && id.indexOf(elementId) == 0)
+          {
+            this.elements[index] = elm[i];
+            index++;
+          }
+        }
+        return this.elements;
+      }
+      function matchElements(tagName, matchId)
+      {
+        this.elements = [];
+        var index = 0;
+        var elm = document.getElementsByTagName(tagName);
+        for (var i = 0; i < elm.length; i++) 
+        {
+          var id = elm[i].id;
+          var tc = id.replace(/s[0-9]+\./, "");
+          if (tc && tc == matchId)
+          {
+            this.elements[index] = elm[i];
+            index++;
+          }
+        }
+        return this.elements;  
+      }
+      function onoff(elm, style)
+      {
+        if(elm.style.display == NONE)
+        {
+          if(style == null || style == VISIBLE)
+            elm.style.display = BLOCK;
+        }
+        else
+        {
+          if(style == null || style == HIDDEN)
+            elm.style.display = NONE;
+        }
+      }
+      function switchTagStyle(tag, id, style)
+      {
+        var divs = getElements(tag, id);
+        for(var i = 0; i < divs.length; i++)
+          onoff(divs[i], style);
+      }
+      function switchRowStyle(tbl, style)
+      {
+        var rows = tbl.rows.length;
+        for(var rowIndex=0; rowIndex < rows; rowIndex++)
+        {
+          var row = tbl.rows[rowIndex];
+          if (row.id != "on")
+            onoff(row, style);
+        }
+      }
+      function switchTableRowStyle(tableId, style)
+      {
+        var tables = getElements('table', tableId);
+        for(var i = 0; i < tables.length; i++)
+          switchRowStyle(tables[i], style);
+      }
+      function switchLinkText(linkId, newText)
+      {
+        var link = getElements('a', linkId);
+        var len = link.length;
+        for(var i = 0; i < len; i++)
+        {
+          var lnk = link[i];
+          if(newText == null)
+          {
+            var oldText = lnk.text;
+            newText = switchText(oldText)
+          }
+          lnk.text = newText;
+        }
+      }
+      function switchTag(tag, id, text)
+      {
+        var style = getStyleFromText(text);
+        switchTagStyle(tag, id, style);
+      }
+      function switchTable(id)
+      {
+        switchLinkText(getTableId(id));
+        switchTableRowStyle(getTableId(id));
+      }
+      function switchDiv(id, linkText)
+      {
+        var text = switchText(linkText);
+        switchLinkText(getLinkId(id), text);
+        switchTag('div', getDivId(id), text);
+      }      
+      function switchAll(id, linkText)
+      {
+        var text = switchText(linkText);
+        switchLinkText(getLinkId(id), text);
+        switchTag('div', getDivId(id), text);
+        var style = getStyleFromText(text);
+        switchTableRowStyle(getTbl2Id(id), style);
+      }
+      function showTable(id)
+      {
+        var tableId = getTableId(id);
+        switchLinkText(tableId, EXPANDED);
+        switchTableRowStyle(tableId, VISIBLE);
+      }
+      function hideTable(id)
+      {
+        var tableId = getTableId(id);
+        switchTableRowStyle(tableId, HIDDEN);
+        switchLinkText(tableId, COLLAPSED);
+      }
+      function showDiv(id)
+      {
+        switchLinkText(getLinkId(id), EXPANDED);
+        switchTag('div', getDivId(id), EXPANDED);
+      }
+      function showTC(id)
+      {
+        var divId = getDivId(id);
+        var elms = matchElements('div', divId); 
+        if(elms != null && elms.length > 0)
+        {
+          id = elms[0].id.replace(getDivId(''), '');
+          showDiv(id);
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <a name="TOP"></a>
+    <table class="HeadingTable">
+      <tr>
+        <td>
+          <big class="Heading1">Report: ISCS_Test</big>
+        </td>
+      </tr>
+    </table>
+    <center>
+      <table class="OverallResultTable">
+        <tr>
+          <td class="NegativeResult">Test failed</td>
+        </tr>
+      </table>
+    </center>
+    <a name="GeneralTestInfo"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">General Test Information</div>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation">
+      <div class="Heading4">Test Engineer</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Windows Login Name: </td>
+            <td class="CellNoColor">arabk</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Test Setup</div>
+      <div class="Indentation">
+        <table>
+          <tr>
+            <td class="CellNoColor">Version: </td>
+            <td class="CellNoColor">CANoe.J1939.CAN /pro 17.5.5 (SP5)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Configuration: </td>
+            <td class="CellNoColor">C:\Users\arabk\Desktop\Holon\configs\Steering_CANoe_Config_SW3.1\DBC_SW030201_Chassis1_CAN.cfg</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database Chassis1CAN_DBCV9.1_SWV3.1 on CHASSIS1CAN: </td>
+            <td class="CellNoColor">C:\Users\arabk\Desktop\Holon\configs\Steering_CANoe_Config_SW3.1\Chassis1CAN_DBCV9.1_SWV3.1.dbc (2025-02-06 17:33:48)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Database Chassis2CAN_DBCV9.2_SWV3.1 on CHASSIS2CAN: </td>
+            <td class="CellNoColor">C:\Users\arabk\Desktop\Holon\configs\Steering_CANoe_Config_SW3.1\Chassis2CAN_DBCV9.2_SWV3.1.dbc (2025-02-06 17:33:48)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Diagnostic Description of ISCS1: </td>
+            <td class="CellNoColor">Base_Variant, en-US, C:\Users\arabk\Desktop\Holon\configs\Steering_CANoe_Config_SW3.1\ISCS1_BLD7_SW3.2_V3.cdd (ISCS1_BLD7_SW3.2_V3.cdd, 2024-12-13 13:51:32+05:30)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Diagnostic Description of ISCS2: </td>
+            <td class="CellNoColor">Base_Variant, en-US, C:\Users\arabk\Desktop\Holon\configs\Steering_CANoe_Config_SW3.1\ISCS2_BLD7_SW3.2_V3.cdd (ISCS2_BLD7_SW3.2_V3.cdd, 2024-12-13 13:56:24+05:30)</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Test Module Name: </td>
+            <td class="CellNoColor">ISCS_Test</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Test Module File: </td>
+            <td class="CellNoColor">C:\Users\arabk\Desktop\Holon\configs\Steering_CANoe_Config_SW3.1\icscTest.can</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Last modification of Test Module File: </td>
+            <td class="CellNoColor">2025-03-07, 16:00:36</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Windows Computer Name: </td>
+            <td class="CellNoColor">GARENWINTEC</td>
+          </tr>
+          <tr>
+            <td class="CellNoColor">Nodelayer Module CANoeILNLVector: </td>
+            <td class="CellNoColor">CANoe Interaction Layer NL (Vector) Version 3.30.113 (Feb 16 2023 15:33:52) , C:\Users\arabk\Desktop\Holon\configs\Steering_CANoe_Config_SW3.1\Exec32\CANoe_14_0\Exec32\CANoeILNLVector.dll</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Hardware</div>
+      <div class="Indentation">
+        <div class="Heading4">CAN Channel Interfaces</div>
+        <div class="Indentation">
+          <table>
+            <tr>
+              <th class="TableHeadingCell">Channel</th>
+              <th class="TableHeadingCell">Device</th>
+              <th class="TableHeadingCell">Serial number</th>
+              <th class="TableHeadingCell">Driver DLL version</th>
+              <th class="TableHeadingCell">Driver version</th>
+            </tr>
+            <tr>
+              <td class="NumberCell">1</td>
+              <td class="NumberCell">VN1640</td>
+              <td class="NumberCell">84632</td>
+              <td class="NumberCell">25.10.18</td>
+              <td class="NumberCell">24.40.10</td>
+            </tr>
+            <tr>
+              <td class="NumberCell">2</td>
+              <td class="NumberCell">VN1640</td>
+              <td class="NumberCell">84632</td>
+              <td class="NumberCell">25.10.18</td>
+              <td class="NumberCell">24.40.10</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="Heading4">Logging and video recordings</div>
+      <div class="Indentation">
+        <table>
+          <th class="TableHeadingCell">Start Time</th>
+          <th class="TableHeadingCell">End Time</th>
+          <th class="TableHeadingCell">Logging/Video File</th>
+          <tr>
+            <td class="NumberCell">Active at test start</td>
+            <td class="NumberCell"> 102.488895</td>
+            <td class="NumberCell" style="text-align:left">..\..\..\Downloads\Steering_Test_Logs\Steering_FT.blf</td>
+          </tr>
+        </table>
+      </div>
+      <p><b>Measurement stop forced. Test is incomplete!</b></p>
+    </div>
+    <a name="TestOverview"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">Test Overview</div>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation">
+      <table class="DefaultTable">
+        <tr>
+          <td style="padding-right: 0.5em;" class="CellNoColor">Test begin: </td>
+          <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:00:48</td>
+          <td class="CellNoColor">(logging timestamp    4.592664)</td>
+        </tr>
+        <tr>
+          <td style="padding-right: 0.5em;" class="CellNoColor">Test end: </td>
+          <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:26</td>
+          <td class="CellNoColor" nowrap>(logging timestamp  102.488895)</td>
+        </tr>
+      </table>
+      <div class="Heading4">Statistics</div>
+      <div class="Indentation">
+        <table class="OverviewTable">
+          <tr>
+            <td class="DefineCell">Overall number of test cases </td>
+            <td class="NumberCell" width="60">15</td>
+            <td class="DefaultCell"></td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Executed test cases </td>
+            <td class="NumberCell">15</td>
+            <td class="DefaultCell">100% of all test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Not executed test cases </td>
+            <td class="NumberCell">0</td>
+            <td class="DefaultCell">0% of all test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases passed </td>
+            <td class="NumberCellPositiveResult">12</td>
+            <td class="NumberCellPositiveResult">80% of executed test cases</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">Test cases failed </td>
+            <td class="NumberCellNegativeResult">3</td>
+            <td class="NumberCellNegativeResult">20% of executed test cases</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Heading4">Test Case Results</div>
+      <div class="Indentation">
+        <table class="OverviewTable">
+          <tr>
+            <td class="DefineCell">1</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_9">CF_807_Manual_Test_Overwrite_Steering</a>
+            </td>
+            <td class="NegativeResultCell">
+              <a href="#i__-1772820560_145" onclick="showTC('1')">fail</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="DefineCell">2</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_179">readDTCsSteering</a>
+            </td>
+            <td class="NegativeResultCell">
+              <a href="#i__-1772820560_3214" onclick="showTC('2')">fail</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="DefineCell">3</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_3239">SteeringFastTrack</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">4</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_3400">EE_REQ_3748</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">5</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_3570">EE_REQ_11585</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">6</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_3740">EE_REQ_11583</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">7</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_3910">EE_REQ_18859</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">8</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_4080">EE_REQ_11586</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">9</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_4250">EE_REQ_3745</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">10</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_4420">EE_REQ_2087</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">11</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_4590">EE_REQ_15304</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">12</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_4630">EE_REQ_2034</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">13</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_4800">EE_REQ_11458</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">14</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_4970">EE_REQ_11454</a>
+            </td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">15</td>
+            <td class="DefaultCell"></td>
+            <td class="DefaultCell">
+              <a href="#i__-1772820560_5140">EE_REQ_15303</a>
+            </td>
+            <td class="NegativeResultCell">fail</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <a name="TestModuleInfo"></a>
+    <table class="SubHeadingTable">
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_" href="javascript:switchAll('',document.all['lnk_'].text)">[−]</a>
+        </td>
+        <td>
+          <div class="Heading2">Test Module Information</div>
+        </td>
+      </tr>
+    </table>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <big class="Heading2">Test Case Details</big>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_1" href="javascript:switchAll('1',document.all['lnk_1'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingNegativeResult">
+          <big class="Heading3">1 <a name="i__-1772820560_9">CF_807_Manual_Test_Overwrite_Steering</a>: Failed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_1">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:00:48</td>
+            <td class="CellNoColor">(logging timestamp    4.592664)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:00:56</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   12.592664)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">   4.592664</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   4.892664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   4.892664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   5.192664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   5.192664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   5.492664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   5.492664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   5.792664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   6.092664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   6.392664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   6.392664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">   6.692664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.592664</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr id="i__-1772820560_145">
+            <td class="DefineCell">  12.592664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">CF_807 Manual Test Overwrite Steering Failed.</td>
+            <td class="NegativeResultCell">fail</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.592664</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 1</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_2" href="javascript:switchAll('2',document.all['lnk_2'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingNegativeResult">
+          <big class="Heading3">2 <a name="i__-1772820560_179">readDTCsSteering</a>: Failed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_2">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:00:56</td>
+            <td class="CellNoColor">(logging timestamp   12.592664)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:00:56</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   12.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation">
+        <table class="ScreenOnly">
+          <tbody>
+            <tr>
+              <td>
+                <a class="Undecorated" href="javascript:showTable('2_')">[expand test steps]</a>
+              </td>
+              <td width="2px"></td>
+              <td>
+                <a class="Undecorated" href="javascript:hideTable('2_')">[collapse test steps]</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.592664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">ISCS1 Extended Session Toggled</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.592664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">ISCS2 Extended Session Toggled</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.592664</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request to read software version sent.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.678107</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'ISCS1' Elapsed time=85.443078ms (max=5000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.678107</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Read Fault Codes:</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.678107</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_2_i__-1772820560_239" href="javascript:switchTable('2_i__-1772820560_239')">[−]</a>
+                    </td>
+                    <td>ISCS1: //ISCS1/Base_Variant/FaultMemory_ReadAllIdentified/RDI_RDTCBSM_PR</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_2_i__-1772820560_239">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">SID-PR</td>
+                  <td class="DefaultCell">0x59</td>
+                  <td class="DefaultCell">59 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ReportDtcByStatusMask</td>
+                  <td class="DefaultCell">0x02</td>
+                  <td class="DefaultCell">02 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">DTCStatusAvailabilityMask</td>
+                  <td class="DefaultCell">0xFF</td>
+                  <td class="DefaultCell">ff </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">DTCStatusAvailabilityMask.Test failed</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">DTCStatusAvailabilityMask.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">DTCStatusAvailabilityMask.Pending DTC</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">DTCStatusAvailabilityMask.Confirmed DTC</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">DTCStatusAvailabilityMask.Test not completed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">DTCStatusAvailabilityMask.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">DTCStatusAvailabilityMask.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">DTCStatusAvailabilityMask.Warning indicator requested</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">ListOfDTC</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration0</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECU1LossOfCommwithCGW1</td>
+                  <td class="DefaultCell">c1 46 87 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x23</td>
+                  <td class="DefaultCell">23 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration1</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECU1LossOfCommwithCGW2</td>
+                  <td class="DefaultCell">e1 46 87 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x23</td>
+                  <td class="DefaultCell">23 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration2</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECUILossOfCommwithMK100</td>
+                  <td class="DefaultCell">e6 06 87 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x23</td>
+                  <td class="DefaultCell">23 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration3</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECU1LossOfCommwithMKC1</td>
+                  <td class="DefaultCell">e6 05 87 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x23</td>
+                  <td class="DefaultCell">23 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration4</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECU1LossOfCommwithSDS_Primary</td>
+                  <td class="DefaultCell">e6 22 87 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x23</td>
+                  <td class="DefaultCell">23 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration5</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECU1LossOfCommwithSDS_Secondary</td>
+                  <td class="DefaultCell">e6 23 87 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x23</td>
+                  <td class="DefaultCell">23 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration6</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECU1LossOfCommwithVCU</td>
+                  <td class="DefaultCell">e6 30 87 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x23</td>
+                  <td class="DefaultCell">23 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration7</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECU1 Power Supply-Low Voltage</td>
+                  <td class="DefaultCell">53 00 16 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x22</td>
+                  <td class="DefaultCell">22 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration8</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECU1 Power Supply-Over Voltage</td>
+                  <td class="DefaultCell">53 02 17 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x22</td>
+                  <td class="DefaultCell">22 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration9</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECU1 Power Supply-Under Voltage</td>
+                  <td class="DefaultCell">53 01 16 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x20</td>
+                  <td class="DefaultCell">20 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 20px;">EndOfServiceIteration10</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">DTC</td>
+                  <td class="DefaultCell">ECU1 failure: Improper Shutdown</td>
+                  <td class="DefaultCell">53 1a 01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 40px;">StatusOfDTC</td>
+                  <td class="DefaultCell">0x23</td>
+                  <td class="DefaultCell">23 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed this monitoring cycle</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Pending DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Confirmed DTC</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed since last clear</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test failed since last clear</td>
+                  <td class="DefaultCell">true</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Test not completed this monitoring cycle</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 60px;">StatusOfDTC.Warning indicator requested</td>
+                  <td class="DefaultCell">false</td>
+                  <td class="DefaultCell">00 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.678107</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Request to read software version sent.</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Resumed on Diagnostics response from 'ISCS1' Elapsed time=10.787885ms (max=5000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Read SW Version:</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">
+              <table class="NoMarginBottom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a class="Undecorated" id="tbl_2_i__-1772820560_2979" href="javascript:switchTable('2_i__-1772820560_2979')">[−]</a>
+                    </td>
+                    <td>ISCS1: //ISCS1/Base_Variant/Application_Software_Identification_Read/RDBI_PR</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="InfoTable" id="tbl_2_i__-1772820560_2979">
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Parameter</td>
+                  <td class="DefineCell">Value</td>
+                  <td class="DefineCell">Raw</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Error: Transferred data too short!</td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">SID-PR</td>
+                  <td class="DefaultCell">0x62</td>
+                  <td class="DefaultCell">62 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Identifier</td>
+                  <td class="DefaultCell">0xF181</td>
+                  <td class="DefaultCell">f1 81 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Major Version</td>
+                  <td class="DefaultCell">..</td>
+                  <td class="DefaultCell">03 01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Delimiter</td>
+                  <td class="DefaultCell">.</td>
+                  <td class="DefaultCell">01 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Minor Version</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell">00 00 </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Delimiter 1</td>
+                  <td class="DefaultCell">.</td>
+                  <td class="DefaultCell">2e </td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">Patch Version</td>
+                  <td class="DefaultCell"></td>
+                  <td class="DefaultCell">00 00 </td>
+                </tr>
+                <tr>
+                  <td class="DefineCell" style="text-indent: 0px;">Error interpreting service data! See hex dump:</td>
+                  <td class="DefineCell"></td>
+                  <td class="DefineCell"></td>
+                </tr>
+                <tr>
+                  <td class="DefaultCell" style="text-indent: 0px;">0000: 62 f1 81 03 01 01 </td>
+                </tr>
+              </table>
+            </td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">ASCII Print of DTCs:</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.688895</td>
+            <td class="NumberCell">Bytes in ASCII</td>
+            <td class="DefaultCell">\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr id="i__-1772820560_3214">
+            <td class="DefineCell">  12.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Negative response received. NRC: 0x81</td>
+            <td class="NegativeResultCell">fail</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_3" href="javascript:switchAll('3',document.all['lnk_3'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">3 <a name="i__-1772820560_3239">SteeringFastTrack</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_3">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:00:56</td>
+            <td class="CellNoColor">(logging timestamp   12.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:04</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   20.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  12.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  13.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  13.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  13.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  13.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  13.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  14.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  14.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  14.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  14.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  20.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  20.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 1</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_4" href="javascript:switchAll('4',document.all['lnk_4'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">4 <a name="i__-1772820560_3400">EE_REQ_3748</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_4">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:04</td>
+            <td class="CellNoColor">(logging timestamp   20.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:12</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   28.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  20.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  20.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  20.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  21.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  21.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  21.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  21.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  21.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  22.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  22.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  22.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  22.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  28.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  28.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_3748 Autonomous Steering Mode Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  28.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 2</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_5" href="javascript:switchAll('5',document.all['lnk_5'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">5 <a name="i__-1772820560_3570">EE_REQ_11585</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_5">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:12</td>
+            <td class="CellNoColor">(logging timestamp   28.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:20</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   36.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  28.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  28.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  28.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  29.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  29.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  29.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  29.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  29.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  30.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  30.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  30.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  30.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  36.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  36.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_11585 Hands on detection Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  36.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 3</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_6" href="javascript:switchAll('6',document.all['lnk_6'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">6 <a name="i__-1772820560_3740">EE_REQ_11583</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_6">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:20</td>
+            <td class="CellNoColor">(logging timestamp   36.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:28</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   44.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  36.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  36.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  36.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  37.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  37.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  37.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  37.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  37.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  38.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  38.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  38.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  38.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  44.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  44.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_11583 Human Intervention Flag ECU 1 Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  44.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 4</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_7" href="javascript:switchAll('7',document.all['lnk_7'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">7 <a name="i__-1772820560_3910">EE_REQ_18859</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_7">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:28</td>
+            <td class="CellNoColor">(logging timestamp   44.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:36</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   52.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  44.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  44.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  44.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  45.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  45.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  45.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  45.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  45.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  46.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  46.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  46.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  46.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  52.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  52.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_11585 Human Intervention Flag ECU 2 Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  52.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 5</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_8" href="javascript:switchAll('8',document.all['lnk_8'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">8 <a name="i__-1772820560_4080">EE_REQ_11586</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_8">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:36</td>
+            <td class="CellNoColor">(logging timestamp   52.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:44</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   60.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  52.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  52.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  52.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  53.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  53.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  53.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  53.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  53.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  54.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  54.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  54.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  54.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  60.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  60.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_11586 Manual override recognition Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  60.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 6</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_9" href="javascript:switchAll('9',document.all['lnk_9'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">9 <a name="i__-1772820560_4250">EE_REQ_3745</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_9">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:44</td>
+            <td class="CellNoColor">(logging timestamp   60.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:52</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   68.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  60.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  60.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  60.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  61.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  61.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  61.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  61.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  61.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  62.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  62.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  62.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  62.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  68.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  68.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_3745  Steer By wire Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  68.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 7</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_10" href="javascript:switchAll('10',document.all['lnk_10'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">10 <a name="i__-1772820560_4420">EE_REQ_2087</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_10">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:01:52</td>
+            <td class="CellNoColor">(logging timestamp   68.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:00</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   76.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  68.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  68.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  68.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  69.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  69.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  69.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  69.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  69.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  70.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  70.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  70.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  70.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  76.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  76.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_2087  Steering By wire Commands Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  76.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 8</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_11" href="javascript:switchAll('11',document.all['lnk_11'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">11 <a name="i__-1772820560_4590">EE_REQ_15304</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_11">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:00</td>
+            <td class="CellNoColor">(logging timestamp   76.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:00</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   76.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  76.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_15304  Lost of VSM Status Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  76.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 9</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_12" href="javascript:switchAll('12',document.all['lnk_12'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">12 <a name="i__-1772820560_4630">EE_REQ_2034</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_12">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:00</td>
+            <td class="CellNoColor">(logging timestamp   76.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:08</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   84.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  76.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  76.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  76.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  77.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  77.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  77.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  77.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  77.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  78.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  78.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  78.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  78.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  84.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  84.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_2034   Maintaining Steering Angle Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  84.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 10</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_13" href="javascript:switchAll('13',document.all['lnk_13'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">13 <a name="i__-1772820560_4800">EE_REQ_11458</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_13">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:08</td>
+            <td class="CellNoColor">(logging timestamp   84.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:16</td>
+            <td class="CellNoColor" nowrap>(logging timestamp   92.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  84.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  84.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  84.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  85.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  85.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  85.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  85.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  85.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  86.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  86.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  86.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  86.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  92.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  92.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_11458  State Transition from Test Drive Mode to Autonomous and Manual Mode Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  92.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 11</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_14" href="javascript:switchAll('14',document.all['lnk_14'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingPositiveResult">
+          <big class="Heading3">14 <a name="i__-1772820560_4970">EE_REQ_11454</a>: Passed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_14">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:16</td>
+            <td class="CellNoColor">(logging timestamp   92.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:24</td>
+            <td class="CellNoColor" nowrap>(logging timestamp  100.688895)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell">  92.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  92.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  92.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  93.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  93.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  93.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  93.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  93.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  94.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  94.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  94.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 6: Set Steering Values</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell">  94.788895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Sequence Completed</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 100.688895</td>
+            <td class="NumberCell">Resume reason</td>
+            <td class="DefaultCell">Elapsed time=8000ms (max=8000ms)</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 100.688895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">EE_REQ_11454  State Transition into Autonomous Mode Passed!</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 100.688895</td>
+            <td class="NumberCell">Test Step</td>
+            <td class="DefaultCell">indexofTest = 12</td>
+            <td class="PositiveResultCell">pass</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td class="LinkCell">
+          <a class="Undecorated" id="lnk_15" href="javascript:switchAll('15',document.all['lnk_15'].text)">[−]</a>
+        </td>
+        <td class="TestcaseHeadingNegativeResult">
+          <big class="Heading3">15 <a name="i__-1772820560_5140">EE_REQ_15303</a>: Failed</big>
+        </td>
+      </tr>
+    </table>
+    <div class="Indentation" id="div_15">
+      <div class="Indentation">
+        <table class="DefaultTable">
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:24</td>
+            <td class="CellNoColor">(logging timestamp  100.688895)</td>
+          </tr>
+          <tr>
+            <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2025-03-07 16:02:26</td>
+            <td class="CellNoColor" nowrap>(logging timestamp  102.488895)</td>
+          </tr>
+        </table>
+        <p><b>Measurement stop forced. Test is incomplete!</b></p>
+      </div>
+      <div class="Indentation"></div>
+      <table class="TestGroupHeadingBackground">
+        <tr>
+          <td>
+            <big class="Heading3">Main Part of Test Case</big>
+          </td>
+        </tr>
+      </table>
+      <div class="Indentation">
+        <table class="ResultTable">
+          <tr>
+            <th class="TableHeadingCell" width="1px">Timestamp</th>
+            <th class="TableHeadingCell" width="1px">Test Step</th>
+            <th class="TableHeadingCell" width="auto">Description</th>
+            <th class="TableHeadingCell" width="1px">Result</th>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 100.688895</td>
+            <td class="NumberCell">Sequence Started</td>
+            <td class="DefaultCell">Starting the sequence with a 1000ms delay.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 100.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 1: Set Sleep</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 100.988895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vsmInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 101.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 101.288895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started primSteeringTimer and secSteeringTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 101.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 3: Set Brake Validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 101.588895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Started vehMvmntInfoTimer for cyclic sending.</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 101.888895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 4: Set Park</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 102.188895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 5: Set Autonomous</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+          <tr>
+            <td class="DefineCell"> 102.488895</td>
+            <td class="NumberCell"></td>
+            <td class="DefaultCell">Step 2: Set SDS Steering validity to Valid</td>
+            <td class="DefaultCell">-</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <table class="SubHeadingTable">
+      <tr>
+        <td>
+          <div class="Heading2">End of Report</div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

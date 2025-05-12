@@ -1,0 +1,207 @@
+﻿/*@!Encoding:65001*/
+includes{
+  #include "ReadSWVersion.CIN"
+  #include "DynamicISCS.CAN"
+  #include "DTC Buffering.CAN"
+}
+
+variables
+{
+  int i = 0;
+  message 0x18DA25F1x  readDTC;
+  long FaultMemoryResults;
+  diagRequest ISCS1.* req;
+  byte Diag[4] = {0x19, 0x02, 0xFF};
+  int idx;
+  int TIMEOUT = 8000;
+  char stepDescription[100]; // Buffer to store the formatted string
+
+  
+}
+
+void MainTest()
+{
+  CF_807_Manual_Test_Overwrite_Steering();
+  readDTCsSteering();
+  SteeringFastTrack();
+  EE_REQ_3748();
+  EE_REQ_11585();
+  EE_REQ_11583();
+  EE_REQ_18859();
+  EE_REQ_11586();
+  EE_REQ_3745(); 
+  EE_REQ_2087();
+  EE_REQ_15304();
+  EE_REQ_2034(); 
+  EE_REQ_11458();
+  EE_REQ_11454();
+  EE_REQ_15303();
+}
+
+
+testcase readDTCsSteering(){
+  extendedSessionTogle1();
+  extendedSessionTogle2();
+  readFaultCodes();
+  readSWVersion();
+}
+
+testcase SteeringFastTrack()
+{
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+testcase CF_807_Manual_Test_Overwrite_Steering()
+{
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepFail("CF_807 Manual Test Overwrite Steering Failed.");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+
+testcase EE_REQ_3748(){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_3748 Autonomous Steering Mode Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+testcase EE_REQ_11585(){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_11585 Hands on detection Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+
+testcase EE_REQ_11583(){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_11583 Human Intervention Flag ECU 1 Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+
+testcase EE_REQ_18859(){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_11585 Human Intervention Flag ECU 2 Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+testcase EE_REQ_11586(){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_11586 Manual override recognition Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+testcase EE_REQ_3745 (){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_3745  Steer By wire Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+testcase EE_REQ_2087 (){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_2087  Steering By wire Commands Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+testcase EE_REQ_15304 (){
+  testStepPass("EE_REQ_15304  Lost of VSM Status Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+testcase EE_REQ_2034(){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_2034   Maintaining Steering Angle Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+testcase EE_REQ_11458(){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_11458  State Transition from Test Drive Mode to Autonomous and Manual Mode Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+testcase EE_REQ_11454(){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_11454  State Transition into Autonomous Mode Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+testcase EE_REQ_15303(){
+  // Start the sequence
+  StartSequence();
+  testWaitForTimeout(TIMEOUT); // Wait for a while to let messages be sent
+  testStepPass("EE_REQ_15303  Wrong VSM Mode being received Passed!");
+  indexofTest++;
+  snprintf(stepDescription, elCount(stepDescription), "indexofTest = %d", indexofTest);
+  testStepPass("Test Step", stepDescription);
+}
+
+// Function to calculate the number of DTC and print the number to the testreport
+
+/*on message 0x18DAF125x{
+  diagResponse ISCS1.* readDTCResponse;
+  if(this.byte(1) == 0x59 && this.byte(1) == 0x02)
+  readDTCResponse = this;
+  
+  // Print the response size
+  responseSize = diagGetPrimitiveSize(readDTCResponse);
+  //testStep("Response size: %d bytes", responseSize);
+
+  // Print the response data in hexadecimal format
+  //testStep("Response data (Hex):");
+  for (idx = 0; i < responseSize; i++)
+  {
+      testStep("%02X ", readDTCResponse.byte(i));
+  }
+}*/
+

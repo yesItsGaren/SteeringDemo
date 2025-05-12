@@ -1,0 +1,21 @@
+﻿/*@!Encoding:65001*/
+includes
+{
+  
+}
+
+variables
+{
+  int sizeDTCResp, loopDTC, counter;
+  byte DTCResponse[99];
+  int isReceivedFlag = 0;
+}
+
+on diagResponse *{
+  if(diagGetPrimitiveByte(this, 0) == 0x59 && diagGetPrimitiveByte(this, 1) == 0x02){
+    sizeDTCResp = DiagGetPrimitiveSize(this);
+    diagSetPrimitiveData (this, DTCResponse, sizeDTCResp);
+    isReceivedFlag = 1;
+  }
+}
+

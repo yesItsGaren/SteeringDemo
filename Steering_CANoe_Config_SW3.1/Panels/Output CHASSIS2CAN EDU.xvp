@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="Panel" ControlName="Output CHASSIS2CAN EDU" Children="Controls">
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl325" ControlName="GroupBoxControl325" Children="Controls">
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl90" ControlName="PanelButtonControl90" Children="Controls">
+        <Property Name="Name">PanelButtonControl90</Property>
+        <Property Name="Size">177,21</Property>
+        <Property Name="Location">5,17</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS2CAN EDU EDU_DiagClient_CFM.xvp</Property>
+        <Property Name="Text">EDU_DiagClient_CFM</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl91" ControlName="PanelButtonControl91" Children="Controls">
+        <Property Name="Name">PanelButtonControl91</Property>
+        <Property Name="Size">177,21</Property>
+        <Property Name="Location">5,38</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS2CAN EDU MCUFastCommandResponse.xvp</Property>
+        <Property Name="Text">MCUFastCommandResponse</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl92" ControlName="PanelButtonControl92" Children="Controls">
+        <Property Name="Name">PanelButtonControl92</Property>
+        <Property Name="Size">177,21</Property>
+        <Property Name="Location">5,59</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS2CAN EDU MCUInfo1.xvp</Property>
+        <Property Name="Text">MCUInfo1</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl93" ControlName="PanelButtonControl93" Children="Controls">
+        <Property Name="Name">PanelButtonControl93</Property>
+        <Property Name="Size">177,21</Property>
+        <Property Name="Location">5,80</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS2CAN EDU MCUInfo2.xvp</Property>
+        <Property Name="Text">MCUInfo2</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl94" ControlName="PanelButtonControl94" Children="Controls">
+        <Property Name="Name">PanelButtonControl94</Property>
+        <Property Name="Size">177,21</Property>
+        <Property Name="Location">5,101</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS2CAN EDU MCUSlowCommandResponse.xvp</Property>
+        <Property Name="Text">MCUSlowCommandResponse</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl95" ControlName="PanelButtonControl95" Children="Controls">
+        <Property Name="Name">PanelButtonControl95</Property>
+        <Property Name="Size">177,21</Property>
+        <Property Name="Location">5,122</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS2CAN EDU MCUThermal1.xvp</Property>
+        <Property Name="Text">MCUThermal1</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl96" ControlName="PanelButtonControl96" Children="Controls">
+        <Property Name="Name">PanelButtonControl96</Property>
+        <Property Name="Size">177,21</Property>
+        <Property Name="Location">5,143</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS2CAN EDU MCUThermal2.xvp</Property>
+        <Property Name="Text">MCUThermal2</Property>
+      </Object>
+      <Property Name="Name">GroupBoxControl325</Property>
+      <Property Name="Size">187,169</Property>
+      <Property Name="Location">5,5</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+      <Property Name="BackColor">255,255,255</Property>
+      <Property Name="Text">TX Messages of EDU</Property>
+      <Property Name="ForeColor">0,0,0</Property>
+    </Object>
+    <Property Name="Panel">Panel</Property>
+    <Property Name="Size">197,179</Property>
+    <Property Name="BackColor">255,255,255</Property>
+  </Object>
+</Panel>

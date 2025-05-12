@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="Panel" ControlName="Output CHASSIS1CAN ECU2_ISCS" Children="Controls">
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl269" ControlName="GroupBoxControl269" Children="Controls">
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl78" ControlName="PanelButtonControl78" Children="Controls">
+        <Property Name="Name">PanelButtonControl78</Property>
+        <Property Name="Size">162,21</Property>
+        <Property Name="Location">5,36</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS1CAN ECU2_ISCS ISCS_CurrPinionStat_2.xvp</Property>
+        <Property Name="Text">ISCS_CurrPinionStat_2</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl79" ControlName="PanelButtonControl79" Children="Controls">
+        <Property Name="Name">PanelButtonControl79</Property>
+        <Property Name="Size">162,21</Property>
+        <Property Name="Location">5,57</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS1CAN ECU2_ISCS ISCS_Info_2.xvp</Property>
+        <Property Name="Text">ISCS_Info_2</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl80" ControlName="PanelButtonControl80" Children="Controls">
+        <Property Name="Name">PanelButtonControl80</Property>
+        <Property Name="Size">162,21</Property>
+        <Property Name="Location">5,78</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS1CAN ECU2_ISCS ISCS_SteeringError_Stat_2.xvp</Property>
+        <Property Name="Text">ISCS_SteeringError_Stat_2</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl81" ControlName="PanelButtonControl81" Children="Controls">
+        <Property Name="Name">PanelButtonControl81</Property>
+        <Property Name="Size">162,21</Property>
+        <Property Name="Location">5,99</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS1CAN ECU2_ISCS ISCS_SteerWhl_Info_2.xvp</Property>
+        <Property Name="Text">ISCS_SteerWhl_Info_2</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl82" ControlName="PanelButtonControl82" Children="Controls">
+        <Property Name="Name">PanelButtonControl82</Property>
+        <Property Name="Size">162,21</Property>
+        <Property Name="Location">5,120</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS1CAN ECU2_ISCS ISCS2_DiagClient_CFM.xvp</Property>
+        <Property Name="Text">ISCS2_DiagClient_CFM</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl83" ControlName="PanelButtonControl83" Children="Controls">
+        <Property Name="Name">PanelButtonControl83</Property>
+        <Property Name="Size">162,21</Property>
+        <Property Name="Location">5,141</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message TX CHASSIS1CAN ECU2_ISCS ISCS2PinionStatCryptPDU.xvp</Property>
+        <Property Name="Text">ISCS2PinionStatCryptPDU</Property>
+      </Object>
+      <Property Name="Name">GroupBoxControl269</Property>
+      <Property Name="Size">172,167</Property>
+      <Property Name="Location">5,5</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+      <Property Name="BackColor">255,255,255</Property>
+      <Property Name="Text">TX Messages of ECU2_ISCS</Property>
+      <Property Name="ForeColor">0,0,0</Property>
+    </Object>
+    <Property Name="Panel">Panel</Property>
+    <Property Name="Size">182,177</Property>
+    <Property Name="BackColor">255,255,255</Property>
+  </Object>
+</Panel>

@@ -1,0 +1,409 @@
+includes
+{
+  // Import required CAPL include files
+  //--- begin generated part --- Block start #GlobalBody_Includes#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_Includes#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_Includes#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  #include "..\CAPL\Vector-NM-Panel-Helper_CAN1.cin"
+  #include "..\CAPL\Vector-IL-KL15-Helper_CAN1.cin"
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  /* #ChannelStart# |CAN2| #BusStart# |CHASSIS2CAN| */
+  #include "..\CAPL\Vector-NM-Panel-Helper_CAN2.cin"
+  #include "..\CAPL\Vector-IL-KL15-Helper_CAN2.cin"
+  /* #ChannelEnd# |CAN2| #BusEnd# |CHASSIS2CAN| */
+  //--- end generated part --- Block end #Body_Includes#; do not delete this line! Add application code below this line.
+}
+
+variables
+{
+  // Define global variables for this CAPL file
+
+  /*--- #GenHeader Begin# --- begin generated comment ---
+  | Generated on Friday, February 14, 2025, 17:15:18
+  | By ModelGenerator for Vector 1.6.4.13, ModelGeneratorVectorDLL 1.6.4.69
+  | Package Vector 4.0.59
+  | Target Bus: CHASSIS1CAN; Channel: CAN1; DB Cluster: DBC_SW030201_Chassis1_CAN;
+  | From Database: DBC_SW03.02.01_Chassis1_CAN.dbc
+  | CANoe Version 17.3.91.0
+  | 
+  | Extended on Friday, February 14, 2025, 17:19:14
+  | By ModelGenerator for Vector 1.6.4.13, ModelGeneratorVectorDLL 1.6.4.69
+  | Package Vector 4.0.59
+  | Target Bus: CHASSIS2CAN; Channel: CAN2; DB Cluster: DBC_SW030201_Chassis2_CAN;
+  | From Database: DBC_SW03.02.01_Chassis2_CAN.dbc
+  | CANoe Version 17.3.91.0
+    --- #GenHeader End  # --- end generated comment --- */
+
+  char gECU[256] = "VN";
+  //--- begin generated part --- Block start #Hdr_GlobalVariables#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_GlobalVariables#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #GlobalBody_GlobalVariables#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_GlobalVariables#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_GlobalVariables#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  char gCAN1BusName[256] = "CHASSIS1CAN";
+  int gCAN1Channel = 1; // The channel the bus is attached to
+
+  long gCAN1DisturbanceMode;
+  long gCAN1DisturbanceCount;
+  long gCAN1DisturbanceValue;
+  long gCAN1DisturbanceContinueMode;
+  double gCAN1DisturbancePeriod;
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  /* #ChannelStart# |CAN2| #BusStart# |CHASSIS2CAN| */
+  char gCAN2BusName[256] = "CHASSIS2CAN";
+  int gCAN2Channel = 2; // The channel the bus is attached to
+
+  long gCAN2DisturbanceMode;
+  long gCAN2DisturbanceCount;
+  long gCAN2DisturbanceValue;
+  long gCAN2DisturbanceContinueMode;
+  double gCAN2DisturbancePeriod;
+  /* #ChannelEnd# |CAN2| #BusEnd# |CHASSIS2CAN| */
+  //--- end generated part --- Block end #Body_GlobalVariables#; do not delete this line! Add application code below this line.
+}
+
+on preStart
+{
+  // Initialize CAPL includes and node's modules/DLLs
+  //--- begin generated part --- Block start #Hdr_OnInit#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_OnInit#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #GlobalBody_OnInit#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_OnInit#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_OnInit#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  ILCAN1_OnInit();
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  /* #ChannelStart# |CAN2| #BusStart# |CHASSIS2CAN| */
+  ILCAN2_OnInit();
+  /* #ChannelEnd# |CAN2| #BusEnd# |CHASSIS2CAN| */
+  //--- end generated part --- Block end #Body_OnInit#; do not delete this line! Add application code below this line.
+}
+
+on start
+{
+  // Start CAPL includes and node's modules/DLLs
+  //--- begin generated part --- Block start #Hdr_OnStart#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_OnStart#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #GlobalBody_OnStart#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_OnStart#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_OnStart#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  ILCAN1_OnStart();
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  /* #ChannelStart# |CAN2| #BusStart# |CHASSIS2CAN| */
+  ILCAN2_OnStart();
+  /* #ChannelEnd# |CAN2| #BusEnd# |CHASSIS2CAN| */
+  //--- end generated part --- Block end #Body_OnStart#; do not delete this line! Add application code below this line.
+}
+
+on preStop
+{
+  // Prepare stopping
+  //--- begin generated part --- Block start #Hdr_OnStopping#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_OnStopping#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #GlobalBody_OnStopping#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_OnStopping#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_OnStopping#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_OnStopping#; do not delete this line! Add application code below this line.
+}
+
+on stopMeasurement
+{
+  // Stop actions
+  //--- begin generated part --- Block start #Hdr_OnStop#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_OnStop#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #GlobalBody_OnStop#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_OnStop#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_OnStop#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_OnStop#; do not delete this line! Add application code below this line.
+}
+
+void StartSim(dword busContext, int busActive, int mode)
+{
+  // Called when ... due to ...
+  //   mode == 1: ILControlResume
+  //   mode == 2: ILControlStart
+  //   mode == 3: ILControlSimulationOn
+  //--- begin generated part --- Block start #Hdr_StartSim#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_StartSim#; do not delete this line! Add application code below this line.
+  //write("[%.6f %NODE_NAME%] StartSim(0x%X, %d, %d)", TimeNowNS()/1e9, busContext, busActive, mode);
+  //--- begin generated part --- Block start #Body_StartSim#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_StartSim#; do not delete this line! Add application code below this line.
+}
+
+void StopSim(dword busContext, int busActive, int mode)
+{
+  // Called when ... due to ...
+  //   mode == 1: ILControlWait
+  //   mode == 2: ILControlStop
+  //   mode == 3: ILControlSimulationOff
+  //--- begin generated part --- Block start #Hdr_StopSim#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_StopSim#; do not delete this line! Add application code below this line.
+  //write("[%.6f %NODE_NAME%] StopSim(0x%X, %d, %d)", TimeNowNS()/1e9, busContext, busActive, mode);
+  //--- begin generated part --- Block start #Body_StopSim#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_StopSim#; do not delete this line! Add application code below this line.
+}
+
+on sysvar_update sysvar::IL::Klemme15
+{
+  // Handle system state variable
+  //--- begin generated part --- Block start #Hdr_KL15_Klemme15#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_KL15_Klemme15#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_KL15_Klemme15#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  ILCAN1_OnEnvKlemme15(@this);
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  /* #ChannelStart# |CAN2| #BusStart# |CHASSIS2CAN| */
+  ILCAN2_OnEnvKlemme15(@this);
+  /* #ChannelEnd# |CAN2| #BusEnd# |CHASSIS2CAN| */
+  //--- end generated part --- Block end #Body_KL15_Klemme15#; do not delete this line! Add application code below this line.
+}
+
+on sysvar_update sysvar::IL::Klemme30
+{
+  // Handle system state variable
+  //--- begin generated part --- Block start #Hdr_KL30_Klemme30#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_KL30_Klemme30#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_KL30_Klemme30#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  ILCAN1_OnEnvKlemme30(@this);
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  /* #ChannelStart# |CAN2| #BusStart# |CHASSIS2CAN| */
+  ILCAN2_OnEnvKlemme30(@this);
+  /* #ChannelEnd# |CAN2| #BusEnd# |CHASSIS2CAN| */
+  //--- end generated part --- Block end #Body_KL30_Klemme30#; do not delete this line! Add application code below this line.
+}
+
+dword applILTxPending(long aId, dword aDlc, byte data[])
+{
+  dword ret = 1;
+  //--- begin generated part --- Block start #Hdr_applILTxPending#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_applILTxPending#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_applILTxPending#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_applILTxPending#; do not delete this line! Add application code below this line.
+  return ret;
+}
+
+//--- begin generated part --- Block start <#Helper_Functions#> do not delete this line and do not add application code in this code block!
+/* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+/* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+//--- end generated part --- Block end <#Helper_Functions#> do not delete this line! Add application code below this line.
+
+//--- begin generated part --- Block start <#SysVar_Handler#> do not delete this line and do not add application code in this code block!
+/* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::EnableNode
+{
+  ILCAN1_Enable(@this && @sysvar::IL_CAN1::enable_AllNodes && @sysvar::IL::Klemme30);
+}
+
+on sysvar_update sysvar::IL_CAN1::enable_AllNodes
+{
+  ILCAN1_Enable(@this && @sysvar::IL_CAN1::NODES::N_VN::EnableNode && @sysvar::IL::Klemme30);
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::EnableCyclic
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionEnableMsg  (CHASSIS1CAN::VN::Veh1_Activate);
+  }
+  else
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionDisableMsg (CHASSIS1CAN::VN::Veh1_Activate);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::SetNormalCycle
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::SelectedPeriod = 0;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::SetNewCycleContinously
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::SelectedPeriod = -1;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::SelectedPeriod
+{
+  if (@this == 0 && @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::NormalCyclePeriod;
+    ILFaultInjectionResetMsgCycleTime(CHASSIS1CAN::VN::Veh1_Activate);
+  }
+  else if (@this == 1 && @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::ActiveCyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::VN::Veh1_Activate, gCAN1DisturbancePeriod);
+  }
+  else if (@this == -1 && @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::CyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::VN::Veh1_Activate, gCAN1DisturbancePeriod);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_Activate::TIMINGS::SendOnce
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILSetMsgEvent(CHASSIS1CAN::VN::Veh1_Activate);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::EnableCyclic
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionEnableMsg  (CHASSIS1CAN::VN::Veh1_VehData);
+  }
+  else
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionDisableMsg (CHASSIS1CAN::VN::Veh1_VehData);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::SetNormalCycle
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::SelectedPeriod = 0;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::SetNewCycleContinously
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::SelectedPeriod = -1;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::SelectedPeriod
+{
+  if (@this == 0 && @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::NormalCyclePeriod;
+    ILFaultInjectionResetMsgCycleTime(CHASSIS1CAN::VN::Veh1_VehData);
+  }
+  else if (@this == 1 && @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::ActiveCyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::VN::Veh1_VehData, gCAN1DisturbancePeriod);
+  }
+  else if (@this == -1 && @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::CyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::VN::Veh1_VehData, gCAN1DisturbancePeriod);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_VN::MESSAGES::Veh1_VehData::TIMINGS::SendOnce
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILSetMsgEvent(CHASSIS1CAN::VN::Veh1_VehData);
+  }
+}
+
+on sysvar_update sysvar::NM_CAN1::NODES::N_VN::OpenNodePanel
+{
+  OpenNodePanel("CHASSIS1CAN::VN", 1);
+}
+
+on sysvar_update sysvar::NM_CAN1::StateControl::CloseNodePanels
+{
+  OpenNodePanel("CHASSIS1CAN::VN", 0);
+}
+
+/* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+/* #ChannelStart# |CAN2| #BusStart# |CHASSIS2CAN| */
+on sysvar_update sysvar::IL_CAN2::NODES::N_VN::EnableNode
+{
+  ILCAN2_Enable(@this && @sysvar::IL_CAN2::enable_AllNodes && @sysvar::IL::Klemme30);
+}
+
+on sysvar_update sysvar::IL_CAN2::enable_AllNodes
+{
+  ILCAN2_Enable(@this && @sysvar::IL_CAN2::NODES::N_VN::EnableNode && @sysvar::IL::Klemme30);
+}
+
+on sysvar_update sysvar::NM_CAN2::NODES::N_VN::OpenNodePanel
+{
+  OpenNodePanel("CHASSIS2CAN::VN", 1);
+}
+
+on sysvar_update sysvar::NM_CAN2::StateControl::CloseNodePanels
+{
+  OpenNodePanel("CHASSIS2CAN::VN", 0);
+}
+
+/* #ChannelEnd# |CAN2| #BusEnd# |CHASSIS2CAN| */
+//--- end generated part --- Block end <#SysVar_Handler#> do not delete this line! Add application code below this line.
+
+//--- begin generated part --- Block start <#MsgUpdateFcns#> do not delete this line and do not add application code in this code block!
+/* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+/* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+//--- end generated part --- Block end <#MsgUpdateFcns#> do not delete this line! Add application code below this line.
+

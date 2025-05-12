@@ -1,0 +1,888 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="MainPanel">
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl689" Children="Controls" ControlName="CAN_IL_States">
+      <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl2" ControlName="KL15">
+        <Property Name="Name">SwitchControl2</Property>
+        <Property Name="Size">23, 30</Property>
+        <Property Name="Location">5, 17</Property>
+        <Property Name="StateCnt">2</Property>
+        <Property Name="Activation">Left</Property>
+        <Property Name="SwitchValues">1;2;0;1</Property>
+        <Property Name="SwitchValuesRx">1;2;0;1</Property>
+        <Property Name="SwitchValuesVT">1;2;0/Lower/0;1/Lower/1</Property>
+        <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;</Property>
+        <Property Name="SymbolConfiguration">4;16;IL;;;Klemme15;1;;;-1</Property>
+        <Property Name="TabIndex">0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1811" Children="Controls" ControlName="StaticTextControl1811">
+        <Property Name="Name">StaticTextControl1811</Property>
+        <Property Name="Size">87, 17</Property>
+        <Property Name="Location">28, 25</Property>
+        <Property Name="BackColor">White</Property>
+        <Property Name="Text">Ignition (KL15)</Property>
+        <Property Name="ForeColor">Black</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl3" ControlName="KL30">
+        <Property Name="Name">SwitchControl3</Property>
+        <Property Name="Size">23, 30</Property>
+        <Property Name="Location">115, 17</Property>
+        <Property Name="StateCnt">2</Property>
+        <Property Name="Activation">Left</Property>
+        <Property Name="SwitchValues">1;2;0;1</Property>
+        <Property Name="SwitchValuesRx">1;2;0;1</Property>
+        <Property Name="SwitchValuesVT">1;2;0/Lower/0;1/Lower/1</Property>
+        <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;</Property>
+        <Property Name="SymbolConfiguration">4;16;IL;;;Klemme30;1;;;-1</Property>
+        <Property Name="TabIndex">2</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1812" Children="Controls" ControlName="StaticTextControl1812">
+        <Property Name="Name">StaticTextControl1812</Property>
+        <Property Name="Size">82, 17</Property>
+        <Property Name="Location">138, 25</Property>
+        <Property Name="BackColor">White</Property>
+        <Property Name="Text">Power (KL30)</Property>
+        <Property Name="ForeColor">Black</Property>
+      </Object>
+      <Property Name="Name">GroupBoxControl689</Property>
+      <Property Name="Size">225, 52</Property>
+      <Property Name="Location">5, 5</Property>
+      <Property Name="BackColor">White</Property>
+      <Property Name="Text">Global States</Property>
+      <Property Name="ForeColor">Black</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+      <Property Name="TabIndex">0</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.VectorTabControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="VectorTabControl2" Children="Controls" ControlName="STEERING">
+      <Object Type="Vector.CANalyzer.Panels.Design.VectorTabPage, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="VectorTabPage1" Children="Controls" ControlName="STEERING">
+        <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl690" Children="Controls" ControlName="GroupBoxControl690">
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl190" Children="Controls" ControlName="CheckBoxControl190">
+            <Property Name="Name">CheckBoxControl190</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 17</Property>
+            <Property Name="Text">ASS</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_ASS;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">0</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl191" Children="Controls" ControlName="CheckBoxControl191">
+            <Property Name="Name">CheckBoxControl191</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 34</Property>
+            <Property Name="Text">CGW2</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_CGW2;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">1</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl192" Children="Controls" ControlName="CheckBoxControl192">
+            <Property Name="Name">CheckBoxControl192</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 51</Property>
+            <Property Name="Text">ECU2_ISCS</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_ECU2_ISCS;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">2</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl193" Children="Controls" ControlName="CheckBoxControl193">
+            <Property Name="Name">CheckBoxControl193</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 68</Property>
+            <Property Name="Text">MK100</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_MK100;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">3</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl194" Children="Controls" ControlName="CheckBoxControl194">
+            <Property Name="Name">CheckBoxControl194</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 85</Property>
+            <Property Name="Text">SDS_Secondary</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_SDS_Secondary;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">4</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl195" Children="Controls" ControlName="CheckBoxControl195">
+            <Property Name="Name">CheckBoxControl195</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 102</Property>
+            <Property Name="Text">VN</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN1::NODES::N_VN;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">5</Property>
+          </Object>
+          <Property Name="Name">GroupBoxControl690</Property>
+          <Property Name="Size">130, 124</Property>
+          <Property Name="Location">5, 5</Property>
+          <Property Name="BackColor">White</Property>
+          <Property Name="Text">Enable IL of Node</Property>
+          <Property Name="ForeColor">Black</Property>
+          <Property Name="UseWindowsStyle">False</Property>
+          <Property Name="TabIndex">0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl691" Children="Controls" ControlName="GroupBoxControl691">
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl196" Children="Controls" ControlName="CheckBoxControl196">
+            <Property Name="Name">CheckBoxControl196</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 17</Property>
+            <Property Name="Text">Enable IL</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;::IL_CAN1;;;enable_AllNodes;1;;;-1</Property>
+            <Property Name="TabIndex">0</Property>
+          </Object>
+          <Property Name="Name">GroupBoxControl691</Property>
+          <Property Name="Size">130, 39</Property>
+          <Property Name="Location">5, 134</Property>
+          <Property Name="BackColor">White</Property>
+          <Property Name="Text">CAN IL Control</Property>
+          <Property Name="ForeColor">Black</Property>
+          <Property Name="UseWindowsStyle">False</Property>
+          <Property Name="TabIndex">1</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl190" Children="Controls" ControlName="PanelButtonControl190">
+          <Property Name="Name">PanelButtonControl190</Property>
+          <Property Name="Size">120, 21</Property>
+          <Property Name="Location">5, 178</Property>
+          <Property Name="ClosePanels">False</Property>
+          <Property Name="PanelList">1;1;NM Panel CAN1.xvp</Property>
+          <Property Name="NodeList">1;0</Property>
+          <Property Name="NetworkList">1;0</Property>
+          <Property Name="ApplicationList">1;0</Property>
+          <Property Name="Text">NM Panel CAN1</Property>
+          <Property Name="TabIndex">2</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl191" Children="Controls" ControlName="PanelButtonControl191">
+          <Property Name="Name">PanelButtonControl191</Property>
+          <Property Name="Size">120, 21</Property>
+          <Property Name="Location">5, 199</Property>
+          <Property Name="PanelList">1;0</Property>
+          <Property Name="NodeList">1;0</Property>
+          <Property Name="NetworkList">1;0</Property>
+          <Property Name="ApplicationList">1;0</Property>
+          <Property Name="Text">Close all panels</Property>
+          <Property Name="TabIndex">3</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl190" Children="Controls" ControlName="ButtonControl190">
+          <Property Name="Name">ButtonControl190</Property>
+          <Property Name="Size">120, 21</Property>
+          <Property Name="Location">5, 220</Property>
+          <Property Name="Text">Close Node Panels</Property>
+          <Property Name="SymbolConfiguration">4;16;NM_CAN1::StateControl;;;CloseNodePanels;1;;;-1</Property>
+          <Property Name="TabIndex">4</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl692" Children="Controls" ControlName="GroupBoxControl692">
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl192" Children="Controls" ControlName="PanelButtonControl192">
+            <Property Name="Name">PanelButtonControl192</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 17</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS1CAN ASS.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">ASS</Property>
+            <Property Name="TabIndex">0</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl193" Children="Controls" ControlName="PanelButtonControl193">
+            <Property Name="Name">PanelButtonControl193</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 38</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS1CAN CGW2.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">CGW2</Property>
+            <Property Name="TabIndex">1</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl194" Children="Controls" ControlName="PanelButtonControl194">
+            <Property Name="Name">PanelButtonControl194</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 59</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS1CAN ECU2_ISCS.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">ECU2_ISCS</Property>
+            <Property Name="TabIndex">2</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl195" Children="Controls" ControlName="PanelButtonControl195">
+            <Property Name="Name">PanelButtonControl195</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 80</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS1CAN MK100.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">MK100</Property>
+            <Property Name="TabIndex">3</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl196" Children="Controls" ControlName="PanelButtonControl196">
+            <Property Name="Name">PanelButtonControl196</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 101</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS1CAN SDS_Secondary.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">SDS_Secondary</Property>
+            <Property Name="TabIndex">4</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl197" Children="Controls" ControlName="PanelButtonControl197">
+            <Property Name="Name">PanelButtonControl197</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 122</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS1CAN VN.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">VN</Property>
+            <Property Name="TabIndex">5</Property>
+          </Object>
+          <Property Name="Name">GroupBoxControl692</Property>
+          <Property Name="Size">130, 148</Property>
+          <Property Name="Location">140, 5</Property>
+          <Property Name="BackColor">White</Property>
+          <Property Name="Text">TX Signals</Property>
+          <Property Name="ForeColor">Black</Property>
+          <Property Name="UseWindowsStyle">False</Property>
+          <Property Name="TabIndex">5</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl693" Children="Controls" ControlName="GroupBoxControl693">
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl198" Children="Controls" ControlName="PanelButtonControl198">
+            <Property Name="Name">PanelButtonControl198</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 17</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS1CAN ASS.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">ASS</Property>
+            <Property Name="TabIndex">0</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl199" Children="Controls" ControlName="PanelButtonControl199">
+            <Property Name="Name">PanelButtonControl199</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 38</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS1CAN CGW2.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">CGW2</Property>
+            <Property Name="TabIndex">1</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl200" Children="Controls" ControlName="PanelButtonControl200">
+            <Property Name="Name">PanelButtonControl200</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 59</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS1CAN ECU2_ISCS.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">ECU2_ISCS</Property>
+            <Property Name="TabIndex">2</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl201" Children="Controls" ControlName="PanelButtonControl201">
+            <Property Name="Name">PanelButtonControl201</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 80</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS1CAN MK100.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">MK100</Property>
+            <Property Name="TabIndex">3</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl202" Children="Controls" ControlName="PanelButtonControl202">
+            <Property Name="Name">PanelButtonControl202</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 101</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS1CAN SDS_Secondary.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">SDS_Secondary</Property>
+            <Property Name="TabIndex">4</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl203" Children="Controls" ControlName="PanelButtonControl203">
+            <Property Name="Name">PanelButtonControl203</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 122</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS1CAN VN.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">VN</Property>
+            <Property Name="TabIndex">5</Property>
+          </Object>
+          <Property Name="Name">GroupBoxControl693</Property>
+          <Property Name="Size">130, 148</Property>
+          <Property Name="Location">275, 5</Property>
+          <Property Name="BackColor">White</Property>
+          <Property Name="Text">RX Signals</Property>
+          <Property Name="ForeColor">Black</Property>
+          <Property Name="UseWindowsStyle">False</Property>
+          <Property Name="TabIndex">6</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl694" Children="Controls" ControlName="GroupBoxControl694">
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl204" Children="Controls" ControlName="PanelButtonControl204">
+            <Property Name="Name">PanelButtonControl204</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 17</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS1CAN::ASS</Property>
+            <Property Name="NetworkList">1;1;CHASSIS1CAN::ASS</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">ASS</Property>
+            <Property Name="TabIndex">0</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl205" Children="Controls" ControlName="PanelButtonControl205">
+            <Property Name="Name">PanelButtonControl205</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 38</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS1CAN::CGW2</Property>
+            <Property Name="NetworkList">1;1;CHASSIS1CAN::CGW2</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">CGW2</Property>
+            <Property Name="TabIndex">1</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl206" Children="Controls" ControlName="PanelButtonControl206">
+            <Property Name="Name">PanelButtonControl206</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 59</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS1CAN::ECU2_ISCS</Property>
+            <Property Name="NetworkList">1;1;CHASSIS1CAN::ECU2_ISCS</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">ECU2_ISCS</Property>
+            <Property Name="TabIndex">2</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl207" Children="Controls" ControlName="PanelButtonControl207">
+            <Property Name="Name">PanelButtonControl207</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 80</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS1CAN::MK100</Property>
+            <Property Name="NetworkList">1;1;CHASSIS1CAN::MK100</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">MK100</Property>
+            <Property Name="TabIndex">3</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl208" Children="Controls" ControlName="PanelButtonControl208">
+            <Property Name="Name">PanelButtonControl208</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 101</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS1CAN::SDS_Secondary</Property>
+            <Property Name="NetworkList">1;1;CHASSIS1CAN::SDS_Secondary</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">SDS_Secondary</Property>
+            <Property Name="TabIndex">4</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl209" Children="Controls" ControlName="PanelButtonControl209">
+            <Property Name="Name">PanelButtonControl209</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 122</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS1CAN::VN</Property>
+            <Property Name="NetworkList">1;1;CHASSIS1CAN::VN</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">VN</Property>
+            <Property Name="TabIndex">5</Property>
+          </Object>
+          <Property Name="Name">GroupBoxControl694</Property>
+          <Property Name="Size">130, 148</Property>
+          <Property Name="Location">410, 5</Property>
+          <Property Name="BackColor">White</Property>
+          <Property Name="Text">Node Signal Panels</Property>
+          <Property Name="ForeColor">Black</Property>
+          <Property Name="UseWindowsStyle">False</Property>
+          <Property Name="TabIndex">7</Property>
+        </Object>
+        <Property Name="Name">VectorTabPage1</Property>
+        <Property Name="Size">883, 522</Property>
+        <Property Name="Location">4, 22</Property>
+        <Property Name="Text">CHASSIS1CAN</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.VectorTabPage, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="VectorTabPage2" Children="Controls" ControlName="STEERING">
+        <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl892" Children="Controls" ControlName="GroupBoxControl892">
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl244" Children="Controls" ControlName="CheckBoxControl244">
+            <Property Name="Name">CheckBoxControl244</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 17</Property>
+            <Property Name="Text">CGW</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_CGW;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">0</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl245" Children="Controls" ControlName="CheckBoxControl245">
+            <Property Name="Name">CheckBoxControl245</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 34</Property>
+            <Property Name="Text">ECU1_ISCS</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_ECU1_ISCS;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">1</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl246" Children="Controls" ControlName="CheckBoxControl246">
+            <Property Name="Name">CheckBoxControl246</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 51</Property>
+            <Property Name="Text">EDU</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_EDU;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">2</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl247" Children="Controls" ControlName="CheckBoxControl247">
+            <Property Name="Name">CheckBoxControl247</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 68</Property>
+            <Property Name="Text">MKC1</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_MKC1;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">3</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl248" Children="Controls" ControlName="CheckBoxControl248">
+            <Property Name="Name">CheckBoxControl248</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 85</Property>
+            <Property Name="Text">SDS_Primary</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_SDS_Primary;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">4</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl249" Children="Controls" ControlName="CheckBoxControl249">
+            <Property Name="Name">CheckBoxControl249</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 102</Property>
+            <Property Name="Text">VCU</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_VCU;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">5</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl250" Children="Controls" ControlName="CheckBoxControl250">
+            <Property Name="Name">CheckBoxControl250</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 119</Property>
+            <Property Name="Text">VN</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;IL_CAN2::NODES::N_VN;;;EnableNode;1;;;-1</Property>
+            <Property Name="TabIndex">6</Property>
+          </Object>
+          <Property Name="Name">GroupBoxControl892</Property>
+          <Property Name="Size">130, 141</Property>
+          <Property Name="Location">5, 5</Property>
+          <Property Name="BackColor">White</Property>
+          <Property Name="Text">Enable IL of Node</Property>
+          <Property Name="ForeColor">Black</Property>
+          <Property Name="UseWindowsStyle">False</Property>
+          <Property Name="TabIndex">0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl893" Children="Controls" ControlName="GroupBoxControl893">
+          <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl251" Children="Controls" ControlName="CheckBoxControl251">
+            <Property Name="Name">CheckBoxControl251</Property>
+            <Property Name="Size">120, 17</Property>
+            <Property Name="Location">5, 17</Property>
+            <Property Name="Text">Enable IL</Property>
+            <Property Name="BackColor">White</Property>
+            <Property Name="ForeColor">Black</Property>
+            <Property Name="SymbolConfiguration">4;16;::IL_CAN2;;;enable_AllNodes;1;;;-1</Property>
+            <Property Name="TabIndex">0</Property>
+          </Object>
+          <Property Name="Name">GroupBoxControl893</Property>
+          <Property Name="Size">130, 39</Property>
+          <Property Name="Location">5, 151</Property>
+          <Property Name="BackColor">White</Property>
+          <Property Name="Text">CAN IL Control</Property>
+          <Property Name="ForeColor">Black</Property>
+          <Property Name="UseWindowsStyle">False</Property>
+          <Property Name="TabIndex">1</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl244" Children="Controls" ControlName="PanelButtonControl244">
+          <Property Name="Name">PanelButtonControl244</Property>
+          <Property Name="Size">120, 21</Property>
+          <Property Name="Location">5, 195</Property>
+          <Property Name="ClosePanels">False</Property>
+          <Property Name="PanelList">1;1;NM Panel CAN2.xvp</Property>
+          <Property Name="NodeList">1;0</Property>
+          <Property Name="NetworkList">1;0</Property>
+          <Property Name="ApplicationList">1;0</Property>
+          <Property Name="Text">NM Panel CAN2</Property>
+          <Property Name="TabIndex">2</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl245" Children="Controls" ControlName="PanelButtonControl245">
+          <Property Name="Name">PanelButtonControl245</Property>
+          <Property Name="Size">120, 21</Property>
+          <Property Name="Location">5, 216</Property>
+          <Property Name="PanelList">1;0</Property>
+          <Property Name="NodeList">1;0</Property>
+          <Property Name="NetworkList">1;0</Property>
+          <Property Name="ApplicationList">1;0</Property>
+          <Property Name="Text">Close all panels</Property>
+          <Property Name="TabIndex">3</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl244" Children="Controls" ControlName="ButtonControl244">
+          <Property Name="Name">ButtonControl244</Property>
+          <Property Name="Size">120, 21</Property>
+          <Property Name="Location">5, 237</Property>
+          <Property Name="Text">Close Node Panels</Property>
+          <Property Name="SymbolConfiguration">4;16;NM_CAN2::StateControl;;;CloseNodePanels;1;;;-1</Property>
+          <Property Name="TabIndex">4</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl894" Children="Controls" ControlName="GroupBoxControl894">
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl246" Children="Controls" ControlName="PanelButtonControl246">
+            <Property Name="Name">PanelButtonControl246</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 17</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS2CAN CGW.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">CGW</Property>
+            <Property Name="TabIndex">0</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl247" Children="Controls" ControlName="PanelButtonControl247">
+            <Property Name="Name">PanelButtonControl247</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 38</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS2CAN ECU1_ISCS.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">ECU1_ISCS</Property>
+            <Property Name="TabIndex">1</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl248" Children="Controls" ControlName="PanelButtonControl248">
+            <Property Name="Name">PanelButtonControl248</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 59</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS2CAN EDU.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">EDU</Property>
+            <Property Name="TabIndex">2</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl249" Children="Controls" ControlName="PanelButtonControl249">
+            <Property Name="Name">PanelButtonControl249</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 80</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS2CAN MKC1.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">MKC1</Property>
+            <Property Name="TabIndex">3</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl250" Children="Controls" ControlName="PanelButtonControl250">
+            <Property Name="Name">PanelButtonControl250</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 101</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS2CAN SDS_Primary.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">SDS_Primary</Property>
+            <Property Name="TabIndex">4</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl251" Children="Controls" ControlName="PanelButtonControl251">
+            <Property Name="Name">PanelButtonControl251</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 122</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS2CAN VCU.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">VCU</Property>
+            <Property Name="TabIndex">5</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl252" Children="Controls" ControlName="PanelButtonControl252">
+            <Property Name="Name">PanelButtonControl252</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 143</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Output CHASSIS2CAN VN.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">VN</Property>
+            <Property Name="TabIndex">6</Property>
+          </Object>
+          <Property Name="Name">GroupBoxControl894</Property>
+          <Property Name="Size">130, 169</Property>
+          <Property Name="Location">140, 5</Property>
+          <Property Name="BackColor">White</Property>
+          <Property Name="Text">TX Signals</Property>
+          <Property Name="ForeColor">Black</Property>
+          <Property Name="UseWindowsStyle">False</Property>
+          <Property Name="TabIndex">5</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl895" Children="Controls" ControlName="GroupBoxControl895">
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl253" Children="Controls" ControlName="PanelButtonControl253">
+            <Property Name="Name">PanelButtonControl253</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 17</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS2CAN CGW.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">CGW</Property>
+            <Property Name="TabIndex">0</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl254" Children="Controls" ControlName="PanelButtonControl254">
+            <Property Name="Name">PanelButtonControl254</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 38</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS2CAN ECU1_ISCS.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">ECU1_ISCS</Property>
+            <Property Name="TabIndex">1</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl255" Children="Controls" ControlName="PanelButtonControl255">
+            <Property Name="Name">PanelButtonControl255</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 59</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS2CAN EDU.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">EDU</Property>
+            <Property Name="TabIndex">2</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl256" Children="Controls" ControlName="PanelButtonControl256">
+            <Property Name="Name">PanelButtonControl256</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 80</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS2CAN MKC1.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">MKC1</Property>
+            <Property Name="TabIndex">3</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl257" Children="Controls" ControlName="PanelButtonControl257">
+            <Property Name="Name">PanelButtonControl257</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 101</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS2CAN SDS_Primary.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">SDS_Primary</Property>
+            <Property Name="TabIndex">4</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl258" Children="Controls" ControlName="PanelButtonControl258">
+            <Property Name="Name">PanelButtonControl258</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 122</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS2CAN VCU.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">VCU</Property>
+            <Property Name="TabIndex">5</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl259" Children="Controls" ControlName="PanelButtonControl259">
+            <Property Name="Name">PanelButtonControl259</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 143</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;1;Input CHASSIS2CAN VN.xvp</Property>
+            <Property Name="NodeList">1;0</Property>
+            <Property Name="NetworkList">1;0</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">VN</Property>
+            <Property Name="TabIndex">6</Property>
+          </Object>
+          <Property Name="Name">GroupBoxControl895</Property>
+          <Property Name="Size">130, 169</Property>
+          <Property Name="Location">275, 5</Property>
+          <Property Name="BackColor">White</Property>
+          <Property Name="Text">RX Signals</Property>
+          <Property Name="ForeColor">Black</Property>
+          <Property Name="UseWindowsStyle">False</Property>
+          <Property Name="TabIndex">6</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl896" Children="Controls" ControlName="GroupBoxControl896">
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl260" Children="Controls" ControlName="PanelButtonControl260">
+            <Property Name="Name">PanelButtonControl260</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 17</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS2CAN::CGW</Property>
+            <Property Name="NetworkList">1;1;CHASSIS2CAN::CGW</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">CGW</Property>
+            <Property Name="TabIndex">0</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl261" Children="Controls" ControlName="PanelButtonControl261">
+            <Property Name="Name">PanelButtonControl261</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 38</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS2CAN::ECU1_ISCS</Property>
+            <Property Name="NetworkList">1;1;CHASSIS2CAN::ECU1_ISCS</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">ECU1_ISCS</Property>
+            <Property Name="TabIndex">1</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl262" Children="Controls" ControlName="PanelButtonControl262">
+            <Property Name="Name">PanelButtonControl262</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 59</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS2CAN::EDU</Property>
+            <Property Name="NetworkList">1;1;CHASSIS2CAN::EDU</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">EDU</Property>
+            <Property Name="TabIndex">2</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl263" Children="Controls" ControlName="PanelButtonControl263">
+            <Property Name="Name">PanelButtonControl263</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 80</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS2CAN::MKC1</Property>
+            <Property Name="NetworkList">1;1;CHASSIS2CAN::MKC1</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">MKC1</Property>
+            <Property Name="TabIndex">3</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl264" Children="Controls" ControlName="PanelButtonControl264">
+            <Property Name="Name">PanelButtonControl264</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 101</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS2CAN::SDS_Primary</Property>
+            <Property Name="NetworkList">1;1;CHASSIS2CAN::SDS_Primary</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">SDS_Primary</Property>
+            <Property Name="TabIndex">4</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl265" Children="Controls" ControlName="PanelButtonControl265">
+            <Property Name="Name">PanelButtonControl265</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 122</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS2CAN::VCU</Property>
+            <Property Name="NetworkList">1;1;CHASSIS2CAN::VCU</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">VCU</Property>
+            <Property Name="TabIndex">5</Property>
+          </Object>
+          <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl266" Children="Controls" ControlName="PanelButtonControl266">
+            <Property Name="Name">PanelButtonControl266</Property>
+            <Property Name="Size">120, 21</Property>
+            <Property Name="Location">5, 143</Property>
+            <Property Name="ClosePanels">False</Property>
+            <Property Name="PanelList">1;0</Property>
+            <Property Name="NodeList">1;1;CHASSIS2CAN::VN</Property>
+            <Property Name="NetworkList">1;1;CHASSIS2CAN::VN</Property>
+            <Property Name="ApplicationList">1;0</Property>
+            <Property Name="Text">VN</Property>
+            <Property Name="TabIndex">6</Property>
+          </Object>
+          <Property Name="Name">GroupBoxControl896</Property>
+          <Property Name="Size">130, 169</Property>
+          <Property Name="Location">410, 5</Property>
+          <Property Name="BackColor">White</Property>
+          <Property Name="Text">Node Signal Panels</Property>
+          <Property Name="ForeColor">Black</Property>
+          <Property Name="UseWindowsStyle">False</Property>
+          <Property Name="TabIndex">7</Property>
+        </Object>
+        <Property Name="Name">VectorTabPage2</Property>
+        <Property Name="Size">883, 522</Property>
+        <Property Name="Location">4, 22</Property>
+        <Property Name="Text">CHASSIS2CAN</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.VectorTabPage, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="VectorTabPage3" Children="Controls" ControlName="STEERING">
+        <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl1" Children="Controls" ControlName="Slider1">
+          <Property Name="Name">TrackBarControl1</Property>
+          <Property Name="Size">760, 47</Property>
+          <Property Name="Location">61, 435</Property>
+          <Property Name="MaximumSize">100000, 47</Property>
+          <Property Name="Maximum">2000</Property>
+          <Property Name="DisplayMinMax">True</Property>
+          <Property Name="Minimum">-2000</Property>
+          <Property Name="TickStyle">None</Property>
+          <Property Name="MaximumDouble">2000</Property>
+          <Property Name="MinimumDouble">-2000</Property>
+          <Property Name="DisplayValue">True</Property>
+          <Property Name="SymbolConfiguration">8;16;SteeringVal;;;SteeringVal;1;;;-1;;;;;;0</Property>
+          <Property Name="TabIndex">0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl1" ControlName="Picture Box 1">
+          <Property Name="Name">PictureBoxControl1</Property>
+          <Property Name="Size">886, 526</Property>
+          <Property Name="Location">0, 0</Property>
+          <Property Name="ImageFile">..\HOLON_Mover_rear_view.jpg</Property>
+        </Object>
+        <Property Name="Name">VectorTabPage3</Property>
+        <Property Name="Size">883, 522</Property>
+        <Property Name="Location">4, 22</Property>
+        <Property Name="Text">STEERING</Property>
+      </Object>
+      <Property Name="Name">VectorTabControl2</Property>
+      <Property Name="Size">891, 548</Property>
+      <Property Name="Location">5, 62</Property>
+      <Property Name="SymbolConfiguration">
+      </Property>
+      <Property Name="TabIndex">1</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">893, 609</Property>
+    <Property Name="BackColor">White</Property>
+    <Property Name="Panel">Panel</Property>
+  </Object>
+</Panel>

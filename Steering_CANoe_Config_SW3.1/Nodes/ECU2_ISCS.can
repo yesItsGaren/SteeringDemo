@@ -1,0 +1,598 @@
+includes
+{
+  // Import required CAPL include files
+  //--- begin generated part --- Block start #GlobalBody_Includes#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_Includes#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_Includes#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  #include "..\CAPL\Vector-NM-Panel-Helper_CAN1.cin"
+  #include "..\CAPL\Vector-IL-KL15-Helper_CAN1.cin"
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_Includes#; do not delete this line! Add application code below this line.
+}
+
+variables
+{
+  // Define global variables for this CAPL file
+
+  /*--- #GenHeader Begin# --- begin generated comment ---
+  | Generated on Friday, February 14, 2025, 17:15:18
+  | By ModelGenerator for Vector 1.6.4.13, ModelGeneratorVectorDLL 1.6.4.69
+  | Package Vector 4.0.59
+  | Target Bus: CHASSIS1CAN; Channel: CAN1; DB Cluster: DBC_SW030201_Chassis1_CAN;
+  | From Database: DBC_SW03.02.01_Chassis1_CAN.dbc
+  | CANoe Version 17.3.91.0
+    --- #GenHeader End  # --- end generated comment --- */
+
+  char gECU[256] = "ECU2_ISCS";
+  //--- begin generated part --- Block start #Hdr_GlobalVariables#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_GlobalVariables#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #GlobalBody_GlobalVariables#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_GlobalVariables#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_GlobalVariables#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  char gCAN1BusName[256] = "CHASSIS1CAN";
+  int gCAN1Channel = 1; // The channel the bus is attached to
+
+  long gCAN1DisturbanceMode;
+  long gCAN1DisturbanceCount;
+  long gCAN1DisturbanceValue;
+  long gCAN1DisturbanceContinueMode;
+  double gCAN1DisturbancePeriod;
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_GlobalVariables#; do not delete this line! Add application code below this line.
+}
+
+on preStart
+{
+  // Initialize CAPL includes and node's modules/DLLs
+  //--- begin generated part --- Block start #Hdr_OnInit#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_OnInit#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #GlobalBody_OnInit#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_OnInit#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_OnInit#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  ILCAN1_OnInit();
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_OnInit#; do not delete this line! Add application code below this line.
+}
+
+on start
+{
+  // Start CAPL includes and node's modules/DLLs
+  //--- begin generated part --- Block start #Hdr_OnStart#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_OnStart#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #GlobalBody_OnStart#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_OnStart#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_OnStart#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  ILCAN1_OnStart();
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_OnStart#; do not delete this line! Add application code below this line.
+}
+
+on preStop
+{
+  // Prepare stopping
+  //--- begin generated part --- Block start #Hdr_OnStopping#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_OnStopping#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #GlobalBody_OnStopping#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_OnStopping#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_OnStopping#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_OnStopping#; do not delete this line! Add application code below this line.
+}
+
+on stopMeasurement
+{
+  // Stop actions
+  //--- begin generated part --- Block start #Hdr_OnStop#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_OnStop#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #GlobalBody_OnStop#; do not delete this line and do not add application code in this code block!
+  /* #ChannelGlobalStart# |CAN1| #BusGlobalStart# |CHASSIS1CAN| */
+  /* #ChannelGlobalEnd# |CAN1| #BusGlobalEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #GlobalBody_OnStop#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_OnStop#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_OnStop#; do not delete this line! Add application code below this line.
+}
+
+void StartSim(dword busContext, int busActive, int mode)
+{
+  // Called when ... due to ...
+  //   mode == 1: ILControlResume
+  //   mode == 2: ILControlStart
+  //   mode == 3: ILControlSimulationOn
+  //--- begin generated part --- Block start #Hdr_StartSim#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_StartSim#; do not delete this line! Add application code below this line.
+  //write("[%.6f %NODE_NAME%] StartSim(0x%X, %d, %d)", TimeNowNS()/1e9, busContext, busActive, mode);
+  //--- begin generated part --- Block start #Body_StartSim#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_StartSim#; do not delete this line! Add application code below this line.
+}
+
+void StopSim(dword busContext, int busActive, int mode)
+{
+  // Called when ... due to ...
+  //   mode == 1: ILControlWait
+  //   mode == 2: ILControlStop
+  //   mode == 3: ILControlSimulationOff
+  //--- begin generated part --- Block start #Hdr_StopSim#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_StopSim#; do not delete this line! Add application code below this line.
+  //write("[%.6f %NODE_NAME%] StopSim(0x%X, %d, %d)", TimeNowNS()/1e9, busContext, busActive, mode);
+  //--- begin generated part --- Block start #Body_StopSim#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_StopSim#; do not delete this line! Add application code below this line.
+}
+
+on sysvar_update sysvar::IL::Klemme15
+{
+  // Handle system state variable
+  //--- begin generated part --- Block start #Hdr_KL15_Klemme15#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_KL15_Klemme15#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_KL15_Klemme15#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  ILCAN1_OnEnvKlemme15(@this);
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_KL15_Klemme15#; do not delete this line! Add application code below this line.
+}
+
+on sysvar_update sysvar::IL::Klemme30
+{
+  // Handle system state variable
+  //--- begin generated part --- Block start #Hdr_KL30_Klemme30#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_KL30_Klemme30#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_KL30_Klemme30#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  ILCAN1_OnEnvKlemme30(@this);
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_KL30_Klemme30#; do not delete this line! Add application code below this line.
+}
+
+dword applILTxPending(long aId, dword aDlc, byte data[])
+{
+  dword ret = 1;
+  //--- begin generated part --- Block start #Hdr_applILTxPending#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Hdr_applILTxPending#; do not delete this line! Add application code below this line.
+  //--- begin generated part --- Block start #Body_applILTxPending#; do not delete this line and do not add application code in this code block!
+  /* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+  /* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+  //--- end generated part --- Block end #Body_applILTxPending#; do not delete this line! Add application code below this line.
+  return ret;
+}
+
+//--- begin generated part --- Block start <#Helper_Functions#> do not delete this line and do not add application code in this code block!
+/* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+/* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+//--- end generated part --- Block end <#Helper_Functions#> do not delete this line! Add application code below this line.
+
+//--- begin generated part --- Block start <#SysVar_Handler#> do not delete this line and do not add application code in this code block!
+/* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::EnableNode
+{
+  ILCAN1_Enable(@this && @sysvar::IL_CAN1::enable_AllNodes && @sysvar::IL::Klemme30);
+}
+
+on sysvar_update sysvar::IL_CAN1::enable_AllNodes
+{
+  ILCAN1_Enable(@this && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::EnableNode && @sysvar::IL::Klemme30);
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::EnableCyclic
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionEnableMsg  (CHASSIS1CAN::ECU2_ISCS::ISCS_CurrPinionStat_2);
+  }
+  else
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionDisableMsg (CHASSIS1CAN::ECU2_ISCS::ISCS_CurrPinionStat_2);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::SetNormalCycle
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::SelectedPeriod = 0;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::SetNewCycleContinously
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::SelectedPeriod = -1;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::SelectedPeriod
+{
+  if (@this == 0 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::NormalCyclePeriod;
+    ILFaultInjectionResetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_CurrPinionStat_2);
+  }
+  else if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::ActiveCyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_CurrPinionStat_2, gCAN1DisturbancePeriod);
+  }
+  else if (@this == -1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::CyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_CurrPinionStat_2, gCAN1DisturbancePeriod);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_CurrPinionStat_2::TIMINGS::SendOnce
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILSetMsgEvent(CHASSIS1CAN::ECU2_ISCS::ISCS_CurrPinionStat_2);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::EnableCyclic
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionEnableMsg  (CHASSIS1CAN::ECU2_ISCS::ISCS_Info_2);
+  }
+  else
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionDisableMsg (CHASSIS1CAN::ECU2_ISCS::ISCS_Info_2);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::SetNormalCycle
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::SelectedPeriod = 0;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::SetNewCycleContinously
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::SelectedPeriod = -1;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::SelectedPeriod
+{
+  if (@this == 0 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::NormalCyclePeriod;
+    ILFaultInjectionResetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_Info_2);
+  }
+  else if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::ActiveCyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_Info_2, gCAN1DisturbancePeriod);
+  }
+  else if (@this == -1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::CyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_Info_2, gCAN1DisturbancePeriod);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_Info_2::TIMINGS::SendOnce
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILSetMsgEvent(CHASSIS1CAN::ECU2_ISCS::ISCS_Info_2);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::EnableCyclic
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionEnableMsg  (CHASSIS1CAN::ECU2_ISCS::ISCS_SteeringError_Stat_2);
+  }
+  else
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionDisableMsg (CHASSIS1CAN::ECU2_ISCS::ISCS_SteeringError_Stat_2);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::SetNormalCycle
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::SelectedPeriod = 0;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::SetNewCycleContinously
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::SelectedPeriod = -1;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::SelectedPeriod
+{
+  if (@this == 0 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::NormalCyclePeriod;
+    ILFaultInjectionResetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_SteeringError_Stat_2);
+  }
+  else if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::ActiveCyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_SteeringError_Stat_2, gCAN1DisturbancePeriod);
+  }
+  else if (@this == -1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::CyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_SteeringError_Stat_2, gCAN1DisturbancePeriod);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteeringError_Stat_2::TIMINGS::SendOnce
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILSetMsgEvent(CHASSIS1CAN::ECU2_ISCS::ISCS_SteeringError_Stat_2);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::EnableCyclic
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionEnableMsg  (CHASSIS1CAN::ECU2_ISCS::ISCS_SteerWhl_Info_2);
+  }
+  else
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionDisableMsg (CHASSIS1CAN::ECU2_ISCS::ISCS_SteerWhl_Info_2);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::SetNormalCycle
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::SelectedPeriod = 0;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::SetNewCycleContinously
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::SelectedPeriod = -1;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::SelectedPeriod
+{
+  if (@this == 0 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::NormalCyclePeriod;
+    ILFaultInjectionResetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_SteerWhl_Info_2);
+  }
+  else if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::ActiveCyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_SteerWhl_Info_2, gCAN1DisturbancePeriod);
+  }
+  else if (@this == -1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::CyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS_SteerWhl_Info_2, gCAN1DisturbancePeriod);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS_SteerWhl_Info_2::TIMINGS::SendOnce
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILSetMsgEvent(CHASSIS1CAN::ECU2_ISCS::ISCS_SteerWhl_Info_2);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::EnableCyclic
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionEnableMsg  (CHASSIS1CAN::ECU2_ISCS::ISCS2_DiagClient_CFM);
+  }
+  else
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionDisableMsg (CHASSIS1CAN::ECU2_ISCS::ISCS2_DiagClient_CFM);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::SetNormalCycle
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::SelectedPeriod = 0;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::SetNewCycleContinously
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::SelectedPeriod = -1;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::SelectedPeriod
+{
+  if (@this == 0 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::NormalCyclePeriod;
+    ILFaultInjectionResetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS2_DiagClient_CFM);
+  }
+  else if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::ActiveCyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS2_DiagClient_CFM, gCAN1DisturbancePeriod);
+  }
+  else if (@this == -1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::CyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS2_DiagClient_CFM, gCAN1DisturbancePeriod);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2_DiagClient_CFM::TIMINGS::SendOnce
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILSetMsgEvent(CHASSIS1CAN::ECU2_ISCS::ISCS2_DiagClient_CFM);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::EnableCyclic
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionEnableMsg  (CHASSIS1CAN::ECU2_ISCS::ISCS2PinionStatCryptPDU);
+  }
+  else
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILFaultInjectionDisableMsg (CHASSIS1CAN::ECU2_ISCS::ISCS2PinionStatCryptPDU);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::SetNormalCycle
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::SelectedPeriod = 0;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::SetNewCycleContinously
+{
+  if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::EnableCyclic)
+  {
+    @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::SelectedPeriod = -1;
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::SelectedPeriod
+{
+  if (@this == 0 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::NormalCyclePeriod;
+    ILFaultInjectionResetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS2PinionStatCryptPDU);
+  }
+  else if (@this == 1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::ActiveCyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS2PinionStatCryptPDU, gCAN1DisturbancePeriod);
+  }
+  else if (@this == -1 && @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::EnableCyclic)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    gCAN1DisturbancePeriod = @sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::CyclePeriod;
+    ILFaultInjectionSetMsgCycleTime(CHASSIS1CAN::ECU2_ISCS::ISCS2PinionStatCryptPDU, gCAN1DisturbancePeriod);
+  }
+}
+
+on sysvar_update sysvar::IL_CAN1::NODES::N_ECU2_ISCS::MESSAGES::ISCS2PinionStatCryptPDU::TIMINGS::SendOnce
+{
+  if (@this == 1)
+  {
+    SetBusContext(gILCAN1_BusContext);
+    ILSetMsgEvent(CHASSIS1CAN::ECU2_ISCS::ISCS2PinionStatCryptPDU);
+  }
+}
+
+on sysvar_update sysvar::NM_CAN1::NODES::N_ECU2_ISCS::OpenNodePanel
+{
+  OpenNodePanel("CHASSIS1CAN::ECU2_ISCS", 1);
+}
+
+on sysvar_update sysvar::NM_CAN1::StateControl::CloseNodePanels
+{
+  OpenNodePanel("CHASSIS1CAN::ECU2_ISCS", 0);
+}
+
+/* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+//--- end generated part --- Block end <#SysVar_Handler#> do not delete this line! Add application code below this line.
+
+//--- begin generated part --- Block start <#MsgUpdateFcns#> do not delete this line and do not add application code in this code block!
+/* #ChannelStart# |CAN1| #BusStart# |CHASSIS1CAN| */
+/* #ChannelEnd# |CAN1| #BusEnd# |CHASSIS1CAN| */
+//--- end generated part --- Block end <#MsgUpdateFcns#> do not delete this line! Add application code below this line.
+

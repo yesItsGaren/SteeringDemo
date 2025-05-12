@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<testmodule starttime="2025-05-05 19:28:01" timestamp="   4.663725" verdicts="2_basic" measurementid="b98b3174-bfdf-47cd-a2ac-0dc25b3c4bcc">
+  <testcase starttime="2025-05-05 19:28:01" timestamp="   4.663725">
+    <teststep timestamp="   4.663725" level="0" type="user" ident="Feature Name:" result="pass">CF_807_Manual_Test_Overwrite_Steering</teststep>
+    <verdict time="2025-05-05 19:28:01" timestamp="   4.663725" endtime="2025-05-05 19:28:01" endtimestamp="   4.663725" result="pass" />
+    <title>CF_807_Manual_Test_Overwrite_Steering</title>
+  </testcase>
+  <testcase starttime="2025-05-05 19:28:01" timestamp="   4.663725">
+    <teststep timestamp="   4.663725" type="user" ident="" result="pass">ISCS1 Extended Session Toggled</teststep>
+    <teststep timestamp="   4.663725" type="user" ident="" result="pass">ISCS2 Extended Session Toggled</teststep>
+    <verdict time="2025-05-05 19:28:01" timestamp="   4.663725" endtime="2025-05-05 19:28:01" endtimestamp="   4.663725" result="pass" />
+    <title>EnableExtendedSession</title>
+  </testcase>
+  <testcase starttime="2025-05-05 19:28:01" timestamp="   4.663725">
+    <teststep timestamp="   4.663725" type="user" ident="" result="pass">Request to read software version sent.</teststep>
+    <teststep timestamp="   4.818923" level="1" type="auto" ident="Resume reason" result="na">Resumed on Communication error with &apos;ISCS1&apos; Elapsed time=155.197208ms (max=5000ms)</teststep>
+    <teststep timestamp="   4.818923" type="user" ident="" result="pass">Read SW Version:</teststep>
+    <teststep timestamp="   4.818923" level="0" type="user" ident="" result="na">No diagnostics object found to report! Check if object is initialized, or response has been received for a request.</teststep>
+    <verdict time="2025-05-05 19:28:01" timestamp="   4.663725" endtime="2025-05-05 19:28:01" endtimestamp="   4.818923" result="pass" />
+    <title>readSWVersionUDS</title>
+  </testcase>
+  <testcase starttime="2025-05-05 19:28:01" timestamp="   4.818923">
+    <teststep timestamp="   4.818923" type="user" ident="" result="pass">Request to read software version sent.</teststep>
+    <teststep timestamp="   4.819408" level="1" type="auto" ident="Resume reason" result="na">Resumed on Communication error with &apos;ISCS2&apos; Elapsed time=0.485675ms (max=5000ms)</teststep>
+    <teststep timestamp="   4.819408" type="user" ident="" result="pass">Read Fault Codes:</teststep>
+    <teststep timestamp="   4.819408" level="0" type="user" ident="" result="na">No diagnostics object found to report! Check if object is initialized, or response has been received for a request.</teststep>
+    <verdict time="2025-05-05 19:28:01" timestamp="   4.818923" endtime="2025-05-05 19:28:01" endtimestamp="   4.819408" result="pass" />
+    <title>readDTCsSteering</title>
+  </testcase>
+  <testcase starttime="2025-05-05 19:28:01" timestamp="   4.819408">
+    <teststep timestamp="   4.819408" level="0" type="user" ident="Sequence Started" result="na">Starting the sequence with a 1000ms delay.</teststep>
+    <teststep timestamp="   5.119408" level="0" type="user" ident="" result="na">Step 0: Set Sleep</teststep>
+    <teststep timestamp="   5.119408" level="0" type="user" ident="" result="na">Started vsmInfoTimer for cyclic sending.</teststep>
+    <teststep timestamp="   5.419408" level="0" type="user" ident="" result="na">Step 1: Set SDS Steering validity to Valid</teststep>
+    <teststep timestamp="   5.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   5.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   5.719408" level="0" type="user" ident="" result="na">Step 2: Set Brake Validity to Valid</teststep>
+    <teststep timestamp="   6.019408" level="0" type="user" ident="" result="na">Step 3: Set Park</teststep>
+    <teststep timestamp="   6.319408" level="0" type="user" ident="" result="na">Step 4: Set Autonomous</teststep>
+    <teststep timestamp="   6.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="   6.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   6.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="   6.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1485</teststep>
+    <teststep timestamp="   6.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="   6.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   6.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1485</teststep>
+    <teststep timestamp="   6.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="   6.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   6.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   6.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   6.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   6.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 1...</teststep>
+    <teststep timestamp="   7.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="   7.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   7.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="   7.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1485</teststep>
+    <teststep timestamp="   7.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="   7.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   7.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1485</teststep>
+    <teststep timestamp="   7.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="   7.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   7.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   7.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   7.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   7.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 2...</teststep>
+    <teststep timestamp="   7.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="   7.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   7.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="   7.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1485</teststep>
+    <teststep timestamp="   7.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="   7.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   7.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1485</teststep>
+    <teststep timestamp="   8.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="   8.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   8.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   8.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   8.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   8.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 3...</teststep>
+    <teststep timestamp="   8.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="   8.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   8.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="   8.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1485</teststep>
+    <teststep timestamp="   8.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="   8.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   8.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1485</teststep>
+    <teststep timestamp="   8.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="   8.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   8.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   8.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   8.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   8.719408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 4...</teststep>
+    <teststep timestamp="   9.019408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="   9.019408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   9.019408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="   9.019408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1485</teststep>
+    <teststep timestamp="   9.019408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="   9.019408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   9.019408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1485</teststep>
+    <teststep timestamp="   9.319408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="   9.319408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   9.319408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   9.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   9.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   9.319408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 5...</teststep>
+    <teststep timestamp="   9.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="   9.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   9.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="   9.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1485</teststep>
+    <teststep timestamp="   9.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="   9.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="   9.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1485</teststep>
+    <teststep timestamp="   9.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="   9.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   9.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   9.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="   9.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="   9.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 6...</teststep>
+    <teststep timestamp="  10.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  10.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  10.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  10.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1485</teststep>
+    <teststep timestamp="  10.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  10.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  10.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1485</teststep>
+    <teststep timestamp="  10.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  10.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="  10.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="  10.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="  10.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="  10.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 7...</teststep>
+    <teststep timestamp="  10.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  10.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  10.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  10.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1485</teststep>
+    <teststep timestamp="  10.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  10.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  10.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1485</teststep>
+    <teststep timestamp="  11.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  11.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="  11.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="  11.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="  11.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="  11.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 8...</teststep>
+    <teststep timestamp="  11.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  11.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  11.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  11.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1485</teststep>
+    <teststep timestamp="  11.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  11.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  11.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1485</teststep>
+    <teststep timestamp="  11.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  11.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="  11.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="  11.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: 0.00%</teststep>
+    <teststep timestamp="  11.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value 0.00 (±2.50)</teststep>
+    <teststep timestamp="  11.719408" type="user" ident="" result="fail">Received Pinion Angle Test failed after reaching MAX retry count.</teststep>
+    <teststep timestamp="  12.019408" level="0" type="user" ident="" result="na">Sequence Completed</teststep>
+    <teststep timestamp="  12.819408" level="1" type="auto" ident="Resume reason" result="na">Elapsed time=8000ms (max=8000ms)</teststep>
+    <teststep timestamp="  12.819408" level="0" type="user" ident="Test Step" result="na">indexofTest = 0</teststep>
+    <teststep timestamp="  12.819408" level="0" type="user" ident="Sequence Started" result="na">Starting the sequence with a 1000ms delay.</teststep>
+    <teststep timestamp="  13.119408" level="0" type="user" ident="" result="na">Step 0: Set Sleep</teststep>
+    <teststep timestamp="  13.119408" level="0" type="user" ident="" result="na">Started vsmInfoTimer for cyclic sending.</teststep>
+    <teststep timestamp="  13.419408" level="0" type="user" ident="" result="na">Step 1: Set SDS Steering validity to Valid</teststep>
+    <teststep timestamp="  13.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  13.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  13.719408" level="0" type="user" ident="" result="na">Step 2: Set Brake Validity to Valid</teststep>
+    <teststep timestamp="  14.019408" level="0" type="user" ident="" result="na">Step 3: Set Park</teststep>
+    <teststep timestamp="  14.319408" level="0" type="user" ident="" result="na">Step 4: Set Autonomous</teststep>
+    <teststep timestamp="  14.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  14.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  14.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  14.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1600</teststep>
+    <teststep timestamp="  14.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  14.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  14.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1600</teststep>
+    <teststep timestamp="  14.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  14.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  14.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  14.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  14.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  14.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 1...</teststep>
+    <teststep timestamp="  15.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  15.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  15.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  15.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1600</teststep>
+    <teststep timestamp="  15.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  15.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  15.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1600</teststep>
+    <teststep timestamp="  15.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  15.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  15.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  15.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  15.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  15.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 2...</teststep>
+    <teststep timestamp="  15.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  15.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  15.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  15.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1600</teststep>
+    <teststep timestamp="  15.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  15.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  15.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1600</teststep>
+    <teststep timestamp="  16.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  16.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  16.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  16.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  16.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  16.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 3...</teststep>
+    <teststep timestamp="  16.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  16.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  16.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  16.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1600</teststep>
+    <teststep timestamp="  16.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  16.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  16.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1600</teststep>
+    <teststep timestamp="  16.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  16.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  16.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  16.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  16.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  16.719408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 4...</teststep>
+    <teststep timestamp="  17.019408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  17.019408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  17.019408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  17.019408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1600</teststep>
+    <teststep timestamp="  17.019408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  17.019408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  17.019408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1600</teststep>
+    <teststep timestamp="  17.319408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  17.319408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  17.319408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  17.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  17.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  17.319408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 5...</teststep>
+    <teststep timestamp="  17.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  17.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  17.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  17.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1600</teststep>
+    <teststep timestamp="  17.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  17.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  17.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1600</teststep>
+    <teststep timestamp="  17.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  17.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  17.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  17.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  17.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  17.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 6...</teststep>
+    <teststep timestamp="  18.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  18.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  18.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  18.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1600</teststep>
+    <teststep timestamp="  18.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  18.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  18.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1600</teststep>
+    <teststep timestamp="  18.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  18.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  18.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  18.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  18.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  18.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 7...</teststep>
+    <teststep timestamp="  18.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  18.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  18.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  18.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1600</teststep>
+    <teststep timestamp="  18.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  18.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  18.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1600</teststep>
+    <teststep timestamp="  19.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  19.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  19.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  19.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  19.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  19.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 8...</teststep>
+    <teststep timestamp="  19.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  19.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  19.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  19.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1600</teststep>
+    <teststep timestamp="  19.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  19.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  19.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1600</teststep>
+    <teststep timestamp="  19.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  19.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  19.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  19.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -63.50%</teststep>
+    <teststep timestamp="  19.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -63.50 (±2.50)</teststep>
+    <teststep timestamp="  19.719408" type="user" ident="" result="fail">Received Pinion Angle Test failed after reaching MAX retry count.</teststep>
+    <teststep timestamp="  20.019408" level="0" type="user" ident="" result="na">Sequence Completed</teststep>
+    <teststep timestamp="  20.819408" level="1" type="auto" ident="Resume reason" result="na">Elapsed time=8000ms (max=8000ms)</teststep>
+    <teststep timestamp="  20.819408" level="0" type="user" ident="Test Step" result="na">indexofTest = 1</teststep>
+    <teststep timestamp="  20.819408" level="0" type="user" ident="Sequence Started" result="na">Starting the sequence with a 1000ms delay.</teststep>
+    <teststep timestamp="  21.119408" level="0" type="user" ident="" result="na">Step 0: Set Sleep</teststep>
+    <teststep timestamp="  21.119408" level="0" type="user" ident="" result="na">Started vsmInfoTimer for cyclic sending.</teststep>
+    <teststep timestamp="  21.419408" level="0" type="user" ident="" result="na">Step 1: Set SDS Steering validity to Valid</teststep>
+    <teststep timestamp="  21.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  21.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  21.719408" level="0" type="user" ident="" result="na">Step 2: Set Brake Validity to Valid</teststep>
+    <teststep timestamp="  22.019408" level="0" type="user" ident="" result="na">Step 3: Set Park</teststep>
+    <teststep timestamp="  22.319408" level="0" type="user" ident="" result="na">Step 4: Set Autonomous</teststep>
+    <teststep timestamp="  22.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  22.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  22.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  22.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1800</teststep>
+    <teststep timestamp="  22.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  22.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  22.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1800</teststep>
+    <teststep timestamp="  22.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  22.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  22.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  22.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  22.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  22.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 1...</teststep>
+    <teststep timestamp="  23.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  23.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  23.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  23.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1800</teststep>
+    <teststep timestamp="  23.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  23.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  23.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1800</teststep>
+    <teststep timestamp="  23.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  23.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  23.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  23.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  23.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  23.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 2...</teststep>
+    <teststep timestamp="  23.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  23.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  23.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  23.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1800</teststep>
+    <teststep timestamp="  23.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  23.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  23.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1800</teststep>
+    <teststep timestamp="  24.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  24.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  24.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  24.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  24.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  24.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 3...</teststep>
+    <teststep timestamp="  24.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  24.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  24.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  24.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1800</teststep>
+    <teststep timestamp="  24.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  24.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  24.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1800</teststep>
+    <teststep timestamp="  24.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  24.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  24.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  24.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  24.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  24.719408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 4...</teststep>
+    <teststep timestamp="  25.019408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  25.019408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  25.019408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  25.019408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1800</teststep>
+    <teststep timestamp="  25.019408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  25.019408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  25.019408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1800</teststep>
+    <teststep timestamp="  25.319408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  25.319408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  25.319408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  25.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  25.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  25.319408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 5...</teststep>
+    <teststep timestamp="  25.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  25.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  25.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  25.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1800</teststep>
+    <teststep timestamp="  25.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  25.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  25.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1800</teststep>
+    <teststep timestamp="  25.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  25.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  25.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  25.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  25.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  25.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 6...</teststep>
+    <teststep timestamp="  26.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  26.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  26.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  26.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1800</teststep>
+    <teststep timestamp="  26.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  26.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  26.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1800</teststep>
+    <teststep timestamp="  26.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  26.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  26.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  26.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  26.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  26.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 7...</teststep>
+    <teststep timestamp="  26.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  26.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  26.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  26.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1800</teststep>
+    <teststep timestamp="  26.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  26.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  26.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1800</teststep>
+    <teststep timestamp="  27.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  27.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  27.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  27.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  27.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  27.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 8...</teststep>
+    <teststep timestamp="  27.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  27.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  27.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  27.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 1800</teststep>
+    <teststep timestamp="  27.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  27.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  27.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 1800</teststep>
+    <teststep timestamp="  27.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  27.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  27.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  27.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -173.90%</teststep>
+    <teststep timestamp="  27.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -173.90 (±2.50)</teststep>
+    <teststep timestamp="  27.719408" type="user" ident="" result="fail">Received Pinion Angle Test failed after reaching MAX retry count.</teststep>
+    <teststep timestamp="  28.019408" level="0" type="user" ident="" result="na">Sequence Completed</teststep>
+    <teststep timestamp="  28.819408" level="1" type="auto" ident="Resume reason" result="na">Elapsed time=8000ms (max=8000ms)</teststep>
+    <teststep timestamp="  28.819408" level="0" type="user" ident="Test Step" result="na">indexofTest = 2</teststep>
+    <teststep timestamp="  28.819408" level="0" type="user" ident="Sequence Started" result="na">Starting the sequence with a 1000ms delay.</teststep>
+    <teststep timestamp="  29.119408" level="0" type="user" ident="" result="na">Step 0: Set Sleep</teststep>
+    <teststep timestamp="  29.119408" level="0" type="user" ident="" result="na">Started vsmInfoTimer for cyclic sending.</teststep>
+    <teststep timestamp="  29.419408" level="0" type="user" ident="" result="na">Step 1: Set SDS Steering validity to Valid</teststep>
+    <teststep timestamp="  29.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  29.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  29.719408" level="0" type="user" ident="" result="na">Step 2: Set Brake Validity to Valid</teststep>
+    <teststep timestamp="  30.019408" level="0" type="user" ident="" result="na">Step 3: Set Park</teststep>
+    <teststep timestamp="  30.319408" level="0" type="user" ident="" result="na">Step 4: Set Autonomous</teststep>
+    <teststep timestamp="  30.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  30.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  30.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  30.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2000</teststep>
+    <teststep timestamp="  30.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  30.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  30.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2000</teststep>
+    <teststep timestamp="  30.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  30.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  30.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  30.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  30.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  30.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 1...</teststep>
+    <teststep timestamp="  31.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  31.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  31.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  31.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2000</teststep>
+    <teststep timestamp="  31.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  31.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  31.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2000</teststep>
+    <teststep timestamp="  31.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  31.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  31.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  31.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  31.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  31.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 2...</teststep>
+    <teststep timestamp="  31.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  31.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  31.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  31.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2000</teststep>
+    <teststep timestamp="  31.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  31.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  31.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2000</teststep>
+    <teststep timestamp="  32.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  32.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  32.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  32.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  32.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  32.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 3...</teststep>
+    <teststep timestamp="  32.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  32.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  32.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  32.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2000</teststep>
+    <teststep timestamp="  32.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  32.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  32.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2000</teststep>
+    <teststep timestamp="  32.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  32.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  32.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  32.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  32.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  32.719408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 4...</teststep>
+    <teststep timestamp="  33.019408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  33.019408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  33.019408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  33.019408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2000</teststep>
+    <teststep timestamp="  33.019408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  33.019408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  33.019408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2000</teststep>
+    <teststep timestamp="  33.319408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  33.319408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  33.319408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  33.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  33.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  33.319408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 5...</teststep>
+    <teststep timestamp="  33.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  33.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  33.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  33.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2000</teststep>
+    <teststep timestamp="  33.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  33.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  33.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2000</teststep>
+    <teststep timestamp="  33.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  33.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  33.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  33.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  33.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  33.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 6...</teststep>
+    <teststep timestamp="  34.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  34.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  34.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  34.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2000</teststep>
+    <teststep timestamp="  34.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  34.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  34.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2000</teststep>
+    <teststep timestamp="  34.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  34.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  34.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  34.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  34.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  34.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 7...</teststep>
+    <teststep timestamp="  34.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  34.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  34.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  34.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2000</teststep>
+    <teststep timestamp="  34.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  34.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  34.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2000</teststep>
+    <teststep timestamp="  35.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  35.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  35.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  35.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  35.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  35.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 8...</teststep>
+    <teststep timestamp="  35.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  35.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  35.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  35.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2000</teststep>
+    <teststep timestamp="  35.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  35.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  35.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2000</teststep>
+    <teststep timestamp="  35.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  35.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  35.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  35.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -284.50%</teststep>
+    <teststep timestamp="  35.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -284.50 (±2.50)</teststep>
+    <teststep timestamp="  35.719408" type="user" ident="" result="fail">Received Pinion Angle Test failed after reaching MAX retry count.</teststep>
+    <teststep timestamp="  36.019408" level="0" type="user" ident="" result="na">Sequence Completed</teststep>
+    <teststep timestamp="  36.819408" level="1" type="auto" ident="Resume reason" result="na">Elapsed time=8000ms (max=8000ms)</teststep>
+    <teststep timestamp="  36.819408" level="0" type="user" ident="Test Step" result="na">indexofTest = 3</teststep>
+    <teststep timestamp="  36.819408" level="0" type="user" ident="Sequence Started" result="na">Starting the sequence with a 1000ms delay.</teststep>
+    <teststep timestamp="  37.119408" level="0" type="user" ident="" result="na">Step 0: Set Sleep</teststep>
+    <teststep timestamp="  37.119408" level="0" type="user" ident="" result="na">Started vsmInfoTimer for cyclic sending.</teststep>
+    <teststep timestamp="  37.419408" level="0" type="user" ident="" result="na">Step 1: Set SDS Steering validity to Valid</teststep>
+    <teststep timestamp="  37.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  37.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  37.719408" level="0" type="user" ident="" result="na">Step 2: Set Brake Validity to Valid</teststep>
+    <teststep timestamp="  38.019408" level="0" type="user" ident="" result="na">Step 3: Set Park</teststep>
+    <teststep timestamp="  38.319408" level="0" type="user" ident="" result="na">Step 4: Set Autonomous</teststep>
+    <teststep timestamp="  38.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  38.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  38.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  38.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2200</teststep>
+    <teststep timestamp="  38.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  38.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  38.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2200</teststep>
+    <teststep timestamp="  38.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  38.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  38.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  38.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  38.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  38.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 1...</teststep>
+    <teststep timestamp="  39.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  39.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  39.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  39.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2200</teststep>
+    <teststep timestamp="  39.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  39.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  39.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2200</teststep>
+    <teststep timestamp="  39.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  39.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  39.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  39.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  39.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  39.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 2...</teststep>
+    <teststep timestamp="  39.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  39.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  39.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  39.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2200</teststep>
+    <teststep timestamp="  39.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  39.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  39.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2200</teststep>
+    <teststep timestamp="  40.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  40.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  40.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  40.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  40.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  40.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 3...</teststep>
+    <teststep timestamp="  40.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  40.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  40.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  40.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2200</teststep>
+    <teststep timestamp="  40.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  40.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  40.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2200</teststep>
+    <teststep timestamp="  40.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  40.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  40.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  40.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  40.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  40.719408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 4...</teststep>
+    <teststep timestamp="  41.019408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  41.019408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  41.019408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  41.019408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2200</teststep>
+    <teststep timestamp="  41.019408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  41.019408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  41.019408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2200</teststep>
+    <teststep timestamp="  41.319408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  41.319408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  41.319408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  41.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  41.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  41.319408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 5...</teststep>
+    <teststep timestamp="  41.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  41.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  41.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  41.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2200</teststep>
+    <teststep timestamp="  41.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  41.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  41.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2200</teststep>
+    <teststep timestamp="  41.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  41.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  41.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  41.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  41.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  41.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 6...</teststep>
+    <teststep timestamp="  42.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  42.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  42.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  42.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2200</teststep>
+    <teststep timestamp="  42.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  42.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  42.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2200</teststep>
+    <teststep timestamp="  42.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  42.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  42.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  42.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  42.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  42.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 7...</teststep>
+    <teststep timestamp="  42.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  42.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  42.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  42.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2200</teststep>
+    <teststep timestamp="  42.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  42.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  42.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2200</teststep>
+    <teststep timestamp="  43.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  43.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  43.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  43.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  43.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  43.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 8...</teststep>
+    <teststep timestamp="  43.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  43.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  43.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  43.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2200</teststep>
+    <teststep timestamp="  43.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  43.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  43.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2200</teststep>
+    <teststep timestamp="  43.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  43.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  43.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  43.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -394.60%</teststep>
+    <teststep timestamp="  43.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -394.60 (±2.50)</teststep>
+    <teststep timestamp="  43.719408" type="user" ident="" result="fail">Received Pinion Angle Test failed after reaching MAX retry count.</teststep>
+    <teststep timestamp="  44.019408" level="0" type="user" ident="" result="na">Sequence Completed</teststep>
+    <teststep timestamp="  44.819408" level="1" type="auto" ident="Resume reason" result="na">Elapsed time=8000ms (max=8000ms)</teststep>
+    <teststep timestamp="  44.819408" level="0" type="user" ident="Test Step" result="na">indexofTest = 4</teststep>
+    <teststep timestamp="  44.819408" level="0" type="user" ident="Sequence Started" result="na">Starting the sequence with a 1000ms delay.</teststep>
+    <teststep timestamp="  45.119408" level="0" type="user" ident="" result="na">Step 0: Set Sleep</teststep>
+    <teststep timestamp="  45.119408" level="0" type="user" ident="" result="na">Started vsmInfoTimer for cyclic sending.</teststep>
+    <teststep timestamp="  45.419408" level="0" type="user" ident="" result="na">Step 1: Set SDS Steering validity to Valid</teststep>
+    <teststep timestamp="  45.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  45.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  45.719408" level="0" type="user" ident="" result="na">Step 2: Set Brake Validity to Valid</teststep>
+    <teststep timestamp="  46.019408" level="0" type="user" ident="" result="na">Step 3: Set Park</teststep>
+    <teststep timestamp="  46.319408" level="0" type="user" ident="" result="na">Step 4: Set Autonomous</teststep>
+    <teststep timestamp="  46.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  46.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  46.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  46.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2400</teststep>
+    <teststep timestamp="  46.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  46.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  46.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2400</teststep>
+    <teststep timestamp="  46.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  46.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  46.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  46.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  46.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  46.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 1...</teststep>
+    <teststep timestamp="  47.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  47.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  47.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  47.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2400</teststep>
+    <teststep timestamp="  47.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  47.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  47.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2400</teststep>
+    <teststep timestamp="  47.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  47.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  47.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  47.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  47.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  47.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 2...</teststep>
+    <teststep timestamp="  47.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  47.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  47.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  47.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2400</teststep>
+    <teststep timestamp="  47.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  47.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  47.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2400</teststep>
+    <teststep timestamp="  48.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  48.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  48.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  48.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  48.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  48.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 3...</teststep>
+    <teststep timestamp="  48.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  48.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  48.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  48.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2400</teststep>
+    <teststep timestamp="  48.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  48.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  48.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2400</teststep>
+    <teststep timestamp="  48.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  48.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  48.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  48.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  48.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  48.719408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 4...</teststep>
+    <teststep timestamp="  49.019408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  49.019408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  49.019408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  49.019408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2400</teststep>
+    <teststep timestamp="  49.019408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  49.019408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  49.019408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2400</teststep>
+    <teststep timestamp="  49.319408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  49.319408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  49.319408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  49.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  49.319408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  49.319408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 5...</teststep>
+    <teststep timestamp="  49.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  49.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  49.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  49.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2400</teststep>
+    <teststep timestamp="  49.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  49.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  49.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2400</teststep>
+    <teststep timestamp="  49.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  49.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  49.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  49.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  49.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  49.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 6...</teststep>
+    <teststep timestamp="  50.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  50.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  50.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  50.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2400</teststep>
+    <teststep timestamp="  50.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  50.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  50.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2400</teststep>
+    <teststep timestamp="  50.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  50.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  50.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  50.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  50.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  50.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 7...</teststep>
+    <teststep timestamp="  50.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  50.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  50.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  50.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2400</teststep>
+    <teststep timestamp="  50.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  50.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  50.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2400</teststep>
+    <teststep timestamp="  51.119408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  51.119408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  51.119408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  51.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  51.119408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  51.119408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 8...</teststep>
+    <teststep timestamp="  51.419408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  51.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  51.419408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  51.419408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2400</teststep>
+    <teststep timestamp="  51.419408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  51.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  51.419408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2400</teststep>
+    <teststep timestamp="  51.719408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  51.719408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  51.719408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  51.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  51.719408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  51.719408" type="user" ident="" result="fail">Received Pinion Angle Test failed after reaching MAX retry count.</teststep>
+    <teststep timestamp="  52.019408" level="0" type="user" ident="" result="na">Sequence Completed</teststep>
+    <teststep timestamp="  52.819408" level="1" type="auto" ident="Resume reason" result="na">Elapsed time=8000ms (max=8000ms)</teststep>
+    <teststep timestamp="  52.819408" level="0" type="user" ident="Test Step" result="na">indexofTest = 5</teststep>
+    <teststep timestamp="  52.819408" level="0" type="user" ident="Sequence Started" result="na">Starting the sequence with a 1000ms delay.</teststep>
+    <teststep timestamp="  53.119408" level="0" type="user" ident="" result="na">Step 0: Set Sleep</teststep>
+    <teststep timestamp="  53.119408" level="0" type="user" ident="" result="na">Started vsmInfoTimer for cyclic sending.</teststep>
+    <teststep timestamp="  53.419408" level="0" type="user" ident="" result="na">Step 1: Set SDS Steering validity to Valid</teststep>
+    <teststep timestamp="  53.419408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  53.419408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  53.719408" level="0" type="user" ident="" result="na">Step 2: Set Brake Validity to Valid</teststep>
+    <teststep timestamp="  54.019408" level="0" type="user" ident="" result="na">Step 3: Set Park</teststep>
+    <teststep timestamp="  54.319408" level="0" type="user" ident="" result="na">Step 4: Set Autonomous</teststep>
+    <teststep timestamp="  54.619408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  54.619408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  54.619408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  54.619408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2800</teststep>
+    <teststep timestamp="  54.619408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  54.619408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  54.619408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2800</teststep>
+    <teststep timestamp="  54.919408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  54.919408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  54.919408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  54.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  54.919408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  54.919408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 1...</teststep>
+    <teststep timestamp="  55.219408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  55.219408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  55.219408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  55.219408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2800</teststep>
+    <teststep timestamp="  55.219408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  55.219408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  55.219408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2800</teststep>
+    <teststep timestamp="  55.519408" level="0" type="user" ident="" result="na">Step 6: Reading output from ISCS ECUs...</teststep>
+    <teststep timestamp="  55.519408" level="0" type="user" ident="" result="na">Received Pinion Angle: -780.00% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  55.519408" level="0" type="user" ident="" result="na">Received Pinion Angle -780.00 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  55.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2: -14.50% and EXPECTED Pinion Angle: -465.00%</teststep>
+    <teststep timestamp="  55.519408" level="0" type="user" ident="" result="na">Received Pinion Angle 2 -14.50 is outside tolerance of expected value -465.00 (±2.50)</teststep>
+    <teststep timestamp="  55.519408" level="0" type="user" ident="retrying" result="na">Received Pinion Angle Test failed. Retrying num 2...</teststep>
+    <teststep timestamp="  55.819408" level="0" type="user" ident="" result="na">Step 5: Setting SDS Steering Values...</teststep>
+    <teststep timestamp="  55.819408" level="0" type="user" ident="" result="na">Validity of Primary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  55.819408" level="0" type="user" ident="" result="na">Incompatible value set to Secondary Steering Validity State. </teststep>
+    <teststep timestamp="  55.819408" level="0" type="user" ident="steeringValPrimary" result="na">Primary Steering Values set to 2800</teststep>
+    <teststep timestamp="  55.819408" level="0" type="user" ident="" result="na">Incompatible Primary value set to Steering Validity State. </teststep>
+    <teststep timestamp="  55.819408" level="0" type="user" ident="" result="na">Validity of Secondary Steering is set to VALID_STATE (1). </teststep>
+    <teststep timestamp="  55.819408" level="0" type="user" ident="steeringValSecondary" result="na">Secondary Steering Values set to 2800</teststep>
+    <!-- Measurement stop forced. Test is incomplete! -->
+    <verdict time="2025-05-05 19:28:08" timestamp="  11.719408" endtime="2025-05-05 19:28:52" endtimestamp="  55.819408" result="fail" />
+    <title>SteeringFastTrack</title>
+    <extendedinfo type="html"><![CDATA[<b>Measurement stop forced. Test is incomplete!</b>]]></extendedinfo>
+  </testcase>
+  <verdict time="2025-05-05 19:28:08" timestamp="  11.719408" endtime="2025-05-05 19:28:52" endtimestamp="  55.819408" result="fail" />
+  <title>ISCS_Test</title>
+  <testlogfiles>
+    <testlogfile file="..\..\..\Downloads\Steering_Test_Logs\Steering_FT.blf" logbegin="Active at test start" logend="Active at test end" />
+  </testlogfiles>
+  <engineer>
+    <xinfo>
+      <name>Windows Login Name</name>
+      <description>arabk</description>
+    </xinfo>
+  </engineer>
+  <testsetup>
+    <xinfo>
+      <name>Version</name>
+      <description>CANoe.ISO11783.J1939.CANopen.CAN.LIN.MOST.FlexRay.J1587.Ethernet.Car2x.AFDX.A429.AMD/XCP.Scope /pro 17.5.5 (SP5)</description>
+    </xinfo>
+    <xinfo>
+      <name>Configuration</name>
+      <description>C:\Users\arabk\Desktop\Holon\HolonGit\Holon-Automated-Tests\Steering_CANoe_Config_SW3.1\DBC_SW030201_Chassis1_CAN.cfg</description>
+    </xinfo>
+    <xinfo>
+      <name>Database Chassis1CAN_DBCV9.1_SWV3.1 on CHASSIS1CAN</name>
+      <description>C:\Users\arabk\Desktop\Holon\HolonGit\Holon-Automated-Tests\Steering_CANoe_Config_SW3.1\Chassis1CAN_DBCV9.1_SWV3.1.dbc (2025-03-11 09:00:36)</description>
+    </xinfo>
+    <xinfo>
+      <name>Database Chassis2CAN_DBCV9.2_SWV3.1 on CHASSIS2CAN</name>
+      <description>C:\Users\arabk\Desktop\Holon\HolonGit\Holon-Automated-Tests\Steering_CANoe_Config_SW3.1\Chassis2CAN_DBCV9.2_SWV3.1.dbc (2025-03-11 09:00:36)</description>
+    </xinfo>
+    <xinfo>
+      <name>Diagnostic Description of ISCS1</name>
+      <description>Base_Variant, en-US, C:\Users\arabk\Desktop\Holon\HolonGit\Holon-Automated-Tests\Steering_CANoe_Config_SW3.1\ISCS1_BLD7_SW3.2_V3.cdd (ISCS1_BLD7_SW3.2_V3.cdd, 2024-12-13 13:51:32+05:30)</description>
+    </xinfo>
+    <xinfo>
+      <name>Diagnostic Description of ISCS2</name>
+      <description>Base_Variant, en-US, C:\Users\arabk\Desktop\Holon\HolonGit\Holon-Automated-Tests\Steering_CANoe_Config_SW3.1\ISCS2_BLD7_SW3.2_V3.cdd (ISCS2_BLD7_SW3.2_V3.cdd, 2024-12-13 13:56:24+05:30)</description>
+    </xinfo>
+    <xinfo>
+      <name>Test Module Name</name>
+      <description>ISCS_Test</description>
+    </xinfo>
+    <xinfo>
+      <name>Test Module File</name>
+      <description>C:\Users\arabk\Desktop\Holon\HolonGit\Holon-Automated-Tests\Steering_CANoe_Config_SW3.1\icscTest.can</description>
+    </xinfo>
+    <xinfo>
+      <name>Last modification of Test Module File</name>
+      <description>2025-05-05, 19:26:15</description>
+    </xinfo>
+    <xinfo>
+      <name>Windows Computer Name</name>
+      <description>GARENWINTEC</description>
+    </xinfo>
+    <xinfo>
+      <name>Nodelayer Module CANoeILNLVector</name>
+      <description>CANoe Interaction Layer NL (Vector) Version 3.30.113 (Feb 16 2023 15:33:52) , C:\Users\arabk\Desktop\Holon\HolonGit\Holon-Automated-Tests\Steering_CANoe_Config_SW3.1\Exec32\CANoe_14_0\Exec32\CANoeILNLVector.dll</description>
+    </xinfo>
+  </testsetup>
+  <hardware name="CAN Channel Interfaces" category="CategoryCANIF">
+    <xinfoset type="device">
+      <xinfoobject type="device">
+      <xinfo key="channel">
+        <name>Channel</name>
+        <description>1</description>
+      </xinfo>
+      <xinfo key="device">
+        <name>Device</name>
+        <description>VN1640</description>
+      </xinfo>
+      <xinfo key="serialnumber">
+        <name>Serial number</name>
+        <description>71889</description>
+      </xinfo>
+      <xinfo key="driverdllversion">
+        <name>Driver DLL version</name>
+        <description>25.10.18</description>
+      </xinfo>
+      <xinfo key="driverversion">
+        <name>Driver version</name>
+        <description>24.40.10</description>
+      </xinfo>
+      </xinfoobject>
+      <xinfoobject type="device">
+      <xinfo key="channel">
+        <name>Channel</name>
+        <description>2</description>
+      </xinfo>
+      <xinfo key="device">
+        <name>Device</name>
+        <description>VN1640</description>
+      </xinfo>
+      <xinfo key="serialnumber">
+        <name>Serial number</name>
+        <description>71889</description>
+      </xinfo>
+      <xinfo key="driverdllversion">
+        <name>Driver DLL version</name>
+        <description>25.10.18</description>
+      </xinfo>
+      <xinfo key="driverversion">
+        <name>Driver version</name>
+        <description>24.40.10</description>
+      </xinfo>
+      </xinfoobject>
+    </xinfoset>
+  </hardware>
+  <extendedinfo type="html"><![CDATA[<b>Measurement stop forced. Test is incomplete!</b>]]></extendedinfo>
+</testmodule>
+<!--footprint="1e361dffe1919a84f0ca988f3447d616" version="1"-->

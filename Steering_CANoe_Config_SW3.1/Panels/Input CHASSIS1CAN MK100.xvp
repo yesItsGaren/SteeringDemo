@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="Panel" ControlName="Input CHASSIS1CAN MK100" Children="Controls">
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl457" ControlName="GroupBoxControl457" Children="Controls">
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl128" ControlName="PanelButtonControl128" Children="Controls">
+        <Property Name="Name">PanelButtonControl128</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,17</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 BatSox.xvp</Property>
+        <Property Name="Text">CGW2::BatSox</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl129" ControlName="PanelButtonControl129" Children="Controls">
+        <Property Name="Name">PanelButtonControl129</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,38</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 BatUMps.xvp</Property>
+        <Property Name="Text">CGW2::BatUMps</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl130" ControlName="PanelButtonControl130" Children="Controls">
+        <Property Name="Name">PanelButtonControl130</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,59</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 CGW_FVM_Authentication.xvp</Property>
+        <Property Name="Text">CGW2::CGW_FVM_Authentication</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl131" ControlName="PanelButtonControl131" Children="Controls">
+        <Property Name="Name">PanelButtonControl131</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,80</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 CGW_FVM_Counter.xvp</Property>
+        <Property Name="Text">CGW2::CGW_FVM_Counter</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl132" ControlName="PanelButtonControl132" Children="Controls">
+        <Property Name="Name">PanelButtonControl132</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,101</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 ISCS_CurrPinionStat.xvp</Property>
+        <Property Name="Text">CGW2::ISCS_CurrPinionStat</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl133" ControlName="PanelButtonControl133" Children="Controls">
+        <Property Name="Name">PanelButtonControl133</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,122</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 ISCS_CurrPinionStat_2.xvp</Property>
+        <Property Name="Text">ECU2_ISCS::ISCS_CurrPinionStat_2</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl134" ControlName="PanelButtonControl134" Children="Controls">
+        <Property Name="Name">PanelButtonControl134</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,143</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 ISCS_Info.xvp</Property>
+        <Property Name="Text">CGW2::ISCS_Info</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl135" ControlName="PanelButtonControl135" Children="Controls">
+        <Property Name="Name">PanelButtonControl135</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,164</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 ISCS_Info_2.xvp</Property>
+        <Property Name="Text">ECU2_ISCS::ISCS_Info_2</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl136" ControlName="PanelButtonControl136" Children="Controls">
+        <Property Name="Name">PanelButtonControl136</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,185</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 ISCS_SteeringError_Stat.xvp</Property>
+        <Property Name="Text">CGW2::ISCS_SteeringError_Stat</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl137" ControlName="PanelButtonControl137" Children="Controls">
+        <Property Name="Name">PanelButtonControl137</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,206</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 ISCS_SteeringError_Stat_2.xvp</Property>
+        <Property Name="Text">ECU2_ISCS::ISCS_SteeringError_Stat_2</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl138" ControlName="PanelButtonControl138" Children="Controls">
+        <Property Name="Name">PanelButtonControl138</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,227</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 ISCS_SteerWhl_Info_2.xvp</Property>
+        <Property Name="Text">ECU2_ISCS::ISCS_SteerWhl_Info_2</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl139" ControlName="PanelButtonControl139" Children="Controls">
+        <Property Name="Name">PanelButtonControl139</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,248</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 MCUFastCommandResponse.xvp</Property>
+        <Property Name="Text">CGW2::MCUFastCommandResponse</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl140" ControlName="PanelButtonControl140" Children="Controls">
+        <Property Name="Name">PanelButtonControl140</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,269</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 NM_CGW.xvp</Property>
+        <Property Name="Text">CGW2::NM_CGW</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl141" ControlName="PanelButtonControl141" Children="Controls">
+        <Property Name="Name">PanelButtonControl141</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,290</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 SDS_Stability_Info_Sec.xvp</Property>
+        <Property Name="Text">SDS_Secondary::SDS_Stability_Info_Sec</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl142" ControlName="PanelButtonControl142" Children="Controls">
+        <Property Name="Name">PanelButtonControl142</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,311</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 SDS_Status_Prim.xvp</Property>
+        <Property Name="Text">CGW2::SDS_Status_Prim</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl143" ControlName="PanelButtonControl143" Children="Controls">
+        <Property Name="Name">PanelButtonControl143</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,332</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 SDS_Status_Sec.xvp</Property>
+        <Property Name="Text">SDS_Secondary::SDS_Status_Sec</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl144" ControlName="PanelButtonControl144" Children="Controls">
+        <Property Name="Name">PanelButtonControl144</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,353</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 TM_Status_0.xvp</Property>
+        <Property Name="Text">CGW2::TM_Status_0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl145" ControlName="PanelButtonControl145" Children="Controls">
+        <Property Name="Name">PanelButtonControl145</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,374</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 VCU_LVBatt1Info.xvp</Property>
+        <Property Name="Text">CGW2::VCU_LVBatt1Info</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl146" ControlName="PanelButtonControl146" Children="Controls">
+        <Property Name="Name">PanelButtonControl146</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,395</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 VCU_ManualOperationInfo_Sec.xvp</Property>
+        <Property Name="Text">CGW2::VCU_ManualOperationInfo_Sec</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl147" ControlName="PanelButtonControl147" Children="Controls">
+        <Property Name="Name">PanelButtonControl147</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,416</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 VCU_VehicleTravel1Info.xvp</Property>
+        <Property Name="Text">CGW2::VCU_VehicleTravel1Info</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl148" ControlName="PanelButtonControl148" Children="Controls">
+        <Property Name="Name">PanelButtonControl148</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,437</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 VCU_VSMInfo.xvp</Property>
+        <Property Name="Text">CGW2::VCU_VSMInfo</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.PanelButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=7.1.94.0, Culture=neutral, PublicKeyToken=null" Name="PanelButtonControl149" ControlName="PanelButtonControl149" Children="Controls">
+        <Property Name="Name">PanelButtonControl149</Property>
+        <Property Name="Size">234,21</Property>
+        <Property Name="Location">5,458</Property>
+        <Property Name="ClosePanels">False</Property>
+        <Property Name="PanelList">1;1;Message RX CHASSIS1CAN MK100 VehTi.xvp</Property>
+        <Property Name="Text">CGW2::VehTi</Property>
+      </Object>
+      <Property Name="Name">GroupBoxControl457</Property>
+      <Property Name="Size">244,484</Property>
+      <Property Name="Location">5,5</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+      <Property Name="BackColor">255,255,255</Property>
+      <Property Name="Text">RX Messages of MK100</Property>
+      <Property Name="ForeColor">0,0,0</Property>
+    </Object>
+    <Property Name="Panel">Panel</Property>
+    <Property Name="Size">254,494</Property>
+    <Property Name="BackColor">255,255,255</Property>
+  </Object>
+</Panel>
