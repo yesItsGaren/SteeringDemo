@@ -850,14 +850,11 @@
         <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl1" Children="Controls" ControlName="Slider1">
           <Property Name="Name">TrackBarControl1</Property>
           <Property Name="Size">760, 47</Property>
-          <Property Name="Location">61, 435</Property>
+          <Property Name="Location">61, 420</Property>
           <Property Name="MaximumSize">100000, 47</Property>
-          <Property Name="Maximum">2000</Property>
-          <Property Name="DisplayMinMax">True</Property>
-          <Property Name="Minimum">-2000</Property>
+          <Property Name="Maximum">2976</Property>
           <Property Name="TickStyle">None</Property>
-          <Property Name="MaximumDouble">2000</Property>
-          <Property Name="MinimumDouble">-2000</Property>
+          <Property Name="MaximumDouble">2976</Property>
           <Property Name="DisplayValue">True</Property>
           <Property Name="SymbolConfiguration">8;16;SteeringVal;;;SteeringVal;1;;;-1;;;;;;0</Property>
           <Property Name="TabIndex">0</Property>
@@ -866,7 +863,7 @@
           <Property Name="Name">PictureBoxControl1</Property>
           <Property Name="Size">886, 526</Property>
           <Property Name="Location">0, 0</Property>
-          <Property Name="ImageFile">..\HOLON_Mover_rear_view.jpg</Property>
+          <Property Name="ImageFile">..\SlideToSteer.png</Property>
         </Object>
         <Property Name="Name">VectorTabPage3</Property>
         <Property Name="Size">883, 522</Property>

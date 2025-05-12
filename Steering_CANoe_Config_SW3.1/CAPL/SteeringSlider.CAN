@@ -54,7 +54,7 @@ on timer updateTimer
 {
   // Read system variable
   write("Current slider Val: %d", @sysvar::SteeringVal::SteeringVal);
-  
+  SetSteeringValues(@sysvar::SteeringVal::SteeringVal, ENABLED, ENABLED);
   // Restart timer
   setTimer(updateTimer, 10);
 }
