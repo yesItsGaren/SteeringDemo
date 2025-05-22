@@ -423,8 +423,8 @@
           <Property Name="TabIndex">7</Property>
         </Object>
         <Property Name="Name">VectorTabPage1</Property>
-        <Property Name="Size">883, 522</Property>
-        <Property Name="Location">4, 22</Property>
+        <Property Name="Size">886, 526</Property>
+        <Property Name="Location">3, 19</Property>
         <Property Name="Text">CHASSIS1CAN</Property>
       </Object>
       <Object Type="Vector.CANalyzer.Panels.Design.VectorTabPage, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="VectorTabPage2" Children="Controls" ControlName="STEERING">
@@ -842,11 +842,34 @@
           <Property Name="TabIndex">7</Property>
         </Object>
         <Property Name="Name">VectorTabPage2</Property>
-        <Property Name="Size">883, 522</Property>
-        <Property Name="Location">4, 22</Property>
+        <Property Name="Size">589, 343</Property>
+        <Property Name="Location">3, 19</Property>
         <Property Name="Text">CHASSIS2CAN</Property>
       </Object>
       <Object Type="Vector.CANalyzer.Panels.Design.VectorTabPage, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="VectorTabPage3" Children="Controls" ControlName="STEERING">
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl1" Children="Controls" ControlName="AngleBox">
+          <Property Name="Name">TextBoxControl1</Property>
+          <Property Name="Size">94, 40</Property>
+          <Property Name="Location">369, 253</Property>
+          <Property Name="AlarmUpperTextColor">WindowText</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="BoxTextAlign">Center</Property>
+          <Property Name="ValueDisplay">Double</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmLowerTextColor">WindowText</Property>
+          <Property Name="BoxFont">InputMono, 22pt, style=Bold</Property>
+          <Property Name="AlarmUpperFont">InputMono, 22pt, style=Bold</Property>
+          <Property Name="AlarmLowerFont">InputMono, 22pt, style=Bold</Property>
+          <Property Name="AlarmGeneralSettings">1;2;-14.5;17.5</Property>
+          <Property Name="DisplayLabel">Hide</Property>
+          <Property Name="TextFont">InputMono, 22pt, style=Bold</Property>
+          <Property Name="DescriptionSize">0, 0</Property>
+          <Property Name="SymbolConfiguration">8;2;CHASSIS1CAN;SDS_Secondary;SDS_CtrlSteeringWheel_Sec;CtrlSteeringPinionAngle_Sec;1;CHASSIS1CAN;;-1;;;;;;0</Property>
+          <Property Name="TabIndex">2</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+        </Object>
         <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=17.5.5.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl1" Children="Controls" ControlName="Slider1">
           <Property Name="Name">TrackBarControl1</Property>
           <Property Name="Size">760, 47</Property>
@@ -863,11 +886,11 @@
           <Property Name="Name">PictureBoxControl1</Property>
           <Property Name="Size">886, 526</Property>
           <Property Name="Location">0, 0</Property>
-          <Property Name="ImageFile">..\SlideToSteer.png</Property>
+          <Property Name="ImageFile">..\SliderBackground.png</Property>
         </Object>
         <Property Name="Name">VectorTabPage3</Property>
-        <Property Name="Size">883, 522</Property>
-        <Property Name="Location">4, 22</Property>
+        <Property Name="Size">886, 526</Property>
+        <Property Name="Location">3, 19</Property>
         <Property Name="Text">STEERING</Property>
       </Object>
       <Property Name="Name">VectorTabControl2</Property>
